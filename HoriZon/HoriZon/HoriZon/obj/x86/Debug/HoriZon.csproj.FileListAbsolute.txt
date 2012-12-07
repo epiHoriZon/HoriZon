@@ -1,0 +1,12 @@
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_face.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_dos.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\HoriZon.exe
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\HoriZon.pdb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\obj\x86\Debug\HoriZon.exe
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\obj\x86\Debug\HoriZon.pdb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\pelouse.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_droit.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_gauche.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\police_point_de_vie.xnb
