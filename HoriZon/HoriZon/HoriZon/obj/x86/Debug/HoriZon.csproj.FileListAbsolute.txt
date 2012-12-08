@@ -10,3 +10,8 @@ C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\
 C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_droit.xnb
 C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_gauche.xnb
 C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\police_point_de_vie.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\credit_menu.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\jouer_menu.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\options_menu.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\quitter_menu.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\credit_menu_enter.xnb
