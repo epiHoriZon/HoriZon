@@ -49,12 +49,13 @@ namespace HoriZon
 
         #region (gameplay)
 
-        KeyboardState clavier;
+
 
         int point_de_vie;
         Vector2 position_point_de_vie;
         SpriteFont police_point_de_vie;
-
+        KeyboardState oldstate;
+        KeyboardState clavier;
         #endregion (gameplay)
 
         #region(menu)
@@ -62,7 +63,7 @@ namespace HoriZon
         bool menu_ou_pas;
         bool enter_menu_ou_pas;
         int compteur_menu;
-
+        int compteur_menu2;
         Texture2D menu;
 
         Texture2D jouer_menu;
@@ -71,7 +72,8 @@ namespace HoriZon
         Texture2D quitter_menu;
 
         Texture2D credit_menu_enter;
-
+        Texture2D volume_options;
+        Texture2D pleinecran_options;
         #endregion(menu)
 
         public Game1()
@@ -92,6 +94,7 @@ namespace HoriZon
 
             enter_menu_ou_pas = false;
             compteur_menu = 0;
+            compteur_menu2 = 0;
             menu_ou_pas = true;
 
             point_de_vie = 100;
@@ -109,6 +112,7 @@ namespace HoriZon
         /// </summary>
         protected override void LoadContent()
         {
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -128,6 +132,9 @@ namespace HoriZon
             options_menu = Content.Load<Texture2D>("options_menu");
             credit_menu = Content.Load<Texture2D>("credit_menu");
             quitter_menu = Content.Load<Texture2D>("quitter_menu");
+
+            volume_options = Content.Load<Texture2D>("optionvol");
+            pleinecran_options = Content.Load<Texture2D>("optionPE");
 
             credit_menu_enter = Content.Load<Texture2D>("credit_menu_enter");
 
@@ -158,6 +165,8 @@ namespace HoriZon
                 this.Exit();
 
             // TODO: Add your update logic here
+
+            oldstate = clavier;
             clavier = Keyboard.GetState();
 
             if (menu_ou_pas)
@@ -175,8 +184,31 @@ namespace HoriZon
                     }
                     else if (compteur_menu % 4 == 1)
                     {
-                        //en attendant le menu options
-                        menu = credit_menu_enter;
+
+                        if (oldstate[Keys.Up] == KeyState.Up && clavier[Keys.Up] == KeyState.Down)
+                        {
+                            compteur_menu2--;
+
+
+                        }
+                        else if (oldstate[Keys.Down] == KeyState.Up && clavier[Keys.Down] == KeyState.Down)
+                        {
+                            compteur_menu2++;
+                        }
+
+                        if (compteur_menu2 % 2 == 1)
+                        {
+                            menu = volume_options;
+                        }
+                        if (compteur_menu2 % 2 == 0)
+                        {
+                            menu = pleinecran_options;
+                            if (clavier.IsKeyDown(Keys.Enter))
+                            {
+                                this.graphics.IsFullScreen = true;
+                            }
+                        }
+
                     }
                     else if (compteur_menu % 4 == 2)
                     {
@@ -189,18 +221,22 @@ namespace HoriZon
                 }
                 else
                 {
-                    if (clavier.IsKeyDown(Keys.Up))
+                    if (oldstate[Keys.Up] == KeyState.Up && clavier[Keys.Up] == KeyState.Down)
                     {
-                        compteur_menu = compteur_menu + 1;
+                        compteur_menu--;
+
+
                     }
-                    else if (clavier.IsKeyDown(Keys.Down))
+                    else if (oldstate[Keys.Down] == KeyState.Up && clavier[Keys.Down] == KeyState.Down)
                     {
-                        compteur_menu = compteur_menu + 1;
+                        compteur_menu++;
                     }
                     else if (clavier.IsKeyDown(Keys.Enter))
                     {
                         enter_menu_ou_pas = true;
                     }
+
+
 
                     if (compteur_menu % 4 == 0)
                     {
@@ -223,16 +259,37 @@ namespace HoriZon
 
             else
             {
+                if (clavier.IsKeyDown(Keys.Back))
+                {
+                    menu_ou_pas = true;
+                }
+
 
                 if (clavier.IsKeyDown(Keys.Up))
                 {
                     skin_perso = skin_dos;
                     deplacement_perso = new Vector2(0, -1);
+                    if (clavier.IsKeyDown(Keys.Right))
+                    {
+                        deplacement_perso = new Vector2(1, -1);
+                    }
+                    if (clavier.IsKeyDown(Keys.Left))
+                    {
+                        deplacement_perso = new Vector2(-1, -1);
+                    }
                 }
                 else if (clavier.IsKeyDown(Keys.Down))
                 {
                     skin_perso = skin_face;
                     deplacement_perso = new Vector2(0, 1);
+                    if (clavier.IsKeyDown(Keys.Right))
+                    {
+                        deplacement_perso = new Vector2(1, 1);
+                    }
+                    if (clavier.IsKeyDown(Keys.Left))
+                    {
+                        deplacement_perso = new Vector2(-1, 1);
+                    }
                 }
 
                 else if (clavier.IsKeyDown(Keys.Right))

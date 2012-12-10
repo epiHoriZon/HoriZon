@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_face.xnb</Output>
-      <Time>2012-12-07T14:37:49.184012+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_face.xnb</Output>
+      <Time>2012-12-09T14:28:04.5984556+01:00</Time>
     </Item>
     <Item>
       <Source>skin_dos.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_dos.xnb</Output>
-      <Time>2012-12-07T14:37:56.8540228+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_dos.xnb</Output>
+      <Time>2012-12-09T14:28:04.5984556+01:00</Time>
     </Item>
     <Item>
       <Source>pelouse.jpg</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\pelouse.xnb</Output>
-      <Time>2012-12-07T14:59:55.9666915+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\pelouse.xnb</Output>
+      <Time>2012-12-09T14:28:04.5784556+01:00</Time>
     </Item>
     <Item>
       <Source>skin_droit.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_droit.xnb</Output>
-      <Time>2012-12-07T15:37:00.685786+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_droit.xnb</Output>
+      <Time>2012-12-09T14:28:04.5984556+01:00</Time>
     </Item>
     <Item>
       <Source>skin_gauche.png</Source>
@@ -43,17 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_gauche.xnb</Output>
-      <Time>2012-12-07T15:37:00.6867861+01:00</Time>
-    </Item>
-    <Item>
-      <Source>police_point_de_vie.spritefont</Source>
-      <Name>police_point_de_vie</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\police_point_de_vie.xnb</Output>
-      <Time>2012-12-07T16:46:17.094519+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\skin_gauche.xnb</Output>
+      <Time>2012-12-09T14:28:04.5984556+01:00</Time>
     </Item>
     <Item>
       <Source>credit_menu.png</Source>
@@ -61,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\credit_menu.xnb</Output>
-      <Time>2012-12-08T09:33:26.2122433+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\credit_menu.xnb</Output>
+      <Time>2012-12-09T14:28:04.5684555+01:00</Time>
     </Item>
     <Item>
       <Source>jouer_menu.png</Source>
@@ -70,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\jouer_menu.xnb</Output>
-      <Time>2012-12-08T09:33:26.2122433+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\jouer_menu.xnb</Output>
+      <Time>2012-12-09T14:28:04.5684555+01:00</Time>
     </Item>
     <Item>
       <Source>options_menu.png</Source>
@@ -79,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\options_menu.xnb</Output>
-      <Time>2012-12-08T09:33:26.2122433+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\options_menu.xnb</Output>
+      <Time>2012-12-09T14:28:04.5784556+01:00</Time>
     </Item>
     <Item>
       <Source>quitter_menu.png</Source>
@@ -88,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\quitter_menu.xnb</Output>
-      <Time>2012-12-08T09:33:26.2122433+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\quitter_menu.xnb</Output>
+      <Time>2012-12-09T14:28:04.5984556+01:00</Time>
     </Item>
     <Item>
       <Source>credit_menu_enter.png</Source>
@@ -97,8 +88,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\credit_menu_enter.xnb</Output>
-      <Time>2012-12-08T10:02:35.123071+01:00</Time>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\credit_menu_enter.xnb</Output>
+      <Time>2012-12-09T14:28:04.5684555+01:00</Time>
+    </Item>
+    <Item>
+      <Source>police_point_de_vie.spritefont</Source>
+      <Name>police_point_de_vie</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\police_point_de_vie.xnb</Output>
+      <Time>2012-12-09T14:28:04.5784556+01:00</Time>
+    </Item>
+    <Item>
+      <Source>optionvol.png</Source>
+      <Name>optionvol</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\optionvol.xnb</Output>
+      <Time>2012-12-09T14:33:28.588781+01:00</Time>
+    </Item>
+    <Item>
+      <Source>optionPE.png</Source>
+      <Name>optionPE</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\optionPE.xnb</Output>
+      <Time>2012-12-09T14:34:31.2239985+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -106,10 +124,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZonContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZonContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZonContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZonContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Binooz\Desktop\HoriZon\HoriZon\HoriZon\HoriZon\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
