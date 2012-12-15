@@ -14,6 +14,7 @@ namespace HoriZontestmenu
 {
     public class MenuButton
     {
+        Texture2D memoire;
         Texture2D texture;
         Texture2D activatedTexture;
         Vector2 position;
@@ -28,7 +29,7 @@ namespace HoriZontestmenu
             this.texture = texture;
             this.container = container;
             this.activatedTexture = activatedTexture;
-
+            this.memoire = texture;
         }
 
         public Rectangle getcontainer()
@@ -55,7 +56,7 @@ namespace HoriZontestmenu
         }
         public Texture2D desactiv()
         {
-
+            texture = memoire;
 
             return texture;
         }

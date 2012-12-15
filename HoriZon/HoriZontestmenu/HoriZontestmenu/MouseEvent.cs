@@ -23,16 +23,9 @@ namespace HoriZontestmenu
         public bool UpdateMouse()
         {
             ButtonPressed = Mouse.GetState();
-            if (ButtonPressed.LeftButton == ButtonState.Pressed)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+            return ButtonPressed.LeftButton == ButtonState.Pressed;
 
+        }
         public Rectangle getmousecontainer()
         {
             ButtonPressed = Mouse.GetState();

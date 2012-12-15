@@ -8,3 +8,4 @@ Content\credits.xnb
 Content\quit.xnb
 Content\quitactiv.xnb
 Content\bl.xnb
+Content\testanim.xnb
