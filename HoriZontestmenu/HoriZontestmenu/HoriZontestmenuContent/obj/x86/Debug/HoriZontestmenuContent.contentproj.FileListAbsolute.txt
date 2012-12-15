@@ -1,0 +1,2 @@
+c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenuContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Binooz\Dropbox\projet jeu\HoriZontestmenu\HoriZontestmenu\HoriZontestmenuContent\obj\x86\Debug\ResolveAssemblyReference.cache
