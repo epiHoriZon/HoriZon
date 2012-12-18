@@ -23,11 +23,11 @@ namespace HoriZontestmenu
         MouseEvent mouse = new MouseEvent();
 
 
-        public MenuButton(Vector2 position, Texture2D texture, Texture2D activatedTexture, Rectangle container)
+        public MenuButton(Vector2 position, Texture2D texture, Texture2D activatedTexture)
         {
             this.position = position;
             this.texture = texture;
-            this.container = container;
+
             this.activatedTexture = activatedTexture;
             this.memoire = texture;
         }

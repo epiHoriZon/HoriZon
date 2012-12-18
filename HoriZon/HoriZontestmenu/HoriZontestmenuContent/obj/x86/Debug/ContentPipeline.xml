@@ -100,6 +100,114 @@
       <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb</Output>
       <Time>2012-12-15T15:11:00.6698515+01:00</Time>
     </Item>
+    <Item>
+      <Source>walk_iso.png</Source>
+      <Name>walk_iso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb</Output>
+      <Time>2012-12-17T20:09:34.0142075+01:00</Time>
+    </Item>
+    <Item>
+      <Source>ronflex.png</Source>
+      <Name>ronflex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb</Output>
+      <Time>2012-12-18T17:16:43.0040711+01:00</Time>
+    </Item>
+    <Item>
+      <Source>anglactiv.png</Source>
+      <Name>anglactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb</Output>
+      <Time>2012-12-18T17:49:12.946199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>fra.png</Source>
+      <Name>fra</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb</Output>
+      <Time>2012-12-18T17:49:12.966199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>fraactiv.png</Source>
+      <Name>fraactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb</Output>
+      <Time>2012-12-18T17:49:12.966199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>langue.png</Source>
+      <Name>langue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb</Output>
+      <Time>2012-12-18T17:49:12.966199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>langueactiv.png</Source>
+      <Name>langueactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb</Output>
+      <Time>2012-12-18T17:49:12.966199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>offactiv.png</Source>
+      <Name>offactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb</Output>
+      <Time>2012-12-18T17:49:12.966199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>onactiv.png</Source>
+      <Name>onactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb</Output>
+      <Time>2012-12-18T17:49:12.966199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PE.png</Source>
+      <Name>PE</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb</Output>
+      <Time>2012-12-18T17:49:12.966199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PEactiv.png</Source>
+      <Name>PEactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb</Output>
+      <Time>2012-12-18T17:49:12.976199+01:00</Time>
+    </Item>
+    <Item>
+      <Source>angl.png</Source>
+      <Name>angl</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb</Output>
+      <Time>2012-12-18T17:50:48.4139497+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

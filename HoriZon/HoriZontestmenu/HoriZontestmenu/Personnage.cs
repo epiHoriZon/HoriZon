@@ -19,7 +19,7 @@ namespace HoriZontestmenu
     class Personnage
     {
         Texture2D skin;
-        Rectangle position;
+        public Rectangle position;
         Rectangle container;
         Direction direction;
 
@@ -28,7 +28,7 @@ namespace HoriZontestmenu
 
         int speed = 2;
         int Timer = 0;
-        int AnimationSpeed = 10;
+        int AnimationSpeed = 5;
         
         public Personnage(Texture2D skin, Rectangle position)
         {
@@ -45,7 +45,7 @@ namespace HoriZontestmenu
             {
                 Timer = 0;
                 Framecolumn++;
-                if (Framecolumn > 4)
+                if (Framecolumn > 10)
                 {
                     Framecolumn = 1;
                 }
@@ -57,12 +57,14 @@ namespace HoriZontestmenu
             {
                 position.Y -= speed;
                 direction = Direction.Up;
+              
                 Animate(); 
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down) && position.Y <= 480 - position.Height)
+           else if (Keyboard.GetState().IsKeyDown(Keys.Down) && position.Y <= 480 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
+            
                 Animate(); 
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Left) && position.X != 0)
@@ -77,21 +79,19 @@ namespace HoriZontestmenu
                 direction = Direction.Right;
                 Animate(); 
             }
-            else
-            {
-                Framecolumn = 1;
-            }
+
+
             switch (direction)
             {
-                case Direction.Up: Frameline = 4;
+                case Direction.Up: Frameline = 5;
                     break;
                 case Direction.Down: Frameline = 1;
                     break;
-                case Direction.Left: Frameline = 2;
+                case Direction.Left: Frameline = 7;
                     break;
                 case Direction.Right: Frameline = 3;
                     break;
-                  
+               
             }
             
         }
@@ -104,7 +104,7 @@ namespace HoriZontestmenu
         }
         public void Drawperso(SpriteBatch spritebatch)
         {
-            spritebatch.Draw(skin, position,new Rectangle((Framecolumn -1)*35,(Frameline -1)*67,35,67), Color.White);
+            spritebatch.Draw(skin, position,new Rectangle((Framecolumn -1)*75,(Frameline -1)*101,75,101), Color.White);
 
         }
 

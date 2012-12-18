@@ -15,3 +15,15 @@ c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontes
 c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb
 c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bl.xnb
 C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb
+C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb

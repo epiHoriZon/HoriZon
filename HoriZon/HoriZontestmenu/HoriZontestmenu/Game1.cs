@@ -19,13 +19,24 @@ namespace HoriZontestmenu
 
         Personnage heros;
 
+        #region variables menu
         Texture2D fond;
         MenuButton jouer_menu;
         MenuButton options_menu;
         MenuButton credit_menu;
         MenuButton quit_menu;
+
+        MenuButton langue_menu;
+        MenuButton fra_menu;
+        MenuButton angl_menu;
+        MenuButton PE_menu;
+        MenuButton Onoff_menu;
+
         MouseEvent mousevent;
+
         bool menu_actif =true;
+        bool sousmenu_actif = false;
+        #endregion
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -40,14 +51,20 @@ namespace HoriZontestmenu
             this.IsMouseVisible = true;
             #region variables menu
             mousevent = new MouseEvent();
-            jouer_menu = new MenuButton(new Vector2(300, 25), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"),new Rectangle(300,25,500,125));
-            options_menu = new MenuButton(new Vector2(300, 80), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"), new Rectangle(300, 80, 500, 180));
-            credit_menu = new MenuButton(new Vector2(310, 135), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"),new Rectangle(310,135,510,235));
-            quit_menu = new MenuButton(new Vector2(310, 190), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"), new Rectangle(310, 190, 510, 290));
+            jouer_menu = new MenuButton(new Vector2(300, 25), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"));
+            options_menu = new MenuButton(new Vector2(300, 80), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"));
+            credit_menu = new MenuButton(new Vector2(310, 135), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"));
+            quit_menu = new MenuButton(new Vector2(310, 190), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"));
+
+            langue_menu = new MenuButton(new Vector2(50, 50), Content.Load<Texture2D>("langue"), Content.Load<Texture2D>("langueactiv"));
+            fra_menu = new MenuButton(new Vector2(300, 50), Content.Load<Texture2D>("fraactiv"), Content.Load<Texture2D>("fra"));
+            angl_menu = new MenuButton(new Vector2(500, 48), Content.Load<Texture2D>("angl"), Content.Load<Texture2D>("anglactiv"));
+            PE_menu = new MenuButton(new Vector2(50, 200), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"));
+            Onoff_menu = new MenuButton(new Vector2(300, 200), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
             #endregion
 
-            heros = new Personnage(Content.Load<Texture2D>("testanim"), new Rectangle(0,0,32,64));
-            
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(0,0,75,101));
+ 
             base.Initialize();
         }
 
@@ -76,10 +93,10 @@ namespace HoriZontestmenu
 
             
           
-            if (menu_actif)
+            if (menu_actif )
             {
                 #region menu
-
+                #region menu principal
                 if (mousevent.getmousecontainer().Intersects(jouer_menu.getcontainer()))
                 {
                     jouer_menu.activ();
@@ -99,7 +116,11 @@ namespace HoriZontestmenu
                     jouer_menu.desactiv(); credit_menu.desactiv(); quit_menu.desactiv();
                     if (mousevent.UpdateMouse())
                     {
-                        Exit();
+                       
+                        fond = Content.Load<Texture2D>("fond");
+                        menu_actif = false;
+                        sousmenu_actif = true;
+                       
 
                     }
                 }
@@ -120,7 +141,22 @@ namespace HoriZontestmenu
                     {
                         Exit();
                     }
-                }  
+                }
+                #endregion
+                if (sousmenu_actif)
+                {
+                    if (mousevent.getmousecontainer().Intersects(angl_menu.getcontainer()))
+                    {
+                        langue_menu.activ();
+                        Console.WriteLine("intersect ok");
+                        if (mousevent.UpdateMouse())
+                        {     
+                                angl_menu.activ(); fra_menu.desactiv();
+                                Console.WriteLine("click ok");
+                        }
+                    }
+                    Console.WriteLine("sous menu actif");
+                }
                 #endregion
             }
          
@@ -146,10 +182,20 @@ namespace HoriZontestmenu
 
             if (menu_actif)
             {
-                jouer_menu.DrawButton(spriteBatch);
-                options_menu.DrawButton(spriteBatch);
-                credit_menu.DrawButton(spriteBatch);
-                quit_menu.DrawButton(spriteBatch);
+
+                    jouer_menu.DrawButton(spriteBatch);
+                    options_menu.DrawButton(spriteBatch);
+                    credit_menu.DrawButton(spriteBatch);
+                    quit_menu.DrawButton(spriteBatch);
+                
+            }
+            else if (sousmenu_actif)
+            {
+                langue_menu.DrawButton(spriteBatch);
+                angl_menu.DrawButton(spriteBatch);
+                fra_menu.DrawButton(spriteBatch);
+                Onoff_menu.DrawButton(spriteBatch);
+                PE_menu.DrawButton(spriteBatch);
             }
             else
             {
