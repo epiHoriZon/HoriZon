@@ -18,6 +18,8 @@ namespace HoriZontestmenu
         SpriteBatch spriteBatch;
 
         Personnage heros;
+        Monstre ronflex;
+
 
         #region variables menu
         Texture2D fond;
@@ -34,8 +36,9 @@ namespace HoriZontestmenu
 
         MouseEvent mousevent;
 
-        bool menu_actif =true;
+        public bool menu_actif =true;
         bool sousmenu_actif = false;
+        bool menu_gameover = false;
         #endregion
         public Game1()
         {
@@ -63,8 +66,8 @@ namespace HoriZontestmenu
             Onoff_menu = new MenuButton(new Vector2(300, 200), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
             #endregion
 
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(0,0,75,101));
- 
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200,200,75,101),100,Content.Load<SpriteFont>("Font_PDV"));
+            ronflex = new Monstre(Content.Load<Texture2D>("monstre"), new Vector2 ( 20,250));
             base.Initialize();
         }
 
@@ -95,8 +98,10 @@ namespace HoriZontestmenu
           
             if (menu_actif )
             {
+                fond = Content.Load<Texture2D>("fond");
                 #region menu
                 #region menu principal
+
                 if (mousevent.getmousecontainer().Intersects(jouer_menu.getcontainer()))
                 {
                     jouer_menu.activ();
@@ -105,7 +110,7 @@ namespace HoriZontestmenu
 
                     if (mousevent.UpdateMouse())
                     {
-                        fond = Content.Load<Texture2D>("bl");
+
                         menu_actif = false;
                     }
 
@@ -143,28 +148,55 @@ namespace HoriZontestmenu
                     }
                 }
                 #endregion
-                if (sousmenu_actif)
-                {
-                    if (mousevent.getmousecontainer().Intersects(angl_menu.getcontainer()))
-                    {
-                        langue_menu.activ();
-                        Console.WriteLine("intersect ok");
-                        if (mousevent.UpdateMouse())
-                        {     
-                                angl_menu.activ(); fra_menu.desactiv();
-                                Console.WriteLine("click ok");
-                        }
-                    }
-                    Console.WriteLine("sous menu actif");
-                }
-                #endregion
             }
-         
+            else if (sousmenu_actif)
+            {
+                if (mousevent.getmousecontainer().Intersects(angl_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(fra_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(langue_menu.getcontainer()))
+                {
+                    langue_menu.activ();
+                    Console.WriteLine("intersect OK");
+                }
+                else
+                {
+                    langue_menu.desactiv();
+                }
+            }
+            else if (menu_gameover)
+            {
+                fond = Content.Load<Texture2D>("fond_gameover");
+                    if(mousevent.UpdateMouse() && mousevent.getmousecontainer().Intersects(new Rectangle(510,438,800,600)))
+                    {
+
+                        menu_gameover = false;
+                        menu_actif = true;
+                    }
+
+            }
+#endregion
             else
             {
 
                 heros.deplacement();
-                heros.getplayercontainer();
+
+                if (heros.getplayercontainer().Intersects(ronflex.getmonstercontainer()) )
+                {
+                  heros.Points_Vie_Perso --;
+  
+                }
+                if (heros.Points_Vie_Perso <= 0)
+                {
+
+                    menu_gameover = true;
+                }
+
+
+
+
+
+
+
+
+
             }
             base.Update(gameTime);
         }
@@ -197,9 +229,15 @@ namespace HoriZontestmenu
                 Onoff_menu.DrawButton(spriteBatch);
                 PE_menu.DrawButton(spriteBatch);
             }
+            else if (menu_gameover)
+            {
+                
+            }
             else
             {
                 heros.Drawperso(spriteBatch);
+                heros.Draw_PDV(spriteBatch);
+                ronflex.DrawMonstre(spriteBatch);
             }
             spriteBatch.End();
 

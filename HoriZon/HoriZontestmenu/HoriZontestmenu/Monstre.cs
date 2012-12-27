@@ -16,13 +16,13 @@ namespace HoriZontestmenu
     {
         Rectangle container;
         Texture2D skinm;
-        Rectangle position;
-       
+        Vector2 position;
+        
 
 
 
 
-        public Monstre(Texture2D skinm, Rectangle position)
+        public Monstre(Texture2D skinm,Vector2 position)
         {
             this.skinm = skinm;
             this.position = position;
@@ -36,8 +36,15 @@ namespace HoriZontestmenu
 
         public void deplacement ()
         {
+
+      
           
         
+        }
+
+        public void DrawMonstre(SpriteBatch spritebatch)
+        {
+            spritebatch.Draw(skinm, position, Color.White);
         }
 
     }

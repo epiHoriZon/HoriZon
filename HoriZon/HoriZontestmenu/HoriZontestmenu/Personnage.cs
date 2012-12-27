@@ -14,12 +14,16 @@ namespace HoriZontestmenu
 
     public enum Direction
     {
-        Up,Down,Left,Right
+        Up, Down, Left, Right
     }
     class Personnage
     {
+        public int Points_Vie_Perso;
+        SpriteFont fontpdv;
+
         Texture2D skin;
         public Rectangle position;
+        Rectangle positiondepart;
         Rectangle container;
         Direction direction;
 
@@ -29,17 +33,19 @@ namespace HoriZontestmenu
         int speed = 2;
         int Timer = 0;
         int AnimationSpeed = 5;
-        
-        public Personnage(Texture2D skin, Rectangle position)
+
+        public Personnage(Texture2D skin, Rectangle position, int Points_Vie_Perso, SpriteFont fontpdv)
         {
             this.skin = skin;
             this.position = position;
-           
+            this.positiondepart = position;
+            this.Points_Vie_Perso = Points_Vie_Perso;
+            this.fontpdv = fontpdv;
         }
 
         public void Animate()
         {
-            
+
             Timer++;
             if (Timer >= AnimationSpeed)
             {
@@ -57,27 +63,31 @@ namespace HoriZontestmenu
             {
                 position.Y -= speed;
                 direction = Direction.Up;
-              
-                Animate(); 
+
+                Animate();
             }
-           else if (Keyboard.GetState().IsKeyDown(Keys.Down) && position.Y <= 480 - position.Height)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down) && position.Y <= 480 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
-            
-                Animate(); 
+
+                Animate();
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Left) && position.X != 0)
             {
                 position.X -= speed;
                 direction = Direction.Left;
-                Animate(); 
+                Animate();
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Right) && position.X <= 800 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;
-                Animate(); 
+                Animate();
+            }
+            else
+            {
+                Framecolumn = 1;
             }
 
 
@@ -91,9 +101,9 @@ namespace HoriZontestmenu
                     break;
                 case Direction.Right: Frameline = 3;
                     break;
-               
+
             }
-            
+
         }
 
 
@@ -102,9 +112,26 @@ namespace HoriZontestmenu
             container = new Rectangle((int)position.X, (int)position.Y, (int)position.X + skin.Width, (int)position.Y + skin.Height);
             return container;
         }
+
+
         public void Drawperso(SpriteBatch spritebatch)
         {
-            spritebatch.Draw(skin, position,new Rectangle((Framecolumn -1)*75,(Frameline -1)*101,75,101), Color.White);
+            spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * 75, (Frameline - 1) * 101, 75, 101), Color.White);
+
+        }
+        public void Draw_PDV(SpriteBatch spritebatch)
+        {
+            if (Points_Vie_Perso > 0)
+            {
+                spritebatch.DrawString(this.fontpdv, "Points de vie :" + Points_Vie_Perso, Vector2.Zero, Color.Red);
+
+            }
+            else
+            {
+
+                position = positiondepart;
+                Points_Vie_Perso = 100;
+            }
 
         }
 

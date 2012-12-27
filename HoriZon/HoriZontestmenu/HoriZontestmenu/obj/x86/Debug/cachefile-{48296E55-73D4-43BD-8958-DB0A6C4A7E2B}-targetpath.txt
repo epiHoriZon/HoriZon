@@ -7,7 +7,6 @@ Content\creditactiv.xnb
 Content\credits.xnb
 Content\quit.xnb
 Content\quitactiv.xnb
-Content\bl.xnb
 Content\testanim.xnb
 Content\walk_iso.xnb
 Content\ronflex.xnb
@@ -21,3 +20,6 @@ Content\onactiv.xnb
 Content\PE.xnb
 Content\PEactiv.xnb
 Content\angl.xnb
+Content\Font_PDV.xnb
+Content\monstre.xnb
+Content\fond_gameover.xnb
