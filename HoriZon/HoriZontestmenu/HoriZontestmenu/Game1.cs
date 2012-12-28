@@ -14,11 +14,11 @@ namespace HoriZontestmenu
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
-        
+
         SpriteBatch spriteBatch;
 
         Personnage heros;
-        Monstre ronflex;
+        Monstre mechant;
 
 
         #region variables menu
@@ -33,11 +33,19 @@ namespace HoriZontestmenu
         MenuButton angl_menu;
         MenuButton PE_menu;
         MenuButton Onoff_menu;
+        MenuButton Retour;
 
         MouseEvent mousevent;
 
-        public bool menu_actif =true;
+
+        bool menu_actif = true;
+
         bool sousmenu_actif = false;
+        bool langue_francais = true;
+        bool plein_ecran = false;
+
+        bool credit_actif = false;
+
         bool menu_gameover = false;
         #endregion
         public Game1()
@@ -48,9 +56,9 @@ namespace HoriZontestmenu
 
         protected override void Initialize()
         {
-           
 
-         
+
+
             this.IsMouseVisible = true;
             #region variables menu
             mousevent = new MouseEvent();
@@ -64,39 +72,40 @@ namespace HoriZontestmenu
             angl_menu = new MenuButton(new Vector2(500, 48), Content.Load<Texture2D>("angl"), Content.Load<Texture2D>("anglactiv"));
             PE_menu = new MenuButton(new Vector2(50, 200), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"));
             Onoff_menu = new MenuButton(new Vector2(300, 200), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
+            Retour = new MenuButton(new Vector2(600, 400), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"));
             #endregion
 
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200,200,75,101),100,Content.Load<SpriteFont>("Font_PDV"));
-            ronflex = new Monstre(Content.Load<Texture2D>("monstre"), new Vector2 ( 20,250));
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 100, Content.Load<SpriteFont>("Font_PDV"));
+            mechant = new Monstre(Content.Load<Texture2D>("monstre"), new Vector2(20, 250));
             base.Initialize();
         }
 
-        
+
         protected override void LoadContent()
         {
-           
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
-           
+
             fond = Content.Load<Texture2D>("fond");
-    
+
         }
 
-     
+
         protected override void UnloadContent()
         {
-            
+
         }
 
-      
+
         protected override void Update(GameTime gameTime)
         {
-           
+            mousevent.old_mouse_state = Mouse.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            
-          
-            if (menu_actif )
+
+
+            if (menu_actif)
             {
                 fond = Content.Load<Texture2D>("fond");
                 #region menu
@@ -121,11 +130,11 @@ namespace HoriZontestmenu
                     jouer_menu.desactiv(); credit_menu.desactiv(); quit_menu.desactiv();
                     if (mousevent.UpdateMouse())
                     {
-                       
+
                         fond = Content.Load<Texture2D>("fond");
                         menu_actif = false;
                         sousmenu_actif = true;
-                       
+
 
                     }
                 }
@@ -135,7 +144,9 @@ namespace HoriZontestmenu
                     jouer_menu.desactiv(); options_menu.desactiv(); quit_menu.desactiv();
                     if (mousevent.UpdateMouse())
                     {
-                        Exit();
+                        menu_actif = false;
+                        sousmenu_actif = false;
+                        credit_actif = true;
                     }
                 }
                 if (mousevent.getmousecontainer().Intersects(quit_menu.getcontainer()))
@@ -151,37 +162,110 @@ namespace HoriZontestmenu
             }
             else if (sousmenu_actif)
             {
+
                 if (mousevent.getmousecontainer().Intersects(angl_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(fra_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(langue_menu.getcontainer()))
                 {
+
                     langue_menu.activ();
-                    Console.WriteLine("intersect OK");
+                    if (mousevent.UpdateMouse())
+                    {
+                        if (langue_francais)
+                        {
+                            fra_menu.desactiv();
+                            angl_menu.desactiv();
+                            langue_francais = false;
+
+
+                        }
+                        else
+                        {
+                            fra_menu.activ();
+                            angl_menu.activ();
+                            langue_francais = true;
+                        }
+                    }
+
                 }
                 else
                 {
                     langue_menu.desactiv();
                 }
+                if (mousevent.getmousecontainer().Intersects(Onoff_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(PE_menu.getcontainer()))
+                {
+                    PE_menu.activ();
+                    if (mousevent.UpdateMouse())
+                    {
+                        if (plein_ecran)
+                        {
+                            Onoff_menu.activ();
+                            plein_ecran = false;
+                        }
+                        else
+                        {
+                            Onoff_menu.desactiv();
+                            plein_ecran = true;
+                        }
+                    }
+                }
+                else
+                {
+                    PE_menu.desactiv();
+                }
+                if (mousevent.getmousecontainer().Intersects(Retour.getcontainer()))
+                {
+                    Retour.activ();
+                    if (mousevent.UpdateMouse())
+                    {
+                        sousmenu_actif = false;
+                        menu_actif = true;
+                    }
+                }
+                else
+                {
+                    Retour.desactiv();
+                }
+            }
+            else if (credit_actif)
+            {
+                fond = Content.Load<Texture2D>("bt_credit");
+                if (mousevent.getmousecontainer().Intersects(Retour.getcontainer()))
+                {
+                    Retour.activ();
+                    if (mousevent.UpdateMouse())
+                    {
+                        credit_actif = false;
+                        menu_actif = true;
+                    }
+                }
+                else
+                {
+                    Retour.desactiv();
+                } 
+
+
+
             }
             else if (menu_gameover)
             {
                 fond = Content.Load<Texture2D>("fond_gameover");
-                    if(mousevent.UpdateMouse() && mousevent.getmousecontainer().Intersects(new Rectangle(510,438,800,600)))
-                    {
+                if (mousevent.UpdateMouse() && mousevent.getmousecontainer().Intersects(new Rectangle(510, 438, 800, 600)))
+                {
 
-                        menu_gameover = false;
-                        menu_actif = true;
-                    }
+                    menu_gameover = false;
+                    menu_actif = true;
+                }
 
             }
-#endregion
+                #endregion
             else
             {
 
                 heros.deplacement();
 
-                if (heros.getplayercontainer().Intersects(ronflex.getmonstercontainer()) )
+                if (heros.getplayercontainer().Intersects(mechant.getmonstercontainer()))
                 {
-                  heros.Points_Vie_Perso --;
-  
+                    heros.Points_Vie_Perso--;
+
                 }
                 if (heros.Points_Vie_Perso <= 0)
                 {
@@ -201,12 +285,12 @@ namespace HoriZontestmenu
             base.Update(gameTime);
         }
 
-       
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-           
+
             spriteBatch.Begin();
 
 
@@ -215,11 +299,11 @@ namespace HoriZontestmenu
             if (menu_actif)
             {
 
-                    jouer_menu.DrawButton(spriteBatch);
-                    options_menu.DrawButton(spriteBatch);
-                    credit_menu.DrawButton(spriteBatch);
-                    quit_menu.DrawButton(spriteBatch);
-                
+                jouer_menu.DrawButton(spriteBatch);
+                options_menu.DrawButton(spriteBatch);
+                credit_menu.DrawButton(spriteBatch);
+                quit_menu.DrawButton(spriteBatch);
+
             }
             else if (sousmenu_actif)
             {
@@ -228,16 +312,22 @@ namespace HoriZontestmenu
                 fra_menu.DrawButton(spriteBatch);
                 Onoff_menu.DrawButton(spriteBatch);
                 PE_menu.DrawButton(spriteBatch);
+                Retour.DrawButton(spriteBatch);
             }
+            else if (credit_actif)
+            {
+                Retour.DrawButton(spriteBatch);
+
+            }      
             else if (menu_gameover)
             {
-                
+
             }
             else
             {
                 heros.Drawperso(spriteBatch);
                 heros.Draw_PDV(spriteBatch);
-                ronflex.DrawMonstre(spriteBatch);
+                mechant.DrawMonstre(spriteBatch);
             }
             spriteBatch.End();
 

@@ -16,14 +16,19 @@ namespace HoriZontestmenu
         MouseState ButtonPressed;
         
          Rectangle mousedetection;
+
+         public MouseState old_mouse_state;
         public MouseEvent()
         {
    
         }
         public bool UpdateMouse()
         {
+             
+
             ButtonPressed = Mouse.GetState();
-            return ButtonPressed.LeftButton == ButtonState.Pressed;
+            return ButtonPressed.LeftButton == ButtonState.Pressed ;
+
 
         }
         public Rectangle getmousecontainer()

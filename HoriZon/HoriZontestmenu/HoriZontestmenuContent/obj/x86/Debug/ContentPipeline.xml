@@ -226,6 +226,24 @@
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond_gameover.xnb</Output>
       <Time>2012-12-27T18:47:59.6180184+01:00</Time>
     </Item>
+    <Item>
+      <Source>bouton_retour.png</Source>
+      <Name>bouton_retour</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retour.xnb</Output>
+      <Time>2012-12-28T11:19:24.0702583+01:00</Time>
+    </Item>
+    <Item>
+      <Source>bt_credit.png</Source>
+      <Name>bt_credit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bt_credit.xnb</Output>
+      <Time>2012-12-28T12:18:57.55665+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
