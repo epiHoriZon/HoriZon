@@ -16,16 +16,17 @@ namespace HoriZontestmenu
     {
         Rectangle container;
         Texture2D skinm;
-        Vector2 position;
-        
+        public Vector2 position;
 
-
+        public Vector2 positiondepart;
+   
 
 
         public Monstre(Texture2D skinm,Vector2 position)
         {
             this.skinm = skinm;
             this.position = position;
+            this.positiondepart = position;
         }
 
         public Rectangle getmonstercontainer()
@@ -36,9 +37,6 @@ namespace HoriZontestmenu
 
         public void deplacement ()
         {
-
-      
-          
         
         }
 

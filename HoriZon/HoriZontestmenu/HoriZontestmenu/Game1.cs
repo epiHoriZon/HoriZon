@@ -17,9 +17,10 @@ namespace HoriZontestmenu
 
         SpriteBatch spriteBatch;
 
-        Personnage heros;
+        Personnage heros;  // Variables objets Personnages et monstres 
         Monstre mechant;
 
+        KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
 
         #region variables menu
         Texture2D fond;
@@ -58,7 +59,7 @@ namespace HoriZontestmenu
         {
 
 
-
+            Keyboard = new KeyboardEvent();
             this.IsMouseVisible = true;
             #region variables menu
             mousevent = new MouseEvent();
@@ -74,9 +75,9 @@ namespace HoriZontestmenu
             Onoff_menu = new MenuButton(new Vector2(300, 200), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
             Retour = new MenuButton(new Vector2(600, 400), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"));
             #endregion
-
+            // Initialisation des variables monstres et personnages :
             heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 100, Content.Load<SpriteFont>("Font_PDV"));
-            mechant = new Monstre(Content.Load<Texture2D>("monstre"), new Vector2(20, 250));
+            mechant = new Monstre(Content.Load<Texture2D>("ronflex"), new Vector2(20, 250));
             base.Initialize();
         }
 
@@ -240,7 +241,7 @@ namespace HoriZontestmenu
                 else
                 {
                     Retour.desactiv();
-                } 
+                }
 
 
 
@@ -259,17 +260,41 @@ namespace HoriZontestmenu
                 #endregion
             else
             {
+                if (Keyboard.Is_Back_Pressed())
+                {
+                    menu_actif = true;
+                }
+
 
                 heros.deplacement();
-
+              
                 if (heros.getplayercontainer().Intersects(mechant.getmonstercontainer()))
                 {
                     heros.Points_Vie_Perso--;
 
                 }
+                else
+                {
+                    if (mechant.position.X <= heros.position.X)
+                    {
+                        mechant.position.X++;
+                    }
+                    else
+                    {
+                        mechant.position.X--;
+                    }
+                    if (mechant.position.Y <= heros.position.Y)
+                    {
+                        mechant.position.Y++;
+                    }
+                    else
+                    {
+                        mechant.position.Y--;
+                    }
+                }
                 if (heros.Points_Vie_Perso <= 0)
                 {
-
+                    mechant.position = mechant.positiondepart;
                     menu_gameover = true;
                 }
 
@@ -318,7 +343,7 @@ namespace HoriZontestmenu
             {
                 Retour.DrawButton(spriteBatch);
 
-            }      
+            }
             else if (menu_gameover)
             {
 
