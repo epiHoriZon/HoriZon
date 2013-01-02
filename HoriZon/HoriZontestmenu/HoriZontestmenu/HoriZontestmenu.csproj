@@ -112,7 +112,6 @@
   <ItemGroup>
     <Compile Include="KeyboardEvent.cs" />
     <Compile Include="MenuButton.cs" />
-    <Compile Include="Monstre.cs" />
     <Compile Include="MouseEvent.cs" />
     <Compile Include="Personnage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

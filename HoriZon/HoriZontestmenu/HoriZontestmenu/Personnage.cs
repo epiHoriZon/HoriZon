@@ -23,9 +23,9 @@ namespace HoriZontestmenu
 
         Texture2D skin;
         public Rectangle position;
-        Rectangle positiondepart;
+        public Rectangle positiondepart;
         Rectangle container;
-        Direction direction;
+        public Direction direction;
 
         int Frameline = 1;
         int Framecolumn = 1;
@@ -106,6 +106,23 @@ namespace HoriZontestmenu
 
         }
 
+        public void animationmonstre()
+        {
+            switch (direction)
+            {
+                case Direction.Up: Frameline = 1;
+                    break;
+                case Direction.Down: Frameline = 3;
+                    break;
+                case Direction.Left: Frameline = 2;
+                    break;
+                case Direction.Right: Frameline = 4;
+                    break;
+
+            }
+
+
+        }
 
         public Rectangle getplayercontainer()
         {
@@ -118,6 +135,13 @@ namespace HoriZontestmenu
         {
             spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * 75, (Frameline - 1) * 101, 75, 101), Color.White);
 
+        }
+
+        public void DrawEnemi(SpriteBatch spritebatch)
+        {
+            spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * 32, (Frameline - 1) * 32, 32, 32), Color.White);
+        
+        
         }
         public void Draw_PDV(SpriteBatch spritebatch)
         {

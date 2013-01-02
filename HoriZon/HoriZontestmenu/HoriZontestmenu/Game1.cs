@@ -18,7 +18,7 @@ namespace HoriZontestmenu
         SpriteBatch spriteBatch;
 
         Personnage heros;  // Variables objets Personnages et monstres 
-        Monstre mechant;
+        Personnage mechant;
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
 
@@ -77,7 +77,7 @@ namespace HoriZontestmenu
             #endregion
             // Initialisation des variables monstres et personnages :
             heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 100, Content.Load<SpriteFont>("Font_PDV"));
-            mechant = new Monstre(Content.Load<Texture2D>("ronflex"), new Vector2(20, 250));
+            mechant = new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(20, 250,32,32),100, Content.Load<SpriteFont>("Font_PDV"));
             base.Initialize();
         }
 
@@ -267,29 +267,37 @@ namespace HoriZontestmenu
 
 
                 heros.deplacement();
-              
-                if (heros.getplayercontainer().Intersects(mechant.getmonstercontainer()))
+
+                if (heros.getplayercontainer().Intersects(mechant.getplayercontainer()))
                 {
                     heros.Points_Vie_Perso--;
-
+                   
                 }
                 else
                 {
-                    if (mechant.position.X <= heros.position.X)
+                    if (mechant.position.X <= heros.position.X && mechant.position.X >0)  
                     {
                         mechant.position.X++;
+                        mechant.direction = Direction.Right;
+                        mechant.animationmonstre();
                     }
                     else
                     {
                         mechant.position.X--;
+                        mechant.direction = Direction.Left;
+                        mechant.animationmonstre();
                     }
                     if (mechant.position.Y <= heros.position.Y)
                     {
                         mechant.position.Y++;
+                        mechant.direction = Direction.Down;
+                        mechant.animationmonstre();
                     }
                     else
                     {
                         mechant.position.Y--;
+                        mechant.direction = Direction.Up;
+                        mechant.animationmonstre();
                     }
                 }
                 if (heros.Points_Vie_Perso <= 0)
@@ -352,7 +360,7 @@ namespace HoriZontestmenu
             {
                 heros.Drawperso(spriteBatch);
                 heros.Draw_PDV(spriteBatch);
-                mechant.DrawMonstre(spriteBatch);
+                mechant.DrawEnemi(spriteBatch);
             }
             spriteBatch.End();
 
