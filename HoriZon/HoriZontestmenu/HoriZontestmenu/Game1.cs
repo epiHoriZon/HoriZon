@@ -77,7 +77,7 @@ namespace HoriZontestmenu
             #endregion
             // Initialisation des variables monstres et personnages :
             heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 100, Content.Load<SpriteFont>("Font_PDV"));
-            mechant = new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(20, 250,32,32),100, Content.Load<SpriteFont>("Font_PDV"));
+            mechant = new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(20, 250, 32, 32), 100, Content.Load<SpriteFont>("Font_PDV"));
             base.Initialize();
         }
 
@@ -168,7 +168,7 @@ namespace HoriZontestmenu
                 {
 
                     langue_menu.activ();
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && mousevent.old_mouse_state.LeftButton == ButtonState.Released)
                     {
                         if (langue_francais)
                         {
@@ -194,7 +194,7 @@ namespace HoriZontestmenu
                 if (mousevent.getmousecontainer().Intersects(Onoff_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(PE_menu.getcontainer()))
                 {
                     PE_menu.activ();
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && !(mousevent.old_mouse_state.LeftButton == ButtonState.Pressed))
                     {
                         if (plein_ecran)
                         {
@@ -225,6 +225,7 @@ namespace HoriZontestmenu
                 {
                     Retour.desactiv();
                 }
+                mousevent.old_mouse_state = mousevent.ButtonPressed;
             }
             else if (credit_actif)
             {
@@ -260,6 +261,7 @@ namespace HoriZontestmenu
                 #endregion
             else
             {
+                fond = Content.Load<Texture2D>("fondville");
                 if (Keyboard.Is_Back_Pressed())
                 {
                     menu_actif = true;
@@ -268,37 +270,44 @@ namespace HoriZontestmenu
 
                 heros.deplacement();
 
-                if (heros.getplayercontainer().Intersects(mechant.getplayercontainer()))
+                if (mechant.position.Intersects(heros.position))
                 {
-                    heros.Points_Vie_Perso--;
-                   
+                     heros.Points_Vie_Perso--;
+                    Console.Write("intersection OK");
+                    Console.WriteLine(mechant.getplayercontainer().X +","+mechant.getplayercontainer().Y );
+                    Console.WriteLine(heros.position);
                 }
                 else
                 {
-                    if (mechant.position.X <= heros.position.X && mechant.position.X >0)  
+                    if (mechant.position.X <= heros.position.X)
                     {
                         mechant.position.X++;
                         mechant.direction = Direction.Right;
                         mechant.animationmonstre();
+                        mechant.Animate(2);
                     }
-                    else
+                    else if (mechant.position.X > heros.position.X)
                     {
                         mechant.position.X--;
                         mechant.direction = Direction.Left;
                         mechant.animationmonstre();
+                        mechant.Animate(2);
                     }
-                    if (mechant.position.Y <= heros.position.Y)
+                     else if (mechant.position.Y <= heros.position.Y)
                     {
                         mechant.position.Y++;
                         mechant.direction = Direction.Down;
                         mechant.animationmonstre();
+                        mechant.Animate(2);
                     }
                     else
                     {
                         mechant.position.Y--;
                         mechant.direction = Direction.Up;
                         mechant.animationmonstre();
+                        mechant.Animate(2);
                     }
+
                 }
                 if (heros.Points_Vie_Perso <= 0)
                 {

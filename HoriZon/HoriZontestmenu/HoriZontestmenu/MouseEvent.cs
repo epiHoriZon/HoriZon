@@ -13,7 +13,7 @@ namespace HoriZontestmenu
 {
     public class MouseEvent
     {
-        MouseState ButtonPressed;
+        public MouseState ButtonPressed;
         
          Rectangle mousedetection;
 
@@ -24,13 +24,15 @@ namespace HoriZontestmenu
         }
         public bool UpdateMouse()
         {
-             
-
             ButtonPressed = Mouse.GetState();
             return ButtonPressed.LeftButton == ButtonState.Pressed ;
-
-
         }
+   
+            
+         
+
+
+        
         public Rectangle getmousecontainer()
         {
             ButtonPressed = Mouse.GetState();

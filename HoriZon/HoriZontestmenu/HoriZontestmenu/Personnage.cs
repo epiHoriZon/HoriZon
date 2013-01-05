@@ -43,7 +43,7 @@ namespace HoriZontestmenu
             this.fontpdv = fontpdv;
         }
 
-        public void Animate()
+        public void Animate(int nbcolonnes)
         {
 
             Timer++;
@@ -51,7 +51,7 @@ namespace HoriZontestmenu
             {
                 Timer = 0;
                 Framecolumn++;
-                if (Framecolumn > 10)
+                if (Framecolumn > nbcolonnes)
                 {
                     Framecolumn = 1;
                 }
@@ -64,26 +64,26 @@ namespace HoriZontestmenu
                 position.Y -= speed;
                 direction = Direction.Up;
 
-                Animate();
+                Animate(5);
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Down) && position.Y <= 480 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
 
-                Animate();
+                Animate(5);
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Left) && position.X != 0)
             {
                 position.X -= speed;
                 direction = Direction.Left;
-                Animate();
+                Animate(5);
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Right) && position.X <= 800 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;
-                Animate();
+                Animate(5);
             }
             else
             {

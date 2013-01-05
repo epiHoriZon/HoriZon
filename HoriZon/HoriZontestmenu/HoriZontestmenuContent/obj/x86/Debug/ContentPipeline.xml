@@ -244,6 +244,15 @@
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bt_credit.xnb</Output>
       <Time>2012-12-28T12:18:57.55665+01:00</Time>
     </Item>
+    <Item>
+      <Source>fondville.jpg</Source>
+      <Name>fondville</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fondville.xnb</Output>
+      <Time>2013-01-05T12:12:12.6712608+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
