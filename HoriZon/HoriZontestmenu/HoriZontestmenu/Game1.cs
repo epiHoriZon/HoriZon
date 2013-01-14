@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+
 namespace HoriZontestmenu
 {
     public class Game1 : Microsoft.Xna.Framework.Game
@@ -17,10 +18,14 @@ namespace HoriZontestmenu
 
         SpriteBatch spriteBatch;
 
-        Personnage heros;  // Variables objets Personnages et monstres 
+        Personnage heros;
+        Rectangle attaque;
+
         Personnage mechant;
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
+
+        Random rnd = new Random();
 
         #region variables menu
         Texture2D fond;
@@ -58,6 +63,8 @@ namespace HoriZontestmenu
         protected override void Initialize()
         {
 
+            mechant =(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(0, 800), 0, 32, 32), 100));
+
 
             Keyboard = new KeyboardEvent();
             this.IsMouseVisible = true;
@@ -76,8 +83,8 @@ namespace HoriZontestmenu
             Retour = new MenuButton(new Vector2(600, 400), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"));
             #endregion
             // Initialisation des variables monstres et personnages :
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 100, Content.Load<SpriteFont>("Font_PDV"));
-            mechant = new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(20, 250, 32, 32), 100, Content.Load<SpriteFont>("Font_PDV"));
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 300);
+       
             base.Initialize();
         }
 
@@ -256,9 +263,9 @@ namespace HoriZontestmenu
                     menu_gameover = false;
                     menu_actif = true;
                 }
-
-            }
                 #endregion
+            }
+
             else
             {
                 fond = Content.Load<Texture2D>("fondville");
@@ -269,61 +276,92 @@ namespace HoriZontestmenu
 
 
                 heros.deplacement();
+               
 
-                if (mechant.position.Intersects(heros.position))
-                {
-                     heros.Points_Vie_Perso--;
-                    Console.Write("intersection OK");
-                    Console.WriteLine(mechant.getplayercontainer().X +","+mechant.getplayercontainer().Y );
-                    Console.WriteLine(heros.position);
-                }
-                else
-                {
-                    if (mechant.position.X <= heros.position.X)
+           
+         
+
+                    if (mechant.position.Intersects(heros.position))
                     {
-                        mechant.position.X++;
-                        mechant.direction = Direction.Right;
-                        mechant.animationmonstre();
-                        mechant.Animate(2);
-                    }
-                    else if (mechant.position.X > heros.position.X)
-                    {
-                        mechant.position.X--;
-                        mechant.direction = Direction.Left;
-                        mechant.animationmonstre();
-                        mechant.Animate(2);
-                    }
-                     else if (mechant.position.Y <= heros.position.Y)
-                    {
-                        mechant.position.Y++;
-                        mechant.direction = Direction.Down;
-                        mechant.animationmonstre();
-                        mechant.Animate(2);
+                        heros.Points_Vie_Perso--;
+
                     }
                     else
                     {
-                        mechant.position.Y--;
-                        mechant.direction = Direction.Up;
-                        mechant.animationmonstre();
-                        mechant.Animate(2);
+
+                        #region deplacement enemi (revoir l'IA )
+                        if (mechant.position.X < heros.position.X)
+                        {
+                            mechant.position.X++;
+                            mechant.direction = Direction.Right;
+                            mechant.animationmonstre();
+                            mechant.Animate(2);
+                        }
+                        else if (mechant.position.X > heros.position.X)
+                        {
+                            mechant.position.X--;
+                            mechant.direction = Direction.Left;
+                            mechant.animationmonstre();
+                            mechant.Animate(2);
+                        }
+                        else
+                        {
+
+
+                            if (mechant.position.Y <= heros.position.Y)
+                            {
+                                mechant.position.Y++;
+                                mechant.direction = Direction.Down;
+                                mechant.animationmonstre();
+                                mechant.Animate(2);
+                            }
+                            else if (mechant.position.Y > heros.position.Y)
+                            {
+                                mechant.position.Y--;
+                                mechant.direction = Direction.Up;
+                                mechant.animationmonstre();
+                                mechant.Animate(2);
+                            }
+
+                        }
+                    }
+                        #endregion
+                    if (heros.Points_Vie_Perso <= 0)
+                    {
+                        mechant.position = mechant.positiondepart;
+                        menu_gameover = true;
                     }
 
+                    if (Keyboard.Is_A_Pressed())
+                    {
+                        switch (heros.direction)
+                        {
+                            case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, heros.skin.Width, 25);
+                                break;
+                            case Direction.Down: attaque = new Rectangle(heros.position.X, heros.position.Y + heros.skin.Height, heros.skin.Width, 25);
+                                break;
+                            case Direction.Left: attaque = new Rectangle(heros.position.X - 25, heros.position.Y, 25, heros.skin.Height);
+                                break;
+                            case Direction.Right: attaque = new Rectangle(heros.position.X + heros.skin.Width, heros.position.Y, 25, heros.skin.Height);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        attaque = new Rectangle(0, 0, 0, 0);
+                    }
+
+
+                    if (attaque.Intersects(mechant.position))
+                    {
+                        Console.Write("attaque OK");
+                        mechant.Points_Vie_Perso -= 5;
+                    }
+
+
                 }
-                if (heros.Points_Vie_Perso <= 0)
-                {
-                    mechant.position = mechant.positiondepart;
-                    menu_gameover = true;
-                }
 
-
-
-
-
-
-
-
-
-            }
+            
             base.Update(gameTime);
         }
 
@@ -367,9 +405,25 @@ namespace HoriZontestmenu
             }
             else
             {
-                heros.Drawperso(spriteBatch);
-                heros.Draw_PDV(spriteBatch);
-                mechant.DrawEnemi(spriteBatch);
+                heros.Drawperso(spriteBatch, 75, 101);
+                if (heros.Points_Vie_Perso > 0)
+                {
+                    spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso)/2, 10), Color.Red);
+                }
+                else
+                {
+
+                    heros.position = heros.positiondepart;
+                    heros.Points_Vie_Perso = 300;
+                    mechant.Points_Vie_Perso = 100;
+                }
+               
+
+                  
+                        mechant.Drawperso(spriteBatch, 32, 32);
+                    
+
+                
             }
             spriteBatch.End();
 

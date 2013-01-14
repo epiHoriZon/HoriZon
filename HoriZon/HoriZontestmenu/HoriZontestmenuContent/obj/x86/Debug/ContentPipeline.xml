@@ -253,6 +253,15 @@
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fondville.xnb</Output>
       <Time>2013-01-05T12:12:12.6712608+01:00</Time>
     </Item>
+    <Item>
+      <Source>jauge_pv.png</Source>
+      <Name>jauge_pv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jauge_pv.xnb</Output>
+      <Time>2013-01-14T10:40:55.5571947+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

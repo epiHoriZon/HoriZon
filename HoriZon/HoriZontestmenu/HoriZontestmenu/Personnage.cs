@@ -19,13 +19,17 @@ namespace HoriZontestmenu
     class Personnage
     {
         public int Points_Vie_Perso;
-        SpriteFont fontpdv;
+        int pv_depart;
 
-        Texture2D skin;
+      
+
+
+        public Texture2D skin;
         public Rectangle position;
         public Rectangle positiondepart;
         Rectangle container;
         public Direction direction;
+
 
         int Frameline = 1;
         int Framecolumn = 1;
@@ -34,14 +38,16 @@ namespace HoriZontestmenu
         int Timer = 0;
         int AnimationSpeed = 5;
 
-        public Personnage(Texture2D skin, Rectangle position, int Points_Vie_Perso, SpriteFont fontpdv)
+        public Personnage(Texture2D skin, Rectangle position, int Points_Vie_Perso)
         {
             this.skin = skin;
             this.position = position;
             this.positiondepart = position;
             this.Points_Vie_Perso = Points_Vie_Perso;
-            this.fontpdv = fontpdv;
+            this.pv_depart = Points_Vie_Perso;
         }
+
+
 
         public void Animate(int nbcolonnes)
         {
@@ -131,33 +137,20 @@ namespace HoriZontestmenu
         }
 
 
-        public void Drawperso(SpriteBatch spritebatch)
-        {
-            spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * 75, (Frameline - 1) * 101, 75, 101), Color.White);
 
-        }
-
-        public void DrawEnemi(SpriteBatch spritebatch)
+        public void Drawperso(SpriteBatch spritebatch, int largeur, int hauteur)
         {
-            spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * 32, (Frameline - 1) * 32, 32, 32), Color.White);
-        
-        
-        }
-        public void Draw_PDV(SpriteBatch spritebatch)
-        {
-            if (Points_Vie_Perso > 0)
+            if (Points_Vie_Perso <= (20 / 100) * pv_depart)
             {
-                spritebatch.DrawString(this.fontpdv, "Points de vie :" + Points_Vie_Perso, Vector2.Zero, Color.Red);
-
+                spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * largeur, (Frameline - 1) * hauteur, largeur, hauteur), Color.Red);
             }
             else
             {
-
-                position = positiondepart;
-                Points_Vie_Perso = 100;
+                spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * largeur, (Frameline - 1) * hauteur, largeur, hauteur), Color.White);
             }
-
         }
+
+
 
     }
 }

@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace HoriZontestmenu
 {
-    class KeyboardEvent
+     class KeyboardEvent
     {
         KeyboardState ButtonPressed;
 
@@ -24,6 +24,12 @@ namespace HoriZontestmenu
         {
             ButtonPressed = Keyboard.GetState();
             return (ButtonPressed.IsKeyDown (Keys.Back));
+        }
+
+        public bool Is_A_Pressed()
+        {
+            ButtonPressed = Keyboard.GetState();
+            return (ButtonPressed.IsKeyDown(Keys.A));
         }
     }
 }
