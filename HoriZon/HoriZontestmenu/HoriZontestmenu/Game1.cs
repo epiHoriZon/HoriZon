@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using HoriZon;
 
 
 namespace HoriZontestmenu
@@ -22,9 +23,14 @@ namespace HoriZontestmenu
         Rectangle attaque;
 
         Personnage mechant;
+        Stack<Munitions> munitionsLoaded;
+        Stack<Munitions> munitionsShooted;
+        Direction munitiondirection;
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
+        KeyboardState kboldstate;
 
+        MouseState oldstate;
         Random rnd = new Random();
 
         #region variables menu
@@ -63,9 +69,13 @@ namespace HoriZontestmenu
         protected override void Initialize()
         {
 
-            mechant =(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(0, 800), 0, 32, 32), 100));
-
-
+            mechant = new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(0, 800), 0, 32, 32), 100);
+            munitionsLoaded = new Stack<Munitions>();
+            munitionsShooted = new Stack<Munitions>();
+            for (int i = 0; i < 25; i++)
+            {
+                munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("jauge_pv")));
+            }
             Keyboard = new KeyboardEvent();
             this.IsMouseVisible = true;
             #region variables menu
@@ -84,7 +94,7 @@ namespace HoriZontestmenu
             #endregion
             // Initialisation des variables monstres et personnages :
             heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 300);
-       
+
             base.Initialize();
         }
 
@@ -111,8 +121,8 @@ namespace HoriZontestmenu
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-
-
+            oldstate = mousevent.ButtonPressed;
+            kboldstate = Keyboard.ButtonPressed;
             if (menu_actif)
             {
                 fond = Content.Load<Texture2D>("fond");
@@ -175,7 +185,7 @@ namespace HoriZontestmenu
                 {
 
                     langue_menu.activ();
-                    if (mousevent.UpdateMouse() && mousevent.old_mouse_state.LeftButton == ButtonState.Released)
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
                         if (langue_francais)
                         {
@@ -201,7 +211,7 @@ namespace HoriZontestmenu
                 if (mousevent.getmousecontainer().Intersects(Onoff_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(PE_menu.getcontainer()))
                 {
                     PE_menu.activ();
-                    if (mousevent.UpdateMouse() && !(mousevent.old_mouse_state.LeftButton == ButtonState.Pressed))
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
                         if (plein_ecran)
                         {
@@ -264,6 +274,7 @@ namespace HoriZontestmenu
                     menu_actif = true;
                 }
                 #endregion
+
             }
 
             else
@@ -276,92 +287,146 @@ namespace HoriZontestmenu
 
 
                 heros.deplacement();
-               
-
-           
-         
-
-                    if (mechant.position.Intersects(heros.position))
-                    {
-                        heros.Points_Vie_Perso--;
-
-                    }
-                    else
-                    {
-
-                        #region deplacement enemi (revoir l'IA )
-                        if (mechant.position.X < heros.position.X)
-                        {
-                            mechant.position.X++;
-                            mechant.direction = Direction.Right;
-                            mechant.animationmonstre();
-                            mechant.Animate(2);
-                        }
-                        else if (mechant.position.X > heros.position.X)
-                        {
-                            mechant.position.X--;
-                            mechant.direction = Direction.Left;
-                            mechant.animationmonstre();
-                            mechant.Animate(2);
-                        }
-                        else
-                        {
 
 
-                            if (mechant.position.Y <= heros.position.Y)
-                            {
-                                mechant.position.Y++;
-                                mechant.direction = Direction.Down;
-                                mechant.animationmonstre();
-                                mechant.Animate(2);
-                            }
-                            else if (mechant.position.Y > heros.position.Y)
-                            {
-                                mechant.position.Y--;
-                                mechant.direction = Direction.Up;
-                                mechant.animationmonstre();
-                                mechant.Animate(2);
-                            }
-
-                        }
-                    }
-                        #endregion
-                    if (heros.Points_Vie_Perso <= 0)
-                    {
-                        mechant.position = mechant.positiondepart;
-                        menu_gameover = true;
-                    }
-
-                    if (Keyboard.Is_A_Pressed())
-                    {
-                        switch (heros.direction)
-                        {
-                            case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, heros.skin.Width, 25);
-                                break;
-                            case Direction.Down: attaque = new Rectangle(heros.position.X, heros.position.Y + heros.skin.Height, heros.skin.Width, 25);
-                                break;
-                            case Direction.Left: attaque = new Rectangle(heros.position.X - 25, heros.position.Y, 25, heros.skin.Height);
-                                break;
-                            case Direction.Right: attaque = new Rectangle(heros.position.X + heros.skin.Width, heros.position.Y, 25, heros.skin.Height);
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        attaque = new Rectangle(0, 0, 0, 0);
-                    }
-
-
-                    if (attaque.Intersects(mechant.position))
-                    {
-                        Console.Write("attaque OK");
-                        mechant.Points_Vie_Perso -= 5;
-                    }
-
+                if (mechant.position.Intersects(heros.position))
+                {
+                    heros.Points_Vie_Perso--;
 
                 }
+                else
+                {
 
-            
+                    #region deplacement enemi (revoir l'IA )
+                    if (mechant.position.X < heros.position.X)
+                    {
+                        mechant.position.X++;
+                        mechant.direction = Direction.Right;
+                        mechant.animationmonstre();
+                        mechant.Animate(2);
+                    }
+                    else if (mechant.position.X > heros.position.X)
+                    {
+                        mechant.position.X--;
+                        mechant.direction = Direction.Left;
+                        mechant.animationmonstre();
+                        mechant.Animate(2);
+                    }
+                    else
+                    {
+
+
+                        if (mechant.position.Y <= heros.position.Y)
+                        {
+                            mechant.position.Y++;
+                            mechant.direction = Direction.Down;
+                            mechant.animationmonstre();
+                            mechant.Animate(2);
+                        }
+                        else if (mechant.position.Y > heros.position.Y)
+                        {
+                            mechant.position.Y--;
+                            mechant.direction = Direction.Up;
+                            mechant.animationmonstre();
+                            mechant.Animate(2);
+                        }
+
+                    }
+                }
+                    #endregion
+                if (heros.Points_Vie_Perso <= 0)
+                {
+                    mechant.position = mechant.positiondepart;
+                    menu_gameover = true;
+                }
+
+                if (Keyboard.Is_A_Pressed())
+                {
+                   
+                    switch (heros.direction)
+                    {
+                        case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, heros.skin.Width, 25);
+                            break;
+                        case Direction.Down: attaque = new Rectangle(heros.position.X, heros.position.Y + heros.skin.Height, heros.skin.Width, 25);
+                            break;
+                        case Direction.Left: attaque = new Rectangle(heros.position.X - 25, heros.position.Y, 25, heros.skin.Height);
+                            break;
+                        case Direction.Right: attaque = new Rectangle(heros.position.X + heros.skin.Width, heros.position.Y, 25, heros.skin.Height);
+                            break;
+                    }
+                }
+                else
+                {
+                    attaque = new Rectangle(0, 0, 0, 0);
+                }
+
+
+                if (attaque.Intersects(mechant.position))
+                {
+                    Console.Write("attaque OK");
+                    mechant.Points_Vie_Perso -= 5;
+                }
+
+
+                if (munitionsLoaded.Count() > 0 && heros.Points_Vie_Perso > 0)
+                {
+
+                    if (Keyboard.Is_E_Pressed() && kboldstate.IsKeyUp(Keys.E))
+                    {
+                        munitionsLoaded.Pop();
+                        switch (heros.direction)
+                        {
+                            case Direction.Up: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y), Content.Load<Texture2D>("tir_horizontal")));
+                                break;
+                            case Direction.Down: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y +100), Content.Load<Texture2D>("tir_horizontal")));
+                                break;
+                            case Direction.Left: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
+                                break;
+                            case Direction.Right: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 72, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
+                                break;
+                        }
+                        switch (heros.direction)
+                        {
+                            case Direction.Up: munitiondirection = Direction.Up;
+                                break;
+                            case Direction.Down: munitiondirection = Direction.Down;
+                                break;
+                            case Direction.Left: munitiondirection = Direction.Left;
+                                break;
+                            case Direction.Right: munitiondirection = Direction.Right;
+                                break;
+                        }
+                    }
+                }
+                foreach (Munitions cs in munitionsShooted)
+                {
+                   
+                    switch (munitiondirection)
+                    {
+                        case Direction.Up: cs.position.Y -=5;
+                            break;
+                        case Direction.Down: cs.position.Y += 5;
+                            break;
+                        case Direction.Left: cs.position.X -= 5;
+                            break;
+                        case Direction.Right: cs.position.X += 5;
+                            break;
+                    }
+
+                    if (cs.getContainer().Intersects(mechant.position))
+                    {
+                        mechant.Points_Vie_Perso--;
+                    }             
+                }
+
+                Console.WriteLine(munitionsShooted.Count());
+                Console.WriteLine(mechant.Points_Vie_Perso);
+
+
+
+            }
+
+
             base.Update(gameTime);
         }
 
@@ -408,7 +473,7 @@ namespace HoriZontestmenu
                 heros.Drawperso(spriteBatch, 75, 101);
                 if (heros.Points_Vie_Perso > 0)
                 {
-                    spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso)/2, 10), Color.Red);
+                    spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso) / 2, 10), Color.Red);
                 }
                 else
                 {
@@ -417,13 +482,16 @@ namespace HoriZontestmenu
                     heros.Points_Vie_Perso = 300;
                     mechant.Points_Vie_Perso = 100;
                 }
-               
+                mechant.Drawperso(spriteBatch, 32, 32);
+                if (munitionsShooted.Count() != 0)
+                {
+                    foreach (Munitions cs in munitionsShooted)
+                    {
+                        cs.DrawMunitions(spriteBatch);
+                    }
+                }
 
-                  
-                        mechant.Drawperso(spriteBatch, 32, 32);
-                    
 
-                
             }
             spriteBatch.End();
 

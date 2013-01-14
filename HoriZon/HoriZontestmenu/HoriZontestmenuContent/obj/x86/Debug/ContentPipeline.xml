@@ -262,6 +262,24 @@
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jauge_pv.xnb</Output>
       <Time>2013-01-14T10:40:55.5571947+01:00</Time>
     </Item>
+    <Item>
+      <Source>tir_vertical.bmp</Source>
+      <Name>tir_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_vertical.xnb</Output>
+      <Time>2013-01-14T18:38:40.0621356+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tir_horizontal.bmp</Source>
+      <Name>tir_horizontal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_horizontal.xnb</Output>
+      <Time>2013-01-14T18:40:24.2860969+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

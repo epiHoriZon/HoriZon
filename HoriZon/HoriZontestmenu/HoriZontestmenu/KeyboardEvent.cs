@@ -13,7 +13,8 @@ namespace HoriZontestmenu
 {
      class KeyboardEvent
     {
-        KeyboardState ButtonPressed;
+        public KeyboardState ButtonPressed;
+       
 
         public KeyboardEvent()
         { 
@@ -22,14 +23,22 @@ namespace HoriZontestmenu
 
         public bool Is_Back_Pressed()
         {
+            
             ButtonPressed = Keyboard.GetState();
             return (ButtonPressed.IsKeyDown (Keys.Back));
         }
 
         public bool Is_A_Pressed()
         {
+            
             ButtonPressed = Keyboard.GetState();
             return (ButtonPressed.IsKeyDown(Keys.A));
+        }
+
+        public bool Is_E_Pressed()
+        { 
+            ButtonPressed = Keyboard.GetState();
+            return (ButtonPressed.IsKeyDown(Keys.E));
         }
     }
 }
