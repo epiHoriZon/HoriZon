@@ -42,13 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fond.jpg">
-      <Name>fond</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="jouer.png">
       <Name>jouer</Name>
       <Importer>TextureImporter</Importer>
@@ -232,6 +225,13 @@
   <ItemGroup>
     <Compile Include="tir_horizontal.bmp">
       <Name>tir_horizontal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fond.png">
+      <Name>fond</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -2,22 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>fond.jpg</Source>
-      <Name>fond</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb</Output>
-      <Time>2012-12-27T16:31:36.9879833+01:00</Time>
-    </Item>
-    <Item>
       <Source>jouer.png</Source>
       <Name>jouer</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jouer.xnb</Output>
-      <Time>2012-12-27T16:31:36.9929836+01:00</Time>
+      <Time>2013-01-14T21:17:43.8259942+01:00</Time>
     </Item>
     <Item>
       <Source>joueractiv.png</Source>
@@ -26,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\joueractiv.xnb</Output>
-      <Time>2012-12-27T16:31:36.9939836+01:00</Time>
+      <Time>2013-01-14T21:17:43.8309945+01:00</Time>
     </Item>
     <Item>
       <Source>option.png</Source>
@@ -35,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\option.xnb</Output>
-      <Time>2012-12-27T16:31:37.0169849+01:00</Time>
+      <Time>2013-01-14T21:17:43.8549958+01:00</Time>
     </Item>
     <Item>
       <Source>optionactiv.png</Source>
@@ -44,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\optionactiv.xnb</Output>
-      <Time>2012-12-27T16:31:37.018985+01:00</Time>
+      <Time>2013-01-14T21:17:43.8599961+01:00</Time>
     </Item>
     <Item>
       <Source>creditactiv.png</Source>
@@ -53,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\creditactiv.xnb</Output>
-      <Time>2012-12-27T16:31:36.983983+01:00</Time>
+      <Time>2013-01-14T21:17:43.804993+01:00</Time>
     </Item>
     <Item>
       <Source>credits.png</Source>
@@ -62,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\credits.xnb</Output>
-      <Time>2012-12-27T16:31:36.9859832+01:00</Time>
+      <Time>2013-01-14T21:17:43.8089932+01:00</Time>
     </Item>
     <Item>
       <Source>quit.png</Source>
@@ -71,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quit.xnb</Output>
-      <Time>2012-12-27T16:31:37.0199851+01:00</Time>
+      <Time>2013-01-14T21:17:43.874997+01:00</Time>
     </Item>
     <Item>
       <Source>quitactiv.png</Source>
@@ -80,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb</Output>
-      <Time>2012-12-27T16:31:37.0209852+01:00</Time>
+      <Time>2013-01-14T21:17:43.8789972+01:00</Time>
     </Item>
     <Item>
       <Source>testanim.png</Source>
@@ -116,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb</Output>
-      <Time>2012-12-27T16:31:36.9779827+01:00</Time>
+      <Time>2013-01-14T21:17:42.5099189+01:00</Time>
     </Item>
     <Item>
       <Source>fra.png</Source>
@@ -125,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb</Output>
-      <Time>2012-12-27T16:31:36.9899834+01:00</Time>
+      <Time>2013-01-14T21:17:43.8139935+01:00</Time>
     </Item>
     <Item>
       <Source>fraactiv.png</Source>
@@ -134,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb</Output>
-      <Time>2012-12-27T16:31:36.9919835+01:00</Time>
+      <Time>2013-01-14T21:17:43.8209939+01:00</Time>
     </Item>
     <Item>
       <Source>langue.png</Source>
@@ -143,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb</Output>
-      <Time>2012-12-27T16:31:36.9959837+01:00</Time>
+      <Time>2013-01-14T21:17:43.8369948+01:00</Time>
     </Item>
     <Item>
       <Source>langueactiv.png</Source>
@@ -152,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb</Output>
-      <Time>2012-12-27T16:31:36.9979838+01:00</Time>
+      <Time>2013-01-14T21:17:43.840995+01:00</Time>
     </Item>
     <Item>
       <Source>offactiv.png</Source>
@@ -161,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb</Output>
-      <Time>2012-12-27T16:31:37.0139848+01:00</Time>
+      <Time>2013-01-14T21:17:43.8449953+01:00</Time>
     </Item>
     <Item>
       <Source>onactiv.png</Source>
@@ -170,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb</Output>
-      <Time>2012-12-27T16:31:37.0159849+01:00</Time>
+      <Time>2013-01-14T21:17:43.8499956+01:00</Time>
     </Item>
     <Item>
       <Source>PE.png</Source>
@@ -179,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb</Output>
-      <Time>2012-12-27T16:31:36.9729824+01:00</Time>
+      <Time>2013-01-14T21:17:43.8639964+01:00</Time>
     </Item>
     <Item>
       <Source>PEactiv.png</Source>
@@ -188,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb</Output>
-      <Time>2012-12-27T16:31:36.9749825+01:00</Time>
+      <Time>2013-01-14T21:17:43.8669965+01:00</Time>
     </Item>
     <Item>
       <Source>angl.png</Source>
@@ -197,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb</Output>
-      <Time>2012-12-27T16:31:36.9759826+01:00</Time>
+      <Time>2013-01-14T21:17:41.7998783+01:00</Time>
     </Item>
     <Item>
       <Source>Font_PDV.spritefont</Source>
@@ -279,6 +270,15 @@
       <Options>None</Options>
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_horizontal.xnb</Output>
       <Time>2013-01-14T18:40:24.2860969+01:00</Time>
+    </Item>
+    <Item>
+      <Source>fond.png</Source>
+      <Name>fond</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb</Output>
+      <Time>2013-01-14T21:44:41.7485341+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

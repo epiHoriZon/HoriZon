@@ -1,4 +1,3 @@
-Content\fond.xnb
 Content\jouer.xnb
 Content\joueractiv.xnb
 Content\option.xnb
@@ -29,3 +28,4 @@ Content\fondville.xnb
 Content\jauge_pv.xnb
 Content\tir_vertical.xnb
 Content\tir_horizontal.xnb
+Content\fond.xnb

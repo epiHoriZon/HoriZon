@@ -63,6 +63,8 @@ namespace HoriZontestmenu
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+
+            graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
         }
 
@@ -80,17 +82,17 @@ namespace HoriZontestmenu
             this.IsMouseVisible = true;
             #region variables menu
             mousevent = new MouseEvent();
-            jouer_menu = new MenuButton(new Vector2(300, 25), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"));
-            options_menu = new MenuButton(new Vector2(300, 80), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"));
-            credit_menu = new MenuButton(new Vector2(310, 135), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"));
-            quit_menu = new MenuButton(new Vector2(310, 190), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"));
+            jouer_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"));
+            options_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"));
+            credit_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"));
+            quit_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"));
 
-            langue_menu = new MenuButton(new Vector2(50, 50), Content.Load<Texture2D>("langue"), Content.Load<Texture2D>("langueactiv"));
-            fra_menu = new MenuButton(new Vector2(300, 50), Content.Load<Texture2D>("fraactiv"), Content.Load<Texture2D>("fra"));
-            angl_menu = new MenuButton(new Vector2(500, 48), Content.Load<Texture2D>("angl"), Content.Load<Texture2D>("anglactiv"));
-            PE_menu = new MenuButton(new Vector2(50, 200), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"));
-            Onoff_menu = new MenuButton(new Vector2(300, 200), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
-            Retour = new MenuButton(new Vector2(600, 400), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"));
+            langue_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("langue"), Content.Load<Texture2D>("langueactiv"));
+           
+            angl_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("fraactiv"), Content.Load<Texture2D>("anglactiv"));
+            PE_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"));
+            Onoff_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
+            Retour = new MenuButton(new Vector2(0, 0), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"));
             #endregion
             // Initialisation des variables monstres et personnages :
             heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 300);
@@ -181,7 +183,7 @@ namespace HoriZontestmenu
             else if (sousmenu_actif)
             {
 
-                if (mousevent.getmousecontainer().Intersects(angl_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(fra_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(langue_menu.getcontainer()))
+                if (mousevent.getmousecontainer().Intersects(angl_menu.getcontainer()) || mousevent.getmousecontainer().Intersects(langue_menu.getcontainer()))
                 {
 
                     langue_menu.activ();
@@ -189,7 +191,6 @@ namespace HoriZontestmenu
                     {
                         if (langue_francais)
                         {
-                            fra_menu.desactiv();
                             angl_menu.desactiv();
                             langue_francais = false;
 
@@ -197,7 +198,7 @@ namespace HoriZontestmenu
                         }
                         else
                         {
-                            fra_menu.activ();
+                          
                             angl_menu.activ();
                             langue_francais = true;
                         }
@@ -217,11 +218,13 @@ namespace HoriZontestmenu
                         {
                             Onoff_menu.activ();
                             plein_ecran = false;
+                            graphics.IsFullScreen = false;
                         }
                         else
                         {
                             Onoff_menu.desactiv();
                             plein_ecran = true;
+                            graphics.IsFullScreen = true;
                         }
                     }
                 }
@@ -454,7 +457,7 @@ namespace HoriZontestmenu
             {
                 langue_menu.DrawButton(spriteBatch);
                 angl_menu.DrawButton(spriteBatch);
-                fra_menu.DrawButton(spriteBatch);
+                
                 Onoff_menu.DrawButton(spriteBatch);
                 PE_menu.DrawButton(spriteBatch);
                 Retour.DrawButton(spriteBatch);

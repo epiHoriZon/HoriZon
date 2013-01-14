@@ -30,6 +30,7 @@ namespace HoriZontestmenu
 
             this.activatedTexture = activatedTexture;
             this.memoire = texture;
+         
         }
 
         public Rectangle getcontainer()
@@ -44,7 +45,7 @@ namespace HoriZontestmenu
 
         public void DrawButton(SpriteBatch spritebatch)
         {
-            spritebatch.Draw(texture, position, Color.White);
+            spritebatch.Draw(texture, new Rectangle ((int)position.X,(int)position.Y,210,107), Color.White);
         }
 
         public Texture2D activ()
