@@ -40,5 +40,11 @@ namespace HoriZontestmenu
             ButtonPressed = Keyboard.GetState();
             return (ButtonPressed.IsKeyDown(Keys.E));
         }
+        public bool Is_R_Pressed()
+        {
+
+            ButtonPressed = Keyboard.GetState();
+            return (ButtonPressed.IsKeyDown(Keys.A));
+        }
     }
 }

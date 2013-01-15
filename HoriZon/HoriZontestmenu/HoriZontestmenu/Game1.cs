@@ -23,9 +23,11 @@ namespace HoriZontestmenu
         Personnage heros;
         Rectangle attaque;
         Animations attaque_cac;
-        
+
         Stack<Munitions> munitionsLoaded;
         Stack<Munitions> munitionsShooted;
+        Stack<Munitions> munitionspossédées;
+
         List<Personnage> pileronflex;
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
@@ -35,7 +37,7 @@ namespace HoriZontestmenu
         Random rnd = new Random();
 
         #region variables menu
-        Texture2D fond;
+        MenuButton fond;
         MenuButton jouer_menu;
         MenuButton options_menu;
         MenuButton credit_menu;
@@ -65,29 +67,30 @@ namespace HoriZontestmenu
         {
             graphics = new GraphicsDeviceManager(this);
 
-            graphics.IsFullScreen = true;
+
             Content.RootDirectory = "Content";
         }
 
         protected override void Initialize()
         {
 
-            
-            
+
+
             attaque_cac = new Animations(Content.Load<Texture2D>("animation_attaque"), new Rectangle(0, 0, 0, 0));
 
             munitionsLoaded = new Stack<Munitions>();
             munitionsShooted = new Stack<Munitions>();
+            munitionspossédées = new Stack<Munitions>();
+
             pileronflex = new List<Personnage>();
             for (int i = 0; i < 25; i++)
             {
                 munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
+                munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
             }
-
-           
             for (int i = 0; i < 10; i++)
             {
-                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"),new Rectangle(rnd.Next(100,1000),rnd.Next(150,800),32,32),100));
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 1000), rnd.Next(150, 800), 32, 32), 100));
             }
 
 
@@ -96,17 +99,16 @@ namespace HoriZontestmenu
             this.IsMouseVisible = true;
             #region variables menu
             mousevent = new MouseEvent();
-            jouer_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"), Content.Load<Texture2D>("play"), Content.Load<Texture2D>("playactiv"));
-            options_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"));
-            credit_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"));
-            quit_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"), Content.Load<Texture2D>("exit"), Content.Load<Texture2D>("exitactiv"));
+            jouer_menu = new MenuButton(new Vector2(50, 425), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"), Content.Load<Texture2D>("play"), Content.Load<Texture2D>("playactiv"));
+            options_menu = new MenuButton(new Vector2(250, 425), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"));
+            credit_menu = new MenuButton(new Vector2(450, 425), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"));
+            quit_menu = new MenuButton(new Vector2(650, 425), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"), Content.Load<Texture2D>("exit"), Content.Load<Texture2D>("exitactiv"));
 
-            langue_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("langue"), Content.Load<Texture2D>("langueactiv"), Content.Load<Texture2D>("language"), Content.Load<Texture2D>("languageactiv"));
-           
-            angl_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("anglactiv"), Content.Load<Texture2D>("anglactiv"), Content.Load<Texture2D>("frenchactiv"), Content.Load<Texture2D>("frenchactiv"));
-            PE_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"), Content.Load<Texture2D>("FS"), Content.Load<Texture2D>("FSactiv"));
-            Onoff_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
-            Retour = new MenuButton(new Vector2(0, 0), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("back"), Content.Load<Texture2D>("backactiv"));
+            langue_menu = new MenuButton(new Vector2(275, 425), Content.Load<Texture2D>("langue"), Content.Load<Texture2D>("langueactiv"), Content.Load<Texture2D>("language"), Content.Load<Texture2D>("languageactiv"));
+            angl_menu = new MenuButton(new Vector2(400, 425), Content.Load<Texture2D>("fra"), Content.Load<Texture2D>("fraactiv"), Content.Load<Texture2D>("english"), Content.Load<Texture2D>("englishactiv"));
+            PE_menu = new MenuButton(new Vector2(20, 425), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"), Content.Load<Texture2D>("FS"), Content.Load<Texture2D>("FSactiv"));
+            Onoff_menu = new MenuButton(new Vector2(150, 425), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
+            Retour = new MenuButton(new Vector2(700, 425), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("back"), Content.Load<Texture2D>("backactiv"));
             #endregion
 
             // Initialisation des variables monstres et personnages :
@@ -123,7 +125,7 @@ namespace HoriZontestmenu
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            fond = Content.Load<Texture2D>("fond");
+            fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"));
 
         }
 
@@ -142,11 +144,11 @@ namespace HoriZontestmenu
 
             oldstate = mousevent.ButtonPressed;
             kboldstate = Keyboard.ButtonPressed;
-          
-            
+
+
             if (menu_actif)
             {
-                fond = Content.Load<Texture2D>("fond");
+                fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"));
                 #region menu
                 #region menu principal
 
@@ -156,7 +158,7 @@ namespace HoriZontestmenu
 
                     options_menu.desactiv(); credit_menu.desactiv(); quit_menu.desactiv();
 
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
 
                         menu_actif = false;
@@ -167,14 +169,14 @@ namespace HoriZontestmenu
                 {
                     options_menu.activ();
                     jouer_menu.desactiv(); credit_menu.desactiv(); quit_menu.desactiv();
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
 
-                        fond = Content.Load<Texture2D>("fond");
+                        fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"));
                         menu_actif = false;
                         sousmenu_actif = true;
 
-                  
+
 
                     }
                 }
@@ -182,7 +184,7 @@ namespace HoriZontestmenu
                 {
                     credit_menu.activ();
                     jouer_menu.desactiv(); options_menu.desactiv(); quit_menu.desactiv();
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
                         menu_actif = false;
                         sousmenu_actif = false;
@@ -193,7 +195,7 @@ namespace HoriZontestmenu
                 {
                     quit_menu.activ();
                     jouer_menu.desactiv(); credit_menu.desactiv(); options_menu.desactiv();
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
                         Exit();
                     }
@@ -228,7 +230,7 @@ namespace HoriZontestmenu
                         }
                         else
                         {
-                          
+
                             angl_menu.activ();
                             langue_francais = true;
 
@@ -275,7 +277,7 @@ namespace HoriZontestmenu
                 if (mousevent.getmousecontainer().Intersects(Retour.getcontainer()))
                 {
                     Retour.activ();
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
                         sousmenu_actif = false;
                         menu_actif = true;
@@ -289,11 +291,11 @@ namespace HoriZontestmenu
             }
             else if (credit_actif)
             {
-                fond = Content.Load<Texture2D>("bt_credit");
+                fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"));
                 if (mousevent.getmousecontainer().Intersects(Retour.getcontainer()))
                 {
                     Retour.activ();
-                    if (mousevent.UpdateMouse())
+                    if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
                     {
                         credit_actif = false;
                         menu_actif = true;
@@ -309,7 +311,8 @@ namespace HoriZontestmenu
             }
             else if (menu_gameover)
             {
-                fond = Content.Load<Texture2D>("fond_gameover");
+
+                fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond_gameover"), Content.Load<Texture2D>("fond_gameover"), Content.Load<Texture2D>("fond_gameover"), Content.Load<Texture2D>("fond_gameover"));
                 if (mousevent.UpdateMouse() && mousevent.getmousecontainer().Intersects(new Rectangle(510, 438, 800, 600)))
                 {
 
@@ -317,29 +320,25 @@ namespace HoriZontestmenu
                     menu_actif = true;
                 }
                 #endregion
-
             }
 
             else
             {
-                fond = Content.Load<Texture2D>("fondville");
+
+                fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"));
                 if (Keyboard.Is_Back_Pressed())
                 {
                     menu_actif = true;
                 }
-
-
                 heros.deplacement();
                 foreach (Personnage mechant in pileronflex)
                 {
-
                     if (mechant.position.Intersects(heros.position))
                     {
                         heros.Points_Vie_Perso--;
                     }
                     else
                     {
-
                         #region deplacement enemi (revoir l'IA )
 
 
@@ -382,12 +381,11 @@ namespace HoriZontestmenu
                         #endregion
                     if (heros.Points_Vie_Perso <= 0)
                     {
-                        for (int i = (munitionsLoaded.Count()-25)/2; i < 25; i++)
+                        for (int i = (munitionsLoaded.Count() - 25) / 2; i < 25; i++)
                         {
                             munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
-
+                            munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
                         }
-
                         mechant.position = mechant.positiondepart;
                         menu_gameover = true;
                     }
@@ -410,22 +408,21 @@ namespace HoriZontestmenu
                 }
                 else
                 {
-                    attaque = new Rectangle(0, 0, 0, 0);
+                    attaque = new Rectangle();
                 }
 
                 foreach (Personnage mechant in pileronflex)
                 {
                     if (attaque.Intersects(mechant.position))
                     {
-                      
+
                         mechant.Points_Vie_Perso -= 5;
                     }
                 }
                 #endregion
-
+                #region gestion munitions et tirs
                 if (munitionsLoaded.Count() > 0 && heros.Points_Vie_Perso > 0)
                 {
-         
                     if (Keyboard.Is_E_Pressed() && kboldstate.IsKeyUp(Keys.E))
                     {
                         munitionsLoaded.Pop();
@@ -433,13 +430,14 @@ namespace HoriZontestmenu
                         {
                             case Direction.Up: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y), Content.Load<Texture2D>("tir_horizontal")));
                                 break;
-                            case Direction.Down: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y +100), Content.Load<Texture2D>("tir_horizontal")));
+                            case Direction.Down: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y + 100), Content.Load<Texture2D>("tir_horizontal")));
                                 break;
                             case Direction.Left: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
                                 break;
                             case Direction.Right: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 72, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
                                 break;
                         }
+
                         foreach (Munitions cs in munitionsShooted)
                         {
                             switch (heros.direction)
@@ -453,16 +451,16 @@ namespace HoriZontestmenu
                                 case Direction.Right: cs.munitiondirection = Direction.Right;
                                     break;
                             }
-                        } 
+                        }
                     }
                 }
                 foreach (Munitions cs in munitionsShooted)
                 {
 
-               
+
                     switch (cs.munitiondirection)
                     {
-                        case Direction.Up: cs.position.Y -=5;
+                        case Direction.Up: cs.position.Y -= 5;
                             break;
                         case Direction.Down: cs.position.Y += 5;
                             break;
@@ -471,24 +469,27 @@ namespace HoriZontestmenu
                         case Direction.Right: cs.position.X += 5;
                             break;
                     }
-                    foreach (Personnage mechant in pileronflex)
-                    {
-                        if (cs.getContainer().Intersects(mechant.position))
-                        {
-                            mechant.Points_Vie_Perso-= 3;
-                            if (mechant.Points_Vie_Perso <= 0)
-                            {
-                                
-                            }
-                        }
-                    }
-                }
 
-                if (pileronflex.Count() != 0)
+                }
+                if (munitionsLoaded.Count() == 0 || Keyboard.Is_R_Pressed())
                 {
-                
+                    int i = 25 - munitionsLoaded.Count();
+                    while (i < 25)
+                    {
+                        if (munitionspossédées.Count() > 0)
+                        {
+                            munitionspossédées.Pop();
+                            munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
+                        }
+                        i++;
+                    }
+
 
                 }
+
+
+
+                #endregion
             }
 
 
@@ -504,7 +505,7 @@ namespace HoriZontestmenu
             spriteBatch.Begin();
 
 
-            spriteBatch.Draw(fond, Vector2.Zero, Color.White);
+            fond.DrawFond(spriteBatch, 800, 600);
 
             if (menu_actif)
             {
@@ -519,7 +520,7 @@ namespace HoriZontestmenu
             {
                 langue_menu.DrawButton(spriteBatch);
                 angl_menu.DrawButton(spriteBatch);
-                
+
                 Onoff_menu.DrawButton(spriteBatch);
                 PE_menu.DrawButton(spriteBatch);
                 Retour.DrawButton(spriteBatch);
@@ -539,7 +540,7 @@ namespace HoriZontestmenu
                 if (heros.Points_Vie_Perso > 0)
                 {
                     spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso) / 2, 10), Color.Red);
-                    spriteBatch.DrawString(Font_PDV, "Munitions:" + munitionsLoaded.Count(), new Vector2(10, 700), Color.Orange);
+                    spriteBatch.DrawString(Font_PDV, "Munitions:" + munitionsLoaded.Count() +"|" + munitionspossédées.Count(), new Vector2(10, 450), Color.Orange);
                 }
                 else
                 {
@@ -549,11 +550,11 @@ namespace HoriZontestmenu
                     {
                         mechant.Points_Vie_Perso = 100;
                     }
-                    
+
                 }
-                foreach (Personnage en  in pileronflex)
+                foreach (Personnage en in pileronflex)
                 {
-                    en.Drawperso(spriteBatch,32,32);
+                    en.Drawperso(spriteBatch, 32, 32);
                 }
 
 
@@ -570,7 +571,7 @@ namespace HoriZontestmenu
                 {
                     attaque_cac.DrawAnimate(spriteBatch);
                 }
-                
+
             }
             spriteBatch.End();
 
