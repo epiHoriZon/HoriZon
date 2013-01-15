@@ -65,27 +65,27 @@ namespace HoriZontestmenu
         }
         public void deplacement()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Up) && position.Y != 0)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.Z) && position.Y != 0)
             {
                 position.Y -= speed;
                 direction = Direction.Up;
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down) && position.Y <= 720 - position.Height)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 720 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Left) && position.X != 0)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Q) && position.X != 0)
             {
                 position.X -= speed;
                 direction = Direction.Left;
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Right) && position.X <= 1200 - position.Width)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1250 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;
@@ -136,7 +136,10 @@ namespace HoriZontestmenu
             return container;
         }
 
-
+        public bool EnnemiCollision(Rectangle balle)
+        {
+            return (container.Intersects(balle));
+        }
 
         public void Drawperso(SpriteBatch spritebatch, int largeur, int hauteur)
         {

@@ -17,20 +17,33 @@ namespace HoriZontestmenu
         Texture2D memoire;
         Texture2D texture;
         Texture2D activatedTexture;
+
+        Texture2D anglais_texture;
+        Texture2D anglais_activated_texture;
+
+        public bool anglais_on;
         Vector2 position;
         Rectangle container;
 
         MouseEvent mouse = new MouseEvent();
 
 
-        public MenuButton(Vector2 position, Texture2D texture, Texture2D activatedTexture)
+        public MenuButton(Vector2 position, Texture2D texture, Texture2D activatedTexture,Texture2D anglais_texture,Texture2D anglais_activated_texture)
         {
             this.position = position;
             this.texture = texture;
-
+            this.anglais_texture = anglais_texture;
             this.activatedTexture = activatedTexture;
-            this.memoire = texture;
-         
+            this.anglais_activated_texture = anglais_activated_texture;
+            if (!anglais_on)
+            {
+                this.memoire = texture;
+            }
+            else
+            {
+                this.memoire = anglais_texture;
+            }
+            
         }
 
         public Rectangle getcontainer()
@@ -50,17 +63,31 @@ namespace HoriZontestmenu
 
         public Texture2D activ()
         {
-            
-            texture = activatedTexture;
-
+            if (!anglais_on)
+            {
+                texture = activatedTexture;
+            }
+            else
+            {
+                texture = anglais_activated_texture;
+            }
             return texture;
         }
         public Texture2D desactiv()
         {
-            texture = memoire;
+            if (!anglais_on)
+            {
+                texture = memoire;
+            }
+            else
+            {
+                texture = anglais_texture;
+            }
+           
 
             return texture;
         }
+
 
     }
 }

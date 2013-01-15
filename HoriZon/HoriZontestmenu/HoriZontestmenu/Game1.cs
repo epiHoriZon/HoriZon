@@ -18,14 +18,15 @@ namespace HoriZontestmenu
         GraphicsDeviceManager graphics;
 
         SpriteBatch spriteBatch;
+        SpriteFont Font_PDV;
 
         Personnage heros;
         Rectangle attaque;
-
-        Personnage mechant;
+        Animations attaque_cac;
+        
         Stack<Munitions> munitionsLoaded;
         Stack<Munitions> munitionsShooted;
-        Direction munitiondirection;
+        List<Personnage> pileronflex;
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
         KeyboardState kboldstate;
@@ -41,11 +42,11 @@ namespace HoriZontestmenu
         MenuButton quit_menu;
 
         MenuButton langue_menu;
-        MenuButton fra_menu;
         MenuButton angl_menu;
         MenuButton PE_menu;
         MenuButton Onoff_menu;
         MenuButton Retour;
+
 
         MouseEvent mousevent;
 
@@ -54,7 +55,7 @@ namespace HoriZontestmenu
 
         bool sousmenu_actif = false;
         bool langue_francais = true;
-        bool plein_ecran = false;
+        public bool plein_ecran = false;
 
         bool credit_actif = false;
 
@@ -71,31 +72,47 @@ namespace HoriZontestmenu
         protected override void Initialize()
         {
 
-            mechant = new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(0, 800), 0, 32, 32), 100);
+            
+            
+            attaque_cac = new Animations(Content.Load<Texture2D>("animation_attaque"), new Rectangle(0, 0, 0, 0));
+
             munitionsLoaded = new Stack<Munitions>();
             munitionsShooted = new Stack<Munitions>();
+            pileronflex = new List<Personnage>();
             for (int i = 0; i < 25; i++)
             {
-                munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("jauge_pv")));
+                munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
             }
+
+           
+            for (int i = 0; i < 10; i++)
+            {
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"),new Rectangle(rnd.Next(100,1000),rnd.Next(150,800),32,32),100));
+            }
+
+
+
             Keyboard = new KeyboardEvent();
             this.IsMouseVisible = true;
             #region variables menu
             mousevent = new MouseEvent();
-            jouer_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"));
-            options_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"));
-            credit_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"));
-            quit_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"));
+            jouer_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("jouer"), Content.Load<Texture2D>("joueractiv"), Content.Load<Texture2D>("play"), Content.Load<Texture2D>("playactiv"));
+            options_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"), Content.Load<Texture2D>("option"), Content.Load<Texture2D>("optionactiv"));
+            credit_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"), Content.Load<Texture2D>("credits"), Content.Load<Texture2D>("creditactiv"));
+            quit_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("quit"), Content.Load<Texture2D>("quitactiv"), Content.Load<Texture2D>("exit"), Content.Load<Texture2D>("exitactiv"));
 
-            langue_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("langue"), Content.Load<Texture2D>("langueactiv"));
+            langue_menu = new MenuButton(new Vector2(630, 620), Content.Load<Texture2D>("langue"), Content.Load<Texture2D>("langueactiv"), Content.Load<Texture2D>("language"), Content.Load<Texture2D>("languageactiv"));
            
-            angl_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("fraactiv"), Content.Load<Texture2D>("anglactiv"));
-            PE_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"));
-            Onoff_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
-            Retour = new MenuButton(new Vector2(0, 0), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"));
+            angl_menu = new MenuButton(new Vector2(910, 620), Content.Load<Texture2D>("anglactiv"), Content.Load<Texture2D>("anglactiv"), Content.Load<Texture2D>("frenchactiv"), Content.Load<Texture2D>("frenchactiv"));
+            PE_menu = new MenuButton(new Vector2(120, 620), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"), Content.Load<Texture2D>("FS"), Content.Load<Texture2D>("FSactiv"));
+            Onoff_menu = new MenuButton(new Vector2(380, 620), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
+            Retour = new MenuButton(new Vector2(0, 0), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("back"), Content.Load<Texture2D>("backactiv"));
             #endregion
+
             // Initialisation des variables monstres et personnages :
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(200, 200, 75, 101), 300);
+
+            Font_PDV = Content.Load<SpriteFont>("Font_PDV");
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300);
 
             base.Initialize();
         }
@@ -125,6 +142,8 @@ namespace HoriZontestmenu
 
             oldstate = mousevent.ButtonPressed;
             kboldstate = Keyboard.ButtonPressed;
+          
+            
             if (menu_actif)
             {
                 fond = Content.Load<Texture2D>("fond");
@@ -155,6 +174,7 @@ namespace HoriZontestmenu
                         menu_actif = false;
                         sousmenu_actif = true;
 
+                  
 
                     }
                 }
@@ -194,6 +214,16 @@ namespace HoriZontestmenu
                             angl_menu.desactiv();
                             langue_francais = false;
 
+                            jouer_menu.anglais_on = false;
+                            options_menu.anglais_on = false;
+                            credit_menu.anglais_on = false;
+                            quit_menu.anglais_on = false;
+                            langue_menu.anglais_on = false;
+                            angl_menu.anglais_on = false;
+                            PE_menu.anglais_on = false;
+                            Onoff_menu.anglais_on = false;
+                            Retour.anglais_on = false;
+
 
                         }
                         else
@@ -201,6 +231,16 @@ namespace HoriZontestmenu
                           
                             angl_menu.activ();
                             langue_francais = true;
+
+                            jouer_menu.anglais_on = true;
+                            options_menu.anglais_on = true;
+                            credit_menu.anglais_on = true;
+                            quit_menu.anglais_on = true;
+                            langue_menu.anglais_on = true;
+                            angl_menu.anglais_on = true;
+                            PE_menu.anglais_on = true;
+                            Onoff_menu.anglais_on = true;
+                            Retour.anglais_on = true;
                         }
                     }
 
@@ -290,62 +330,72 @@ namespace HoriZontestmenu
 
 
                 heros.deplacement();
-
-
-                if (mechant.position.Intersects(heros.position))
-                {
-                    heros.Points_Vie_Perso--;
-
-                }
-                else
+                foreach (Personnage mechant in pileronflex)
                 {
 
-                    #region deplacement enemi (revoir l'IA )
-                    if (mechant.position.X < heros.position.X)
+                    if (mechant.position.Intersects(heros.position))
                     {
-                        mechant.position.X++;
-                        mechant.direction = Direction.Right;
-                        mechant.animationmonstre();
-                        mechant.Animate(2);
-                    }
-                    else if (mechant.position.X > heros.position.X)
-                    {
-                        mechant.position.X--;
-                        mechant.direction = Direction.Left;
-                        mechant.animationmonstre();
-                        mechant.Animate(2);
+                        heros.Points_Vie_Perso--;
                     }
                     else
                     {
 
+                        #region deplacement enemi (revoir l'IA )
 
-                        if (mechant.position.Y <= heros.position.Y)
+
+                        if (mechant.position.X < heros.position.X)
                         {
-                            mechant.position.Y++;
-                            mechant.direction = Direction.Down;
+                            mechant.position.X++;
+                            mechant.direction = Direction.Right;
                             mechant.animationmonstre();
                             mechant.Animate(2);
                         }
-                        else if (mechant.position.Y > heros.position.Y)
+                        else if (mechant.position.X > heros.position.X)
                         {
-                            mechant.position.Y--;
-                            mechant.direction = Direction.Up;
+                            mechant.position.X--;
+                            mechant.direction = Direction.Left;
                             mechant.animationmonstre();
                             mechant.Animate(2);
                         }
+                        else
+                        {
 
+
+                            if (mechant.position.Y <= heros.position.Y)
+                            {
+                                mechant.position.Y++;
+                                mechant.direction = Direction.Down;
+                                mechant.animationmonstre();
+                                mechant.Animate(2);
+                            }
+                            else if (mechant.position.Y > heros.position.Y)
+                            {
+                                mechant.position.Y--;
+                                mechant.direction = Direction.Up;
+                                mechant.animationmonstre();
+                                mechant.Animate(2);
+                            }
+
+                        }
+                    }
+
+                        #endregion
+                    if (heros.Points_Vie_Perso <= 0)
+                    {
+                        for (int i = (munitionsLoaded.Count()-25)/2; i < 25; i++)
+                        {
+                            munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
+
+                        }
+
+                        mechant.position = mechant.positiondepart;
+                        menu_gameover = true;
                     }
                 }
-                    #endregion
-                if (heros.Points_Vie_Perso <= 0)
-                {
-                    mechant.position = mechant.positiondepart;
-                    menu_gameover = true;
-                }
-
+                #region attque CAC
                 if (Keyboard.Is_A_Pressed())
                 {
-                   
+                    attaque_cac.Animate(5);
                     switch (heros.direction)
                     {
                         case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, heros.skin.Width, 25);
@@ -363,17 +413,19 @@ namespace HoriZontestmenu
                     attaque = new Rectangle(0, 0, 0, 0);
                 }
 
-
-                if (attaque.Intersects(mechant.position))
+                foreach (Personnage mechant in pileronflex)
                 {
-                    Console.Write("attaque OK");
-                    mechant.Points_Vie_Perso -= 5;
+                    if (attaque.Intersects(mechant.position))
+                    {
+                      
+                        mechant.Points_Vie_Perso -= 5;
+                    }
                 }
-
+                #endregion
 
                 if (munitionsLoaded.Count() > 0 && heros.Points_Vie_Perso > 0)
                 {
-
+         
                     if (Keyboard.Is_E_Pressed() && kboldstate.IsKeyUp(Keys.E))
                     {
                         munitionsLoaded.Pop();
@@ -388,23 +440,27 @@ namespace HoriZontestmenu
                             case Direction.Right: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 72, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
                                 break;
                         }
-                        switch (heros.direction)
+                        foreach (Munitions cs in munitionsShooted)
                         {
-                            case Direction.Up: munitiondirection = Direction.Up;
-                                break;
-                            case Direction.Down: munitiondirection = Direction.Down;
-                                break;
-                            case Direction.Left: munitiondirection = Direction.Left;
-                                break;
-                            case Direction.Right: munitiondirection = Direction.Right;
-                                break;
-                        }
+                            switch (heros.direction)
+                            {
+                                case Direction.Up: cs.munitiondirection = Direction.Up;
+                                    break;
+                                case Direction.Down: cs.munitiondirection = Direction.Down;
+                                    break;
+                                case Direction.Left: cs.munitiondirection = Direction.Left;
+                                    break;
+                                case Direction.Right: cs.munitiondirection = Direction.Right;
+                                    break;
+                            }
+                        } 
                     }
                 }
                 foreach (Munitions cs in munitionsShooted)
                 {
-                   
-                    switch (munitiondirection)
+
+               
+                    switch (cs.munitiondirection)
                     {
                         case Direction.Up: cs.position.Y -=5;
                             break;
@@ -415,18 +471,24 @@ namespace HoriZontestmenu
                         case Direction.Right: cs.position.X += 5;
                             break;
                     }
-
-                    if (cs.getContainer().Intersects(mechant.position))
+                    foreach (Personnage mechant in pileronflex)
                     {
-                        mechant.Points_Vie_Perso--;
-                    }             
+                        if (cs.getContainer().Intersects(mechant.position))
+                        {
+                            mechant.Points_Vie_Perso-= 3;
+                            if (mechant.Points_Vie_Perso <= 0)
+                            {
+                                
+                            }
+                        }
+                    }
                 }
 
-                Console.WriteLine(munitionsShooted.Count());
-                Console.WriteLine(mechant.Points_Vie_Perso);
+                if (pileronflex.Count() != 0)
+                {
+                
 
-
-
+                }
             }
 
 
@@ -477,15 +539,26 @@ namespace HoriZontestmenu
                 if (heros.Points_Vie_Perso > 0)
                 {
                     spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso) / 2, 10), Color.Red);
+                    spriteBatch.DrawString(Font_PDV, "Munitions:" + munitionsLoaded.Count(), new Vector2(10, 700), Color.Orange);
                 }
                 else
                 {
-
                     heros.position = heros.positiondepart;
                     heros.Points_Vie_Perso = 300;
-                    mechant.Points_Vie_Perso = 100;
+                    foreach (Personnage mechant in pileronflex)
+                    {
+                        mechant.Points_Vie_Perso = 100;
+                    }
+                    
                 }
-                mechant.Drawperso(spriteBatch, 32, 32);
+                foreach (Personnage en  in pileronflex)
+                {
+                    en.Drawperso(spriteBatch,32,32);
+                }
+
+
+
+
                 if (munitionsShooted.Count() != 0)
                 {
                     foreach (Munitions cs in munitionsShooted)
@@ -493,8 +566,11 @@ namespace HoriZontestmenu
                         cs.DrawMunitions(spriteBatch);
                     }
                 }
-
-
+                if (Keyboard.Is_A_Pressed())
+                {
+                    attaque_cac.DrawAnimate(spriteBatch);
+                }
+                
             }
             spriteBatch.End();
 

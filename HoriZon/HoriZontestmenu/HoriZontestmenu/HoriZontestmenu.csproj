@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animations.cs" />
     <Compile Include="KeyboardEvent.cs" />
     <Compile Include="MenuButton.cs" />
     <Compile Include="MouseEvent.cs" />

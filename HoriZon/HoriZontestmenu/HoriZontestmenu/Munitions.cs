@@ -8,14 +8,17 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using HoriZontestmenu;
 
 namespace HoriZon
 {
     class Munitions
     {
         public Vector2 position;
-        Rectangle container;
+       public  Rectangle container;
         Texture2D texture;
+        public Direction munitiondirection;
+
         public Munitions(Vector2 position, Texture2D texture)       
         {
             this.position = position;
