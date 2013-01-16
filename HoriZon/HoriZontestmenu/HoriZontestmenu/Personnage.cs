@@ -169,9 +169,14 @@ namespace HoriZontestmenu
 
         public void Drawperso(SpriteBatch spritebatch, int largeur, int hauteur)
         {
-            if (Points_Vie_Perso <= (20 / 100) * pv_depart)
+            if (Points_Vie_Perso <= ((20 / 100) * pv_depart))
             {
                 spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * largeur, (Frameline - 1) * hauteur, largeur, hauteur), Color.Red);
+                if (Game1.cri_montre_devient_rouge_fait == false)
+                {
+                    Game1.cri_montre_devient_rouge.Play();
+                    Game1.cri_montre_devient_rouge_fait = true;
+                }
             }
             else
             {

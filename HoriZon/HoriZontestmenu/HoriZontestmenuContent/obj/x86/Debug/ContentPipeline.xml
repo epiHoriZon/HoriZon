@@ -481,6 +481,33 @@
       <Extra>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.wma</Extra>
       <Time>2013-01-16T03:33:22.9294917+01:00</Time>
     </Item>
+    <Item>
+      <Source>etre_toucher_son.mp3</Source>
+      <Name>etre_toucher_son</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\etre_toucher_son.xnb</Output>
+      <Time>2013-01-16T11:48:52.1040803+01:00</Time>
+    </Item>
+    <Item>
+      <Source>corp_a_corp_son.mp3</Source>
+      <Name>corp_a_corp_son</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\corp_a_corp_son.xnb</Output>
+      <Time>2013-01-16T11:50:02.3745243+01:00</Time>
+    </Item>
+    <Item>
+      <Source>cri_montre_devient_rouge.mp3</Source>
+      <Name>cri_montre_devient_rouge</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cri_montre_devient_rouge.xnb</Output>
+      <Time>2013-01-16T11:50:41.3306601+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

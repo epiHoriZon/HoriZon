@@ -54,3 +54,6 @@ Content\game_over_musique.wma
 Content\game_over_son.xnb
 Content\musique_jeu.xnb
 Content\musique_jeu.wma
+Content\etre_toucher_son.xnb
+Content\corp_a_corp_son.xnb
+Content\cri_montre_devient_rouge.xnb

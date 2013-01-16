@@ -50,11 +50,15 @@ namespace HoriZontestmenu
         SoundEffect tir_son;
         public static SoundEffect deplacement_robot_son;
         SoundEffect game_over_son;
+        SoundEffect corp_a_corp_son;
+        SoundEffect etre_toucher_son;
+        bool etre_toucher_ou_pas;
+        public static SoundEffect cri_montre_devient_rouge;
+        public static bool cri_montre_devient_rouge_fait;
 
         #endregion Effets sonores
 
         public static Keys old_keys_deplacement;
-
 
 
         #region variables menu
@@ -146,6 +150,8 @@ namespace HoriZontestmenu
             #endregion musique
 
             old_keys_deplacement = Keys.U;
+            etre_toucher_ou_pas = false;
+            cri_montre_devient_rouge_fait = false;
 
             base.Initialize();
         }
@@ -171,6 +177,9 @@ namespace HoriZontestmenu
             tir_son = Content.Load<SoundEffect>("tir_son");
             deplacement_robot_son = Content.Load<SoundEffect>("deplacement_robot_son");
             game_over_son = Content.Load<SoundEffect>("game_over_son");
+            corp_a_corp_son = Content.Load<SoundEffect>("corp_a_corp_son");
+            etre_toucher_son = Content.Load<SoundEffect>("etre_toucher_son");
+            cri_montre_devient_rouge = Content.Load<SoundEffect>("cri_montre_devient_rouge");
 
             #endregion Effets sonores
 
@@ -389,6 +398,12 @@ namespace HoriZontestmenu
                     if (mechant.position.Intersects(heros.position))
                     {
                         heros.Points_Vie_Perso--;
+                        if (etre_toucher_ou_pas == false)
+                        {
+                            etre_toucher_son.Play();
+                            etre_toucher_ou_pas = true;
+                        }
+
                     }
                     else
                     {
@@ -432,6 +447,7 @@ namespace HoriZontestmenu
                     }
 
                         #endregion
+
                     if (heros.Points_Vie_Perso <= 0)
                     {
                         for (int i = (munitionsLoaded.Count() - 25) / 2; i < 25; i++)
@@ -448,6 +464,12 @@ namespace HoriZontestmenu
                 #region attque CAC
                 if (Keyboard.Is_A_Pressed())
                 {
+                    if (old_keys_deplacement != Keys.A)
+                    {
+                        corp_a_corp_son.Play();
+                    }
+                    old_keys_deplacement = Keys.A;
+
                     attaque_cac.Animate(5);
                     switch (heros.direction)
                     {

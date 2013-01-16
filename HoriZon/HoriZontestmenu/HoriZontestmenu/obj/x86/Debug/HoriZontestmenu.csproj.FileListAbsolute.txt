@@ -142,3 +142,6 @@ C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x8
 C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.wma
 C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.xnb
 C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.wma
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\etre_toucher_son.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\corp_a_corp_son.xnb
+C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cri_montre_devient_rouge.xnb
