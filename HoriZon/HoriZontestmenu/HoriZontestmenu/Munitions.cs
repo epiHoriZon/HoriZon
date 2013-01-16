@@ -16,6 +16,7 @@ namespace HoriZon
     {
         public Vector2 position;
        public  Rectangle container;
+        public Rectangle affichage;
         Texture2D texture;
         public Direction munitiondirection;
 
@@ -23,7 +24,7 @@ namespace HoriZon
         {
             this.position = position;
             this.texture = texture;
-
+            this.affichage = getContainer();
         }
 
         public Rectangle getContainer()
@@ -39,7 +40,7 @@ namespace HoriZon
 
         public void DrawMunitions(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, position, Color.Orange);
+            spriteBatch.Draw(texture, affichage, Color.Orange);
 
 
         }

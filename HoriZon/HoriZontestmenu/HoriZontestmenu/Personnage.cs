@@ -21,11 +21,13 @@ namespace HoriZontestmenu
         public int Points_Vie_Perso;
         int pv_depart;
 
+        public int numero;
 
-
+      
 
         public Texture2D skin;
         public Rectangle position;
+        public Rectangle affichage;
         public Rectangle positiondepart;
         Rectangle container;
         public Direction direction;
@@ -34,9 +36,9 @@ namespace HoriZontestmenu
         int Frameline = 1;
         int Framecolumn = 1;
 
-        int speed = 2;
+        public int speed = 2;
         int Timer = 0;
-        int AnimationSpeed = 5;
+        public int AnimationSpeed = 5;
 
         public Personnage(Texture2D skin, Rectangle position, int Points_Vie_Perso)
         {
@@ -45,6 +47,7 @@ namespace HoriZontestmenu
             this.positiondepart = position;
             this.Points_Vie_Perso = Points_Vie_Perso;
             this.pv_depart = Points_Vie_Perso;
+            this.affichage = position;
         }
 
 
@@ -81,7 +84,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 720 - position.Height)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 450 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
@@ -105,7 +108,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1250 - position.Width)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1000 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;
@@ -138,23 +141,50 @@ namespace HoriZontestmenu
 
         }
 
-        public void animationmonstre()
+        public void animationmonstre(int numero)
         {
-            switch (direction)
+            if (numero == 2)
+	        {
+		 
+	
+                switch (direction)
+                    {
+                     case Direction.Up: Frameline = 1;
+                            break;
+                      case Direction.Down: Frameline = 3;
+                          break;
+                     case Direction.Left: Frameline = 2;
+                           break;
+                     case Direction.Right: Frameline = 4;
+                           break;
+
+                    }
+            }
+            else if (numero == 4)
             {
-                case Direction.Up: Frameline = 1;
-                    break;
-                case Direction.Down: Frameline = 3;
-                    break;
-                case Direction.Left: Frameline = 2;
-                    break;
-                case Direction.Right: Frameline = 4;
-                    break;
+
+                switch (direction)
+                    {
+                     case Direction.Up: Frameline = 4;
+                            break;
+                      case Direction.Down: Frameline = 1;
+                          break;
+                     case Direction.Left: Frameline = 2;
+                           break;
+                     case Direction.Right: Frameline = 3;
+                           break;
+
+                    }
+
 
             }
-
+	{
+		 
+	}
 
         }
+
+     
 
         public Rectangle getplayercontainer()
         {
@@ -171,7 +201,7 @@ namespace HoriZontestmenu
         {
             if (Points_Vie_Perso <= ((20 / 100) * pv_depart))
             {
-                spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * largeur, (Frameline - 1) * hauteur, largeur, hauteur), Color.Red);
+                spritebatch.Draw(skin, affichage, new Rectangle((Framecolumn - 1) * largeur, (Frameline - 1) * hauteur, largeur, hauteur), Color.Red);
                 if (Game1.cri_montre_devient_rouge_fait == false)
                 {
                     Game1.cri_montre_devient_rouge.Play();
@@ -180,7 +210,7 @@ namespace HoriZontestmenu
             }
             else
             {
-                spritebatch.Draw(skin, position, new Rectangle((Framecolumn - 1) * largeur, (Frameline - 1) * hauteur, largeur, hauteur), Color.White);
+                spritebatch.Draw(skin, affichage, new Rectangle((Framecolumn - 1) * largeur, (Frameline - 1) * hauteur, largeur, hauteur), Color.White);
             }
         }
 

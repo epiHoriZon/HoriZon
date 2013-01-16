@@ -23,7 +23,7 @@ namespace HoriZontestmenu
 
         public bool anglais_on;
         Vector2 position;
-        Rectangle container;
+        public Rectangle container;
 
         MouseEvent mouse = new MouseEvent();
 

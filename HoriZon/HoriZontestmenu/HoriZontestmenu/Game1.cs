@@ -17,6 +17,8 @@ namespace HoriZontestmenu
     {
         GraphicsDeviceManager graphics;
 
+        Camera camera;
+
         SpriteBatch spriteBatch;
         SpriteFont Font_PDV;
 
@@ -25,10 +27,16 @@ namespace HoriZontestmenu
         Animations attaque_cac;
 
         Stack<Munitions> munitionsLoaded;
-        Stack<Munitions> munitionsShooted;
+        List<Munitions> munitionsShooted;
         Stack<Munitions> munitionspossédées;
 
+        Recompense coffre;
+        List<Recompense> liste_coffre;
+        int argent = 0;
+
         List<Personnage> pileronflex;
+
+   
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
         KeyboardState kboldstate;
@@ -98,13 +106,14 @@ namespace HoriZontestmenu
 
         protected override void Initialize()
         {
-
-
+            
+            coffre = new Recompense(Content.Load<Texture2D>("coffre_ferme"), Content.Load<Texture2D>("coffre_ouvert"), new Rectangle(rnd.Next(0, 750), rnd.Next(0, 450), 25, 25));
+            liste_coffre = new List<Recompense>();
 
             attaque_cac = new Animations(Content.Load<Texture2D>("animation_attaque"), new Rectangle(0, 0, 0, 0));
 
             munitionsLoaded = new Stack<Munitions>();
-            munitionsShooted = new Stack<Munitions>();
+            munitionsShooted = new List<Munitions>();
             munitionspossédées = new Stack<Munitions>();
 
             pileronflex = new List<Personnage>();
@@ -113,11 +122,16 @@ namespace HoriZontestmenu
                 munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
                 munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
             }
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i <= 3; i++)
             {
-                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 1000), rnd.Next(150, 800), 32, 32), 100));
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
+                pileronflex[i].numero = 2;
             }
-
+            for (int i = 4; i < 7; i++)
+            {
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("cyborgcostar"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
+                pileronflex[i].numero = 4;
+            }
 
 
             Keyboard = new KeyboardEvent();
@@ -138,8 +152,10 @@ namespace HoriZontestmenu
 
             // Initialisation des variables monstres et personnages :
 
+            
             Font_PDV = Content.Load<SpriteFont>("Font_PDV");
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300);
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 3000);
+            camera = new Camera(new Vector2(heros.position.X, heros.position.Y), Content.Load<Texture2D>("fondville"));
 
             #region musique
 
@@ -147,12 +163,12 @@ namespace HoriZontestmenu
             musique_menu = Content.Load<Song>("musique_menu");
             MediaPlayer.Play(musique_menu);
 
-            #endregion musique
+
 
             old_keys_deplacement = Keys.U;
             etre_toucher_ou_pas = false;
             cri_montre_devient_rouge_fait = false;
-
+            #endregion musique
             base.Initialize();
         }
 
@@ -197,7 +213,7 @@ namespace HoriZontestmenu
             mousevent.old_mouse_state = Mouse.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+          
             oldstate = mousevent.ButtonPressed;
             kboldstate = Keyboard.ButtonPressed;
 
@@ -317,12 +333,15 @@ namespace HoriZontestmenu
                             Onoff_menu.activ();
                             plein_ecran = false;
                             graphics.IsFullScreen = false;
+                            graphics.ApplyChanges();
+                           
                         }
                         else
                         {
                             Onoff_menu.desactiv();
                             plein_ecran = true;
                             graphics.IsFullScreen = true;
+                            graphics.ApplyChanges();
                         }
                     }
                 }
@@ -369,9 +388,8 @@ namespace HoriZontestmenu
             {
 
                 fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond_gameover"), Content.Load<Texture2D>("fond_gameover"), Content.Load<Texture2D>("fond_gameover"), Content.Load<Texture2D>("fond_gameover"));
-                if (mousevent.UpdateMouse() && mousevent.getmousecontainer().Intersects(new Rectangle(510, 438, 800, 600)))
+                if (mousevent.UpdateMouse() && mousevent.getmousecontainer().Intersects(new Rectangle(0, 0, 800, 600)))
                 {
-
                     menu_gameover = false;
                     menu_actif = true;
                 }
@@ -385,6 +403,7 @@ namespace HoriZontestmenu
                     MediaPlayer.Play(musique_jeu);
                     musique_jeu_principal_lancer = true;
                 }
+                camera.Update(heros.position);
                 fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"));
                 if (Keyboard.Is_Back_Pressed())
                 {
@@ -393,6 +412,21 @@ namespace HoriZontestmenu
                     musique_jeu_principal_lancer = false;
                 }
                 heros.deplacement();
+                if (Keyboard.Is_Space_Pressed())
+                {
+                    heros.speed = 4;
+                    heros.AnimationSpeed = 7;
+                }
+                else
+                {
+                    heros.speed = 2;
+                    heros.AnimationSpeed = 5;
+                }
+                for (int i = 0; i < pileronflex.Count; i++)
+                {
+                    if (pileronflex[i].Points_Vie_Perso <= 0)
+                        pileronflex.RemoveAt(i);
+                }
                 foreach (Personnage mechant in pileronflex)
                 {
                     if (mechant.position.Intersects(heros.position))
@@ -414,15 +448,15 @@ namespace HoriZontestmenu
                         {
                             mechant.position.X++;
                             mechant.direction = Direction.Right;
-                            mechant.animationmonstre();
-                            mechant.Animate(2);
+                            mechant.animationmonstre(mechant.numero);
+                            mechant.Animate(mechant.numero);
                         }
                         else if (mechant.position.X > heros.position.X)
                         {
                             mechant.position.X--;
                             mechant.direction = Direction.Left;
-                            mechant.animationmonstre();
-                            mechant.Animate(2);
+                            mechant.animationmonstre(mechant.numero);
+                            mechant.Animate(mechant.numero);
                         }
                         else
                         {
@@ -432,18 +466,19 @@ namespace HoriZontestmenu
                             {
                                 mechant.position.Y++;
                                 mechant.direction = Direction.Down;
-                                mechant.animationmonstre();
-                                mechant.Animate(2);
+                                mechant.animationmonstre(mechant.numero);
+                                mechant.Animate(mechant.numero);
                             }
                             else if (mechant.position.Y > heros.position.Y)
                             {
                                 mechant.position.Y--;
                                 mechant.direction = Direction.Up;
-                                mechant.animationmonstre();
-                                mechant.Animate(2);
+                                mechant.animationmonstre(mechant.numero);
+                                mechant.Animate(mechant.numero);
                             }
 
                         }
+                     
                     }
 
                         #endregion
@@ -471,15 +506,16 @@ namespace HoriZontestmenu
                     old_keys_deplacement = Keys.A;
 
                     attaque_cac.Animate(5);
+                   
                     switch (heros.direction)
                     {
-                        case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, heros.skin.Width, 25);
+                        case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, 74, 25);
                             break;
-                        case Direction.Down: attaque = new Rectangle(heros.position.X, heros.position.Y + heros.skin.Height, heros.skin.Width, 25);
+                        case Direction.Down: attaque = new Rectangle(heros.position.X, heros.position.Y + 104, 74, 25);
                             break;
-                        case Direction.Left: attaque = new Rectangle(heros.position.X - 25, heros.position.Y, 25, heros.skin.Height);
+                        case Direction.Left: attaque = new Rectangle(heros.position.X - 25, heros.position.Y, 25, 104);
                             break;
-                        case Direction.Right: attaque = new Rectangle(heros.position.X + heros.skin.Width, heros.position.Y, 25, heros.skin.Height);
+                        case Direction.Right: attaque = new Rectangle(heros.position.X + 74, heros.position.Y, 25, 104);
                             break;
                     }
                 }
@@ -506,35 +542,31 @@ namespace HoriZontestmenu
                         munitionsLoaded.Pop();
                         switch (heros.direction)
                         {
-                            case Direction.Up: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y), Content.Load<Texture2D>("tir_horizontal")));
+                            case Direction.Up: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y), Content.Load<Texture2D>("tir_horizontal")));
                                 break;
-                            case Direction.Down: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y + 100), Content.Load<Texture2D>("tir_horizontal")));
+                            case Direction.Down: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y + 100), Content.Load<Texture2D>("tir_horizontal")));
                                 break;
-                            case Direction.Left: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
+                            case Direction.Left: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
                                 break;
-                            case Direction.Right: munitionsShooted.Push(new Munitions(new Vector2(heros.position.X + 72, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
+                            case Direction.Right: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 72, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
+                                break;
+                        }
+                        switch (heros.direction)
+                        {
+                            case Direction.Up: munitionsShooted[munitionsShooted.Count - 1].munitiondirection = Direction.Up;
+                                break;
+                            case Direction.Down: munitionsShooted[munitionsShooted.Count - 1].munitiondirection = Direction.Down;
+                                break;
+                            case Direction.Left: munitionsShooted[munitionsShooted.Count - 1].munitiondirection = Direction.Left;
+                                break;
+                            case Direction.Right: munitionsShooted[munitionsShooted.Count - 1].munitiondirection = Direction.Right;
                                 break;
                         }
 
-                        foreach (Munitions cs in munitionsShooted)
-                        {
-                            switch (heros.direction)
-                            {
-                                case Direction.Up: cs.munitiondirection = Direction.Up;
-                                    break;
-                                case Direction.Down: cs.munitiondirection = Direction.Down;
-                                    break;
-                                case Direction.Left: cs.munitiondirection = Direction.Left;
-                                    break;
-                                case Direction.Right: cs.munitiondirection = Direction.Right;
-                                    break;
-                            }
-                        }
                     }
                 }
                 foreach (Munitions cs in munitionsShooted)
                 {
-
 
                     switch (cs.munitiondirection)
                     {
@@ -547,6 +579,14 @@ namespace HoriZontestmenu
                         case Direction.Right: cs.position.X += 5;
                             break;
                     }
+                    for (int i = 0; i < pileronflex.Count; i++)
+                    {
+                        if (pileronflex[i].position.Intersects(cs.container))
+                        {
+                            pileronflex[i].Points_Vie_Perso -= 50;
+                        }
+                    }
+              
 
                 }
                 if (munitionsLoaded.Count() == 0 || Keyboard.Is_R_Pressed())
@@ -568,7 +608,29 @@ namespace HoriZontestmenu
 
 
                 #endregion
+                if (pileronflex.Count() == 0)
+                {
+                        liste_coffre.Add(coffre);
+                        for (int i = 0; i < liste_coffre.Count; i++)
+                        {
+                            if (liste_coffre[i].obtention_recompense(heros) && !liste_coffre[i].ouvert)
+                            {
+
+                                argent += rnd.Next(0, 100);
+                                coffre.ouverture();
+                                heros.Points_Vie_Perso += 100;
+                                for (int j = 0; j <= 7; j++)
+                                {
+                                    pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
+                                    pileronflex[j].numero = 2;
+                                }
+
+                            }
+                        }
+                }
+                
             }
+
 
 
             base.Update(gameTime);
@@ -587,12 +649,10 @@ namespace HoriZontestmenu
 
             if (menu_actif)
             {
-
                 jouer_menu.DrawButton(spriteBatch);
                 options_menu.DrawButton(spriteBatch);
                 credit_menu.DrawButton(spriteBatch);
                 quit_menu.DrawButton(spriteBatch);
-
             }
             else if (sousmenu_actif)
             {
@@ -606,7 +666,6 @@ namespace HoriZontestmenu
             else if (credit_actif)
             {
                 Retour.DrawButton(spriteBatch);
-
             }
             else if (menu_gameover)
             {
@@ -614,11 +673,20 @@ namespace HoriZontestmenu
             }
             else
             {
+                camera.Draw(spriteBatch, 800, 600);
+                if (heros.position.Y > GraphicsDeviceManager.DefaultBackBufferHeight / 2)
+                    heros.affichage.Y = GraphicsDeviceManager.DefaultBackBufferHeight / 2;
+
+                if (heros.position.X > GraphicsDeviceManager.DefaultBackBufferWidth / 2)
+                    heros.affichage.X = GraphicsDeviceManager.DefaultBackBufferWidth / 2;
+
                 heros.Drawperso(spriteBatch, 75, 101);
+                
                 if (heros.Points_Vie_Perso > 0)
                 {
                     spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso) / 2, 10), Color.Red);
                     spriteBatch.DrawString(Font_PDV, "Munitions:" + munitionsLoaded.Count() + "|" + munitionspossédées.Count(), new Vector2(10, 450), Color.Orange);
+                    spriteBatch.DrawString(Font_PDV, "$" + argent, new Vector2(750, 10), Color.Yellow);
                 }
                 else
                 {
@@ -632,7 +700,20 @@ namespace HoriZontestmenu
                 }
                 foreach (Personnage en in pileronflex)
                 {
-                    en.Drawperso(spriteBatch, 32, 32);
+                    en.affichage = en.position;
+                    if (heros.position.X > camera.CameraWidth / 2)
+                        en.affichage.X = camera.CameraWidth / 2 - heros.position.X + en.position.X; ;
+                    if (heros.position.Y > camera.CameraHeight / 2)
+                        en.affichage.Y = camera.CameraHeight / 2 - heros.position.Y + en.position.Y; 
+                    if (en.numero == 2)
+                    {
+                        en.Drawperso(spriteBatch, 32, 32);
+                    }
+                    else if (en.numero == 4)
+                    {
+                        en.Drawperso(spriteBatch, 64, 80);
+                    }
+
                 }
 
 
@@ -642,7 +723,27 @@ namespace HoriZontestmenu
                 {
                     foreach (Munitions cs in munitionsShooted)
                     {
+                        cs.affichage.X = (int)cs.position.X;
+                        cs.affichage.Y = (int)cs.position.Y;
+                        if (heros.position.X > camera.CameraWidth / 2)
+                            cs.affichage.X = camera.CameraWidth / 2 - heros.position.X + (int)cs.position.X ;
+                        if (heros.position.Y > camera.CameraHeight / 2)
+                            cs.affichage.Y = camera.CameraHeight / 2 - heros.position.Y + (int)cs.position.Y;
                         cs.DrawMunitions(spriteBatch);
+                    }
+                }
+                if (liste_coffre.Count != 0)
+                {
+                    foreach (Recompense coffre in liste_coffre)
+                    {
+                        coffre.affichage.X = coffre.container.X;
+                        coffre.affichage.X = coffre.container.X;
+                        if (heros.position.X > camera.CameraWidth / 2)
+                            coffre.affichage.X = camera.CameraWidth / 2 - heros.position.X + coffre.container.X; ;
+                        if (heros.position.Y > camera.CameraHeight / 2)
+                            coffre.affichage.Y = camera.CameraHeight / 2 - heros.position.Y + coffre.container.Y; 
+                        coffre.DrawRecompense(spriteBatch);
+
                     }
                 }
                 if (Keyboard.Is_A_Pressed())
@@ -652,8 +753,9 @@ namespace HoriZontestmenu
 
             }
             spriteBatch.End();
-
+            heros.affichage = heros.position;
             base.Draw(gameTime);
+            
         }
     }
 }
