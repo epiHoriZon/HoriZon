@@ -36,6 +36,27 @@ namespace HoriZontestmenu
         MouseState oldstate;
         Random rnd = new Random();
 
+        #region musique
+
+        Song musique_menu;
+        Song musique_jeu;
+        bool musique_jeu_principal_lancer;
+        Song game_over_musique;
+
+        #endregion musique
+
+        #region Effets sonores
+
+        SoundEffect tir_son;
+        public static SoundEffect deplacement_robot_son;
+        SoundEffect game_over_son;
+
+        #endregion Effets sonores
+
+        public static Keys old_keys_deplacement;
+
+
+
         #region variables menu
         MenuButton fond;
         MenuButton jouer_menu;
@@ -116,6 +137,16 @@ namespace HoriZontestmenu
             Font_PDV = Content.Load<SpriteFont>("Font_PDV");
             heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300);
 
+            #region musique
+
+            musique_jeu_principal_lancer = false;
+            musique_menu = Content.Load<Song>("musique_menu");
+            MediaPlayer.Play(musique_menu);
+
+            #endregion musique
+
+            old_keys_deplacement = Keys.U;
+
             base.Initialize();
         }
 
@@ -126,6 +157,22 @@ namespace HoriZontestmenu
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"));
+
+
+            #region musique
+
+            game_over_musique = Content.Load<Song>("game_over_musique");
+            musique_jeu = Content.Load<Song>("musique_jeu");
+
+            #endregion musique
+
+            #region Effets sonores
+
+            tir_son = Content.Load<SoundEffect>("tir_son");
+            deplacement_robot_son = Content.Load<SoundEffect>("deplacement_robot_son");
+            game_over_son = Content.Load<SoundEffect>("game_over_son");
+
+            #endregion Effets sonores
 
         }
 
@@ -324,11 +371,17 @@ namespace HoriZontestmenu
 
             else
             {
-
+                if (musique_jeu_principal_lancer == false)
+                {
+                    MediaPlayer.Play(musique_jeu);
+                    musique_jeu_principal_lancer = true;
+                }
                 fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"));
                 if (Keyboard.Is_Back_Pressed())
                 {
                     menu_actif = true;
+                    MediaPlayer.Play(musique_menu);
+                    musique_jeu_principal_lancer = false;
                 }
                 heros.deplacement();
                 foreach (Personnage mechant in pileronflex)
@@ -387,6 +440,8 @@ namespace HoriZontestmenu
                             munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
                         }
                         mechant.position = mechant.positiondepart;
+                        game_over_son.Play();
+                        MediaPlayer.Play(game_over_musique);
                         menu_gameover = true;
                     }
                 }
@@ -425,6 +480,7 @@ namespace HoriZontestmenu
                 {
                     if (Keyboard.Is_E_Pressed() && kboldstate.IsKeyUp(Keys.E))
                     {
+                        tir_son.Play();
                         munitionsLoaded.Pop();
                         switch (heros.direction)
                         {
@@ -540,7 +596,7 @@ namespace HoriZontestmenu
                 if (heros.Points_Vie_Perso > 0)
                 {
                     spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso) / 2, 10), Color.Red);
-                    spriteBatch.DrawString(Font_PDV, "Munitions:" + munitionsLoaded.Count() +"|" + munitionspossédées.Count(), new Vector2(10, 450), Color.Orange);
+                    spriteBatch.DrawString(Font_PDV, "Munitions:" + munitionsLoaded.Count() + "|" + munitionspossédées.Count(), new Vector2(10, 450), Color.Orange);
                 }
                 else
                 {

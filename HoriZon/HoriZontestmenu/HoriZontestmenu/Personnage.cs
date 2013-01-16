@@ -21,7 +21,7 @@ namespace HoriZontestmenu
         public int Points_Vie_Perso;
         int pv_depart;
 
-      
+
 
 
         public Texture2D skin;
@@ -65,10 +65,19 @@ namespace HoriZontestmenu
         }
         public void deplacement()
         {
+
+
+
             if (Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.Z) && position.Y != 0)
             {
                 position.Y -= speed;
                 direction = Direction.Up;
+                if (Game1.old_keys_deplacement != Keys.Up)
+                {
+                    Game1.deplacement_robot_son.Play();
+                }
+                Game1.old_keys_deplacement = Keys.Up;
+
 
                 Animate(5);
             }
@@ -76,6 +85,11 @@ namespace HoriZontestmenu
             {
                 position.Y += speed;
                 direction = Direction.Down;
+                if (Game1.old_keys_deplacement != Keys.Down)
+                {
+                    Game1.deplacement_robot_son.Play();
+                }
+                Game1.old_keys_deplacement = Keys.Down;
 
                 Animate(5);
             }
@@ -83,12 +97,24 @@ namespace HoriZontestmenu
             {
                 position.X -= speed;
                 direction = Direction.Left;
+                if (Game1.old_keys_deplacement != Keys.Left)
+                {
+                    Game1.deplacement_robot_son.Play();
+                }
+                Game1.old_keys_deplacement = Keys.Left;
+
                 Animate(5);
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1250 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;
+                if (Game1.old_keys_deplacement != Keys.Right)
+                {
+                    Game1.deplacement_robot_son.Play();
+                }
+                Game1.old_keys_deplacement = Keys.Right;
+
                 Animate(5);
             }
             else

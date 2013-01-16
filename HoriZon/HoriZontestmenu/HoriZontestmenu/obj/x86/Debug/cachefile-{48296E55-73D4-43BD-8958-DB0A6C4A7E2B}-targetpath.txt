@@ -19,7 +19,6 @@ Content\onactiv.xnb
 Content\PE.xnb
 Content\PEactiv.xnb
 Content\angl.xnb
-Content\Font_PDV.xnb
 Content\monstre.xnb
 Content\fond_gameover.xnb
 Content\bouton_retour.xnb
@@ -45,3 +44,13 @@ Content\language.xnb
 Content\languageactiv.xnb
 Content\play.xnb
 Content\playactiv.xnb
+Content\Font_PDV.xnb
+Content\musique_menu.xnb
+Content\musique_menu.wma
+Content\tir_son.xnb
+Content\deplacement_robot_son.xnb
+Content\game_over_musique.xnb
+Content\game_over_musique.wma
+Content\game_over_son.xnb
+Content\musique_jeu.xnb
+Content\musique_jeu.wma
