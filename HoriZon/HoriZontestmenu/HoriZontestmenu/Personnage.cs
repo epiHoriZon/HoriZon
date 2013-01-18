@@ -84,7 +84,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 450 - position.Height)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 900 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
@@ -108,7 +108,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1000 - position.Width)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1400 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;

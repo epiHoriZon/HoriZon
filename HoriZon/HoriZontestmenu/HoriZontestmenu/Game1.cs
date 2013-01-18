@@ -33,6 +33,7 @@ namespace HoriZontestmenu
         Recompense coffre;
         List<Recompense> liste_coffre;
         int argent = 0;
+        int vague = 1;
 
         List<Personnage> pileronflex;
 
@@ -154,7 +155,7 @@ namespace HoriZontestmenu
 
             
             Font_PDV = Content.Load<SpriteFont>("Font_PDV");
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 3000);
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300);
             camera = new Camera(new Vector2(heros.position.X, heros.position.Y), Content.Load<Texture2D>("fondville"));
 
             #region musique
@@ -210,6 +211,7 @@ namespace HoriZontestmenu
 
         protected override void Update(GameTime gameTime)
         {
+            
             mousevent.old_mouse_state = Mouse.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
@@ -608,27 +610,29 @@ namespace HoriZontestmenu
 
 
                 #endregion
-                if (pileronflex.Count() == 0)
+              
+                    if (pileronflex.Count() == 0 && vague == 1)
+                    {
+ 
+                        liste_coffre.Add(new Recompense(Content.Load<Texture2D>("coffre_ferme"), Content.Load<Texture2D>("coffre_ouvert"), new Rectangle(rnd.Next(0, 750), rnd.Next(0, 450), 25, 25)));
+                        vague--;
+                    }
+
+                for (int i = 0; i < liste_coffre.Count; i++)
                 {
-                        liste_coffre.Add(coffre);
-                        for (int i = 0; i < liste_coffre.Count; i++)
+                    if (liste_coffre[i].obtention_recompense(heros) && !liste_coffre[i].ouvert)
+                    {
+                        argent += rnd.Next(0, 100);
+                        liste_coffre[i].ouverture();
+                        heros.Points_Vie_Perso += 100;
+                        vague++;
+                        for (int j = 0; j < 6; j++)
                         {
-                            if (liste_coffre[i].obtention_recompense(heros) && !liste_coffre[i].ouvert)
-                            {
-
-                                argent += rnd.Next(0, 100);
-                                coffre.ouverture();
-                                heros.Points_Vie_Perso += 100;
-                                for (int j = 0; j <= 7; j++)
-                                {
-                                    pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
-                                    pileronflex[j].numero = 2;
-                                }
-
-                            }
+                            pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
+                            pileronflex[j].numero = 2 ;
                         }
+                    }
                 }
-                
             }
 
 

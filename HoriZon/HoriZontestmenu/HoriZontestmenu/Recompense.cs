@@ -18,7 +18,7 @@ namespace HoriZon
         Texture2D activated_texture;
         public Rectangle affichage;
         public Rectangle container;
-        public bool ouvert;
+        public bool ouvert = false;
 
         public Recompense(Texture2D texture, Texture2D activated_texture, Rectangle container)
         {
@@ -26,6 +26,7 @@ namespace HoriZon
             this.activated_texture = activated_texture;
             this.container = container;
             this.affichage = container;
+        
         }
 
 
