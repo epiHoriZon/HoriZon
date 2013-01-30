@@ -61,3 +61,8 @@ Content\IMG_15012013_210205.xnb
 Content\coffre_ferme.xnb
 Content\coffre_ouvert.xnb
 Content\cyborgcostar.xnb
+Content\equip.xnb
+Content\fond inventaire.xnb
+Content\utilitaires.xnb
+Content\equipactiv.xnb
+Content\utilitairesactiv.xnb

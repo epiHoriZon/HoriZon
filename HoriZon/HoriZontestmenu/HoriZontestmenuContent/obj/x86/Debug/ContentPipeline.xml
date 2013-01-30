@@ -544,6 +544,51 @@
       <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cyborgcostar.xnb</Output>
       <Time>2013-01-16T16:06:14.2169484+01:00</Time>
     </Item>
+    <Item>
+      <Source>equip.png</Source>
+      <Name>equip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equip.xnb</Output>
+      <Time>2013-01-25T19:53:44.6347437+01:00</Time>
+    </Item>
+    <Item>
+      <Source>fond inventaire.png</Source>
+      <Name>fond inventaire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond inventaire.xnb</Output>
+      <Time>2013-01-25T19:53:44.638744+01:00</Time>
+    </Item>
+    <Item>
+      <Source>utilitaires.png</Source>
+      <Name>utilitaires</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitaires.xnb</Output>
+      <Time>2013-01-25T19:53:44.6427442+01:00</Time>
+    </Item>
+    <Item>
+      <Source>equipactiv.png</Source>
+      <Name>equipactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equipactiv.xnb</Output>
+      <Time>2013-01-25T20:02:09.7326337+01:00</Time>
+    </Item>
+    <Item>
+      <Source>utilitairesactiv.png</Source>
+      <Name>utilitairesactiv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitairesactiv.xnb</Output>
+      <Time>2013-01-25T20:02:09.7366339+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

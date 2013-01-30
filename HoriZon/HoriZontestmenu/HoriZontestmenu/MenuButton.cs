@@ -60,11 +60,8 @@ namespace HoriZontestmenu
         {
             spritebatch.Draw(texture, new Rectangle ((int)position.X,(int)position.Y,102,53), Color.White);
         }
-
-
         public void DrawFond(SpriteBatch spriteBatch,int x,int y)
         {
-
             spriteBatch.Draw(texture, new Rectangle((int)position.X, (int)position.Y, x, y), Color.White);
         }
         public Texture2D activ()

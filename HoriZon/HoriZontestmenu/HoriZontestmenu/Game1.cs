@@ -83,6 +83,9 @@ namespace HoriZontestmenu
         MenuButton Onoff_menu;
         MenuButton Retour;
 
+        MenuButton fond_inventaire;
+        MenuButton utilitaire_menu;
+        MenuButton equip_menu;
 
         MouseEvent mousevent;
 
@@ -94,7 +97,7 @@ namespace HoriZontestmenu
         public bool plein_ecran = false;
 
         bool credit_actif = false;
-
+        bool inventaire_actif = false;
         bool menu_gameover = false;
         #endregion
         public Game1()
@@ -149,6 +152,10 @@ namespace HoriZontestmenu
             PE_menu = new MenuButton(new Vector2(20, 425), Content.Load<Texture2D>("PE"), Content.Load<Texture2D>("PEactiv"), Content.Load<Texture2D>("FS"), Content.Load<Texture2D>("FSactiv"));
             Onoff_menu = new MenuButton(new Vector2(150, 425), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
             Retour = new MenuButton(new Vector2(700, 425), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("back"), Content.Load<Texture2D>("backactiv"));
+
+            fond_inventaire = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond inventaire"), Content.Load<Texture2D>("fond inventaire"), Content.Load<Texture2D>("fond inventaire"), Content.Load<Texture2D>("fond inventaire"));
+            equip_menu = new MenuButton(new Vector2(550, 150), Content.Load<Texture2D>("equip"), Content.Load<Texture2D>("equipactiv"), Content.Load<Texture2D>("equip"), Content.Load<Texture2D>("equipactiv"));
+            utilitaire_menu = new MenuButton(new Vector2(550, 220), Content.Load<Texture2D>("utilitaires"), Content.Load<Texture2D>("utilitairesactiv"), Content.Load<Texture2D>("utilitaires"), Content.Load<Texture2D>("utilitairesactiv"));
             #endregion
 
             // Initialisation des variables monstres et personnages :
@@ -299,7 +306,9 @@ namespace HoriZontestmenu
                             PE_menu.anglais_on = false;
                             Onoff_menu.anglais_on = false;
                             Retour.anglais_on = false;
-
+                            equip_menu.anglais_on = false;
+                            fond_inventaire.anglais_on = false;
+                            utilitaire_menu.anglais_on = false;
 
                         }
                         else
@@ -317,6 +326,9 @@ namespace HoriZontestmenu
                             PE_menu.anglais_on = true;
                             Onoff_menu.anglais_on = true;
                             Retour.anglais_on = true;
+                            equip_menu.anglais_on = true;
+                            fond_inventaire.anglais_on = true;
+                            utilitaire_menu.anglais_on = true;
                         }
                     }
 
@@ -386,6 +398,30 @@ namespace HoriZontestmenu
 
 
             }
+            else if (inventaire_actif)
+            {
+                fond = fond_inventaire;
+                if (mousevent.getmousecontainer().Intersects(equip_menu.container))
+                {
+                    equip_menu.activ();
+                    if (mousevent.UpdateMouse())
+                    {
+                        Exit();
+                    }
+                }
+                if (mousevent.getmousecontainer().Intersects(utilitaire_menu.container))
+                {
+                    utilitaire_menu.activ();
+                     if (mousevent.UpdateMouse())
+                    {
+                        
+                    }
+                }
+                if (Keyboard.Is_I_Pressed() && kboldstate.IsKeyUp(Keys.I))
+                {
+                    inventaire_actif = false;
+                }
+            }
             else if (menu_gameover)
             {
 
@@ -412,6 +448,10 @@ namespace HoriZontestmenu
                     menu_actif = true;
                     MediaPlayer.Play(musique_menu);
                     musique_jeu_principal_lancer = false;
+                }
+                if (Keyboard.Is_I_Pressed() && kboldstate.IsKeyUp(Keys.I))
+                {
+                    inventaire_actif = true;
                 }
                 heros.deplacement();
                 if (Keyboard.Is_Space_Pressed())
@@ -499,7 +539,7 @@ namespace HoriZontestmenu
                     }
                 }
                 #region attque CAC
-                if (Keyboard.Is_A_Pressed())
+                if (Keyboard.Is_A_Pressed() && kboldstate.IsKeyUp(Keys.A))
                 {
                     if (old_keys_deplacement != Keys.A)
                     {
@@ -569,7 +609,8 @@ namespace HoriZontestmenu
                 }
                 foreach (Munitions cs in munitionsShooted)
                 {
-
+                    
+                    bool old_intersect_munition_ennemi ;
                     switch (cs.munitiondirection)
                     {
                         case Direction.Up: cs.position.Y -= 5;
@@ -583,6 +624,7 @@ namespace HoriZontestmenu
                     }
                     for (int i = 0; i < pileronflex.Count; i++)
                     {
+                        old_intersect_munition_ennemi = pileronflex[i].position.Intersects(cs.container);
                         if (pileronflex[i].position.Intersects(cs.container))
                         {
                             pileronflex[i].Points_Vie_Perso -= 50;
@@ -591,6 +633,7 @@ namespace HoriZontestmenu
               
 
                 }
+
                 if (munitionsLoaded.Count() == 0 || Keyboard.Is_R_Pressed())
                 {
                     int i = 25 - munitionsLoaded.Count();
@@ -670,6 +713,12 @@ namespace HoriZontestmenu
             else if (credit_actif)
             {
                 Retour.DrawButton(spriteBatch);
+            }
+            else if (inventaire_actif)
+            {
+                fond_inventaire.DrawFond(spriteBatch,0,0);
+                utilitaire_menu.DrawButton(spriteBatch);
+                equip_menu.DrawButton(spriteBatch);
             }
             else if (menu_gameover)
             {

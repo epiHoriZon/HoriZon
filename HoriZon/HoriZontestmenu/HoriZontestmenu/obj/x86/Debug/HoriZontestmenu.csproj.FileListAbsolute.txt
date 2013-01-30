@@ -161,3 +161,8 @@ C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmen
 C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ferme.xnb
 C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ouvert.xnb
 C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cyborgcostar.xnb
+C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equip.xnb
+C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond inventaire.xnb
+C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitaires.xnb
+C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equipactiv.xnb
+C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitairesactiv.xnb
