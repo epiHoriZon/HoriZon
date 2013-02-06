@@ -23,6 +23,9 @@ namespace HoriZontestmenu
 
         public int numero;
 
+        int bonus_attaque;
+        int bonus_tir;
+        int bonus_defense;
       
 
         public Texture2D skin;
@@ -40,8 +43,13 @@ namespace HoriZontestmenu
         int Timer = 0;
         public int AnimationSpeed = 5;
 
-        public Personnage(Texture2D skin, Rectangle position, int Points_Vie_Perso)
+        public Personnage(Texture2D skin, Rectangle position, int Points_Vie_Perso , int bonus_attaque,int bonus_tir,int bonus_defense)
         {
+   
+            this.bonus_attaque = bonus_attaque;
+            this.bonus_defense = bonus_defense;
+            this.bonus_tir = bonus_tir;
+
             this.skin = skin;
             this.position = position;
             this.positiondepart = position;
@@ -84,7 +92,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 900 - position.Height)
+            if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 900 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
@@ -96,7 +104,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Q) && position.X != 0)
+             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Q) && position.X != 0)
             {
                 position.X -= speed;
                 direction = Direction.Left;
@@ -108,7 +116,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1400 - position.Width)
+             if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1400 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;

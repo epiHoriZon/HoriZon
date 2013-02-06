@@ -128,12 +128,12 @@ namespace HoriZontestmenu
             }
             for (int i = 0; i <= 3; i++)
             {
-                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10, 1, 0, 0));
                 pileronflex[i].numero = 2;
             }
             for (int i = 4; i < 7; i++)
             {
-                pileronflex.Add(new Personnage(Content.Load<Texture2D>("cyborgcostar"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("cyborgcostar"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10,2,0,0));
                 pileronflex[i].numero = 4;
             }
 
@@ -162,7 +162,7 @@ namespace HoriZontestmenu
 
             
             Font_PDV = Content.Load<SpriteFont>("Font_PDV");
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300);
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300,5,5,5);
             camera = new Camera(new Vector2(heros.position.X, heros.position.Y), Content.Load<Texture2D>("fondville"));
 
             #region musique
@@ -634,7 +634,7 @@ namespace HoriZontestmenu
 
                 }
 
-                if (munitionsLoaded.Count() == 0 || Keyboard.Is_R_Pressed())
+                if (munitionsLoaded.Count() !=0 || Keyboard.Is_R_Pressed())
                 {
                     int i = 25 - munitionsLoaded.Count();
                     while (i < 25)
@@ -671,7 +671,7 @@ namespace HoriZontestmenu
                         vague++;
                         for (int j = 0; j < 6; j++)
                         {
-                            pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10));
+                            pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10, 1, 0, 0));
                             pileronflex[j].numero = 2 ;
                         }
                     }

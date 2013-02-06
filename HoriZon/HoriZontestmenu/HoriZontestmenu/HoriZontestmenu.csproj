@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="Animations.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="Equipements.cs" />
     <Compile Include="KeyboardEvent.cs" />
     <Compile Include="MenuButton.cs" />
     <Compile Include="MouseEvent.cs" />
