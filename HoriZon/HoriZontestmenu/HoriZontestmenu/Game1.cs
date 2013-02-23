@@ -37,7 +37,7 @@ namespace HoriZontestmenu
 
         List<Personnage> pileronflex;
 
-   
+        Map map;
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
         KeyboardState kboldstate;
@@ -137,7 +137,7 @@ namespace HoriZontestmenu
                 pileronflex[i].numero = 4;
             }
 
-
+            map = new Map(Content.Load<Texture2D>("tile0"),Content.Load<Texture2D>("tile1"));
             Keyboard = new KeyboardEvent();
             this.IsMouseVisible = true;
             #region variables menu
@@ -162,7 +162,7 @@ namespace HoriZontestmenu
 
             
             Font_PDV = Content.Load<SpriteFont>("Font_PDV");
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300,5,5,5);
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 350,5,5,5);
             camera = new Camera(new Vector2(heros.position.X, heros.position.Y), Content.Load<Texture2D>("fondville"));
 
             #region musique
@@ -183,6 +183,7 @@ namespace HoriZontestmenu
 
         protected override void LoadContent()
         {
+            
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -218,7 +219,7 @@ namespace HoriZontestmenu
 
         protected override void Update(GameTime gameTime)
         {
-            
+           
             mousevent.old_mouse_state = Mouse.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
@@ -667,7 +668,7 @@ namespace HoriZontestmenu
                     {
                         argent += rnd.Next(0, 100);
                         liste_coffre[i].ouverture();
-                        heros.Points_Vie_Perso += 100;
+                        heros.Points_Vie_Perso += 50;
                         vague++;
                         for (int j = 0; j < 6; j++)
                         {
@@ -716,9 +717,10 @@ namespace HoriZontestmenu
             }
             else if (inventaire_actif)
             {
-                fond_inventaire.DrawFond(spriteBatch,0,0);
+               
                 utilitaire_menu.DrawButton(spriteBatch);
                 equip_menu.DrawButton(spriteBatch);
+                fond_inventaire.DrawFond(spriteBatch, 0, 0);
             }
             else if (menu_gameover)
             {
@@ -726,6 +728,8 @@ namespace HoriZontestmenu
             }
             else
             {
+                
+
                 camera.Draw(spriteBatch, 800, 600);
                 if (heros.position.Y > GraphicsDeviceManager.DefaultBackBufferHeight / 2)
                     heros.affichage.Y = GraphicsDeviceManager.DefaultBackBufferHeight / 2;
@@ -737,9 +741,13 @@ namespace HoriZontestmenu
                 
                 if (heros.Points_Vie_Perso > 0)
                 {
-                    spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(10, 10, (heros.Points_Vie_Perso) / 2, 10), Color.Red);
-                    spriteBatch.DrawString(Font_PDV, "Munitions:" + munitionsLoaded.Count() + "|" + munitionspossédées.Count(), new Vector2(10, 450), Color.Orange);
-                    spriteBatch.DrawString(Font_PDV, "$" + argent, new Vector2(750, 10), Color.Yellow);
+                    spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(12, 25, (heros.Points_Vie_Perso) / 2, 15), Color.Red);
+                    spriteBatch.Draw(Content.Load<Texture2D>("jauge_pv"), new Rectangle(12, 56, (munitionsLoaded.Count) * 3, 20), Color.Orange);
+                    if (heros.Points_Vie_Perso > 350)
+                    {
+                        heros.Points_Vie_Perso = 330;
+                    }
+                    
                 }
                 else
                 {
@@ -803,8 +811,11 @@ namespace HoriZontestmenu
                 {
                     attaque_cac.DrawAnimate(spriteBatch);
                 }
-
+                spriteBatch.Draw(Content.Load<Texture2D>("HUD"), new Rectangle(0, 0, 200, 150), Color.White);
+                spriteBatch.DrawString(Font_PDV, "$" + argent, new Vector2(40, 90), Color.Yellow);
             }
+           
+
             spriteBatch.End();
             heros.affichage = heros.position;
             base.Draw(gameTime);

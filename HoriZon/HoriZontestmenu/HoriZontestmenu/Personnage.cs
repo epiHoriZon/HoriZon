@@ -27,14 +27,12 @@ namespace HoriZontestmenu
         int bonus_tir;
         int bonus_defense;
       
-
         public Texture2D skin;
         public Rectangle position;
         public Rectangle affichage;
         public Rectangle positiondepart;
         Rectangle container;
         public Direction direction;
-
 
         int Frameline = 1;
         int Framecolumn = 1;
@@ -92,7 +90,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 900 - position.Height)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 900 - position.Height)
             {
                 position.Y += speed;
                 direction = Direction.Down;
@@ -104,7 +102,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Q) && position.X != 0)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Q) && position.X != 0)
             {
                 position.X -= speed;
                 direction = Direction.Left;
@@ -116,7 +114,7 @@ namespace HoriZontestmenu
 
                 Animate(5);
             }
-             if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1400 - position.Width)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1400 - position.Width)
             {
                 position.X += speed;
                 direction = Direction.Right;

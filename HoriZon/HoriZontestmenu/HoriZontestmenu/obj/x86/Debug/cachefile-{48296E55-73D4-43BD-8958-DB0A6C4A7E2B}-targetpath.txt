@@ -66,3 +66,6 @@ Content\fond inventaire.xnb
 Content\utilitaires.xnb
 Content\equipactiv.xnb
 Content\utilitairesactiv.xnb
+Content\tile0.xnb
+Content\tile1.xnb
+Content\HUD.xnb
