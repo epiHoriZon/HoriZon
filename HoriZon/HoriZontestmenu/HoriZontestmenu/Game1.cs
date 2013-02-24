@@ -48,9 +48,13 @@ namespace HoriZontestmenu
         #region musique
 
         Song musique_menu;
+        bool musique_menu_lancer;
+
         Song musique_jeu;
         bool musique_jeu_principal_lancer;
+
         Song game_over_musique;
+        bool musique_game_over_lancer;
 
         #endregion musique
 
@@ -168,8 +172,10 @@ namespace HoriZontestmenu
             #region musique
 
             musique_jeu_principal_lancer = false;
-            musique_menu = Content.Load<Song>("musique_menu");
-            MediaPlayer.Play(musique_menu);
+            musique_menu_lancer = false;
+            bool musique_game_over_lancer=false;
+            
+         
 
 
 
@@ -192,6 +198,7 @@ namespace HoriZontestmenu
 
             #region musique
 
+            musique_menu = Content.Load<Song>("musique_menu");
             game_over_musique = Content.Load<Song>("game_over_musique");
             musique_jeu = Content.Load<Song>("musique_jeu");
 
@@ -230,6 +237,10 @@ namespace HoriZontestmenu
 
             if (menu_actif)
             {
+                Musique.lancer_musique(ref musique_menu_lancer, musique_menu);              
+                musique_jeu_principal_lancer = false;
+                musique_game_over_lancer = false;
+
                 fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"), Content.Load<Texture2D>("fond"));
                 #region menu
                 #region menu principal
@@ -437,18 +448,15 @@ namespace HoriZontestmenu
 
             else
             {
-                if (musique_jeu_principal_lancer == false)
-                {
-                    MediaPlayer.Play(musique_jeu);
-                    musique_jeu_principal_lancer = true;
-                }
+                Musique.lancer_musique(ref musique_jeu_principal_lancer, musique_jeu);
+                musique_menu_lancer = false;
+                musique_game_over_lancer = false;
+
                 camera.Update(heros.position);
                 fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"), Content.Load<Texture2D>("fondville"));
                 if (Keyboard.Is_Back_Pressed())
                 {
                     menu_actif = true;
-                    MediaPlayer.Play(musique_menu);
-                    musique_jeu_principal_lancer = false;
                 }
                 if (Keyboard.Is_I_Pressed() && kboldstate.IsKeyUp(Keys.I))
                 {
@@ -561,7 +569,11 @@ namespace HoriZontestmenu
                         }
                         mechant.position = mechant.positiondepart;
                         game_over_son.Play();
-                        MediaPlayer.Play(game_over_musique);
+
+                        Musique.lancer_musique(ref musique_game_over_lancer, game_over_musique);
+                        musique_menu_lancer = false;
+                        musique_jeu_principal_lancer = false;
+
                         menu_gameover = true;
                     }
                 }

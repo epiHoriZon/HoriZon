@@ -44,6 +44,18 @@ Content\language.xnb
 Content\languageactiv.xnb
 Content\play.xnb
 Content\playactiv.xnb
+Content\IMG_15012013_210205.xnb
+Content\coffre_ferme.xnb
+Content\coffre_ouvert.xnb
+Content\cyborgcostar.xnb
+Content\equip.xnb
+Content\fond inventaire.xnb
+Content\utilitaires.xnb
+Content\equipactiv.xnb
+Content\utilitairesactiv.xnb
+Content\tile0.xnb
+Content\tile1.xnb
+Content\HUD.xnb
 Content\Font_PDV.xnb
 Content\tir_son.xnb
 Content\musique_menu.xnb
@@ -57,15 +69,3 @@ Content\musique_jeu.wma
 Content\etre_toucher_son.xnb
 Content\corp_a_corp_son.xnb
 Content\cri_montre_devient_rouge.xnb
-Content\IMG_15012013_210205.xnb
-Content\coffre_ferme.xnb
-Content\coffre_ouvert.xnb
-Content\cyborgcostar.xnb
-Content\equip.xnb
-Content\fond inventaire.xnb
-Content\utilitaires.xnb
-Content\equipactiv.xnb
-Content\utilitairesactiv.xnb
-Content\tile0.xnb
-Content\tile1.xnb
-Content\HUD.xnb
