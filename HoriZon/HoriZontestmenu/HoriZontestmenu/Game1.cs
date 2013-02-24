@@ -485,43 +485,69 @@ namespace HoriZontestmenu
                     else
                     {
                         #region deplacement enemi (revoir l'IA )
+                        if (mechant.position.Intersects(new Rectangle(heros.position.X - 50, heros.position.Y - 50, heros.position.X + heros.skin.Width + 50, heros.position.Y + heros.skin.Height + 50)))
+                        {
+
+                            if (mechant.position.X < heros.position.X)
+                            {
+                                mechant.position.X++;
+                                mechant.direction = Direction.Right;
+                                mechant.animationmonstre(mechant.numero);
+                                mechant.Animate(mechant.numero);
+                            }
+                            else if (mechant.position.X > heros.position.X)
+                            {
+                                mechant.position.X--;
+                                mechant.direction = Direction.Left;
+                                mechant.animationmonstre(mechant.numero);
+                                mechant.Animate(mechant.numero);
+                            }
+                            else
+                            {
 
 
-                        if (mechant.position.X < heros.position.X)
-                        {
-                            mechant.position.X++;
-                            mechant.direction = Direction.Right;
-                            mechant.animationmonstre(mechant.numero);
-                            mechant.Animate(mechant.numero);
-                        }
-                        else if (mechant.position.X > heros.position.X)
-                        {
-                            mechant.position.X--;
-                            mechant.direction = Direction.Left;
-                            mechant.animationmonstre(mechant.numero);
-                            mechant.Animate(mechant.numero);
+                                if (mechant.position.Y <= heros.position.Y)
+                                {
+                                    mechant.position.Y++;
+                                    mechant.direction = Direction.Down;
+                                    mechant.animationmonstre(mechant.numero);
+                                    mechant.Animate(mechant.numero);
+                                }
+                                else if (mechant.position.Y > heros.position.Y)
+                                {
+                                    mechant.position.Y--;
+                                    mechant.direction = Direction.Up;
+                                    mechant.animationmonstre(mechant.numero);
+                                    mechant.Animate(mechant.numero);
+                                }
+
+                            }
                         }
                         else
                         {
-
-
-                            if (mechant.position.Y <= heros.position.Y)
+                            if (rnd.Next(0, 1) == 0)
                             {
-                                mechant.position.Y++;
-                                mechant.direction = Direction.Down;
-                                mechant.animationmonstre(mechant.numero);
-                                mechant.Animate(mechant.numero);
+                                if (rnd.Next(0,2) == 0)
+                                {
+                                    mechant.position.X++;
+                                }
+                                else
+                                {
+                                    mechant.position.X--;
+                                }
                             }
-                            else if (mechant.position.Y > heros.position.Y)
+                            else 
                             {
-                                mechant.position.Y--;
-                                mechant.direction = Direction.Up;
-                                mechant.animationmonstre(mechant.numero);
-                                mechant.Animate(mechant.numero);
+                                if (rnd.Next(0, 2) == 0)
+                                {
+                                    mechant.position.Y--;
+                                }
+                                else 
+                                {
+                                    mechant.position.Y++;
+                                }
                             }
-
                         }
-                     
                     }
 
                         #endregion
