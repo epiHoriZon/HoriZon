@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using HoriZon;
 
 namespace HoriZontestmenu
 {
@@ -18,15 +19,21 @@ namespace HoriZontestmenu
     }
     class Personnage
     {
+        public List<Equipements> inventaire;
+        public List<Equipements> equip;
         public int Points_Vie_Perso;
         int pv_depart;
-
+        Map map;
         public int numero;
 
-        int bonus_attaque;
+        public int attaque;
+        int tir;
+        int defense;
+
+        public int bonus_attaque;
         int bonus_tir;
-        int bonus_defense;
-      
+        public int bonus_defense;
+
         public Texture2D skin;
         public Rectangle position;
         public Rectangle affichage;
@@ -41,21 +48,42 @@ namespace HoriZontestmenu
         int Timer = 0;
         public int AnimationSpeed = 5;
 
-        public Personnage(Texture2D skin, Rectangle position, int Points_Vie_Perso , int bonus_attaque,int bonus_tir,int bonus_defense)
+        public Personnage(Texture2D skin, Rectangle position, int pv_depart, int attaque, int tir, int defense, List<Equipements> inventaire, List<Equipements> equip,Map mapmap)
         {
-   
-            this.bonus_attaque = bonus_attaque;
-            this.bonus_defense = bonus_defense;
-            this.bonus_tir = bonus_tir;
+            this.attaque = attaque;
+            this.defense = defense;
+            this.tir = tir;
+            this.inventaire = inventaire;
+            this.equip = equip;
+            this.Points_Vie_Perso = pv_depart;
+            this.pv_depart = pv_depart;
+
+            map = mapmap;
 
             this.skin = skin;
             this.position = position;
             this.positiondepart = position;
-            this.Points_Vie_Perso = Points_Vie_Perso;
-            this.pv_depart = Points_Vie_Perso;
+
             this.affichage = position;
         }
 
+        public void Inventaire()
+        {
+            this.bonus_attaque = attaque;
+            this.bonus_defense = defense;
+            this.bonus_tir = tir;
+
+            if (equip != null)
+            {
+                for (int i = 0; i < equip.Count; i++)
+                {
+                    this.bonus_attaque = bonus_attaque + equip[i].bonus_attaque;
+                    this.bonus_defense = bonus_defense + equip[i].bonus_defense;
+                    this.bonus_tir = bonus_tir + equip[i].bonus_tir;
+                }
+            }
+
+        }
 
 
         public void Animate(int nbcolonnes)
@@ -74,73 +102,61 @@ namespace HoriZontestmenu
         }
         public void deplacement()
         {
-
-
-
-            if (Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.Z) && position.Y != 0)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.Z))
             {
-                position.Y -= speed;
+                if (map.GetFropPos(position.X, position.Y - speed) == 0)
+                    position.Y -= speed;
+                else if (map.GetFropPos(position.X, position.Y - speed) == 2)
+                    position.Y -= speed / 2;
+
                 direction = Direction.Up;
-                if (Game1.old_keys_deplacement != Keys.Up)
-                {
-                    Game1.deplacement_robot_son.Play();
-                }
-                Game1.old_keys_deplacement = Keys.Up;
-
-
-                Animate(5);
+                Animate(3);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S) && position.Y <= 900 - position.Height)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down) || Keyboard.GetState().IsKeyDown(Keys.S))
             {
-                position.Y += speed;
+                if (map.GetFropPos(position.X, position.Y + 32 + 5) == 0 && map.GetFropPos(position.X + speed + 24, position.Y - speed + 32) == 0)
+                    position.Y += speed;
+                else if (map.GetFropPos(position.X, position.Y + 32) == 2 && map.GetFropPos(position.X + speed + 24, position.Y - speed + 32) == 2)
+                    position.Y += speed / 2;
+
                 direction = Direction.Down;
-                if (Game1.old_keys_deplacement != Keys.Down)
-                {
-                    Game1.deplacement_robot_son.Play();
-                }
-                Game1.old_keys_deplacement = Keys.Down;
-
-                Animate(5);
+                Animate(3);
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Q) && position.X != 0)
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                position.X -= speed;
-                direction = Direction.Left;
-                if (Game1.old_keys_deplacement != Keys.Left)
-                {
-                    Game1.deplacement_robot_son.Play();
-                }
-                Game1.old_keys_deplacement = Keys.Left;
+                if (map.GetFropPos(position.X + 5 + 24, position.Y) == 0 && map.GetFropPos(position.X + 24, position.Y - speed + 32) == 0)
+                    position.X += speed;
+                else if (map.GetFropPos(position.X + speed + 24, position.Y) == 2 && map.GetFropPos(position.X + 24, position.Y - speed + 32) == 2)
+                    position.X += speed / 2;
 
-                Animate(5);
-            }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) && position.X <= 1400 - position.Width)
-            {
-                position.X += speed;
                 direction = Direction.Right;
-                if (Game1.old_keys_deplacement != Keys.Right)
-                {
-                    Game1.deplacement_robot_son.Play();
-                }
-                Game1.old_keys_deplacement = Keys.Right;
+                Animate(3);
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Q))
+            {
+                if (map.GetFropPos(position.X - speed, position.Y) == 0 && map.GetFropPos(position.X, position.Y + 32) == 0)
+                    position.X -= speed;
+                else if (map.GetFropPos(position.X - speed, position.Y) == 2)
+                    position.X -= speed / 2;
 
-                Animate(5);
+                direction = Direction.Left;
+                Animate(3);
             }
             else
             {
-                Framecolumn = 1;
+                Framecolumn = 2;
             }
 
 
             switch (direction)
             {
-                case Direction.Up: Frameline = 5;
+                case Direction.Up: Frameline = 1;
                     break;
-                case Direction.Down: Frameline = 1;
+                case Direction.Down: Frameline = 3;
                     break;
-                case Direction.Left: Frameline = 7;
+                case Direction.Left: Frameline = 4;
                     break;
-                case Direction.Right: Frameline = 3;
+                case Direction.Right: Frameline = 2;
                     break;
 
             }
@@ -184,9 +200,7 @@ namespace HoriZontestmenu
 
 
             }
-	{
-		 
-	}
+	
 
         }
 

@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jouer.xnb</Output>
-      <Time>2013-02-24T13:47:59.4916266+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jouer.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>joueractiv.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\joueractiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.4926267+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\joueractiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>option.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\option.xnb</Output>
-      <Time>2013-02-24T13:47:59.6766372+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\option.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>optionactiv.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\optionactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.6776373+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\optionactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>creditactiv.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\creditactiv.xnb</Output>
-      <Time>2013-02-24T13:47:58.8805917+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\creditactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>credits.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\credits.xnb</Output>
-      <Time>2013-02-24T13:47:58.8815917+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\credits.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>quit.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quit.xnb</Output>
-      <Time>2013-02-24T13:47:59.6846377+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quit.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>quitactiv.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.6846377+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>testanim.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb</Output>
-      <Time>2013-02-24T13:47:59.6866378+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>walk_iso.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb</Output>
-      <Time>2013-02-24T13:47:59.7046388+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>ronflex.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb</Output>
-      <Time>2013-02-24T13:47:59.6856377+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>anglactiv.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb</Output>
-      <Time>2013-02-24T13:47:58.8735913+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>fra.png</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb</Output>
-      <Time>2013-02-24T13:47:59.4516243+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>fraactiv.png</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.4516243+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>langue.png</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb</Output>
-      <Time>2013-02-24T13:47:59.568631+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>langueactiv.png</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.5696311+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>offactiv.png</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.6756372+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>onactiv.png</Source>
@@ -160,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.6766372+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>PE.png</Source>
@@ -169,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb</Output>
-      <Time>2013-02-24T13:47:58.8715912+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>PEactiv.png</Source>
@@ -178,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb</Output>
-      <Time>2013-02-24T13:47:58.8725912+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>angl.png</Source>
@@ -187,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb</Output>
-      <Time>2013-02-24T13:47:58.8725912+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>monstre.png</Source>
@@ -196,8 +196,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\monstre.xnb</Output>
-      <Time>2013-02-24T13:47:59.5696311+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\monstre.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>fond_gameover.png</Source>
@@ -205,8 +205,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond_gameover.xnb</Output>
-      <Time>2013-02-24T13:47:59.4446239+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond_gameover.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>bouton_retour.png</Source>
@@ -214,8 +214,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retour.xnb</Output>
-      <Time>2013-02-24T13:47:58.8755914+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retour.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>bt_credit.png</Source>
@@ -223,8 +223,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bt_credit.xnb</Output>
-      <Time>2013-02-24T13:47:58.8775915+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bt_credit.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>fondville.jpg</Source>
@@ -232,8 +232,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fondville.xnb</Output>
-      <Time>2013-02-24T13:47:59.4506243+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fondville.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>jauge_pv.png</Source>
@@ -241,8 +241,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jauge_pv.xnb</Output>
-      <Time>2013-02-24T13:47:59.4916266+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jauge_pv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>tir_vertical.bmp</Source>
@@ -250,8 +250,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_vertical.xnb</Output>
-      <Time>2013-02-24T13:47:59.689638+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_vertical.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>tir_horizontal.bmp</Source>
@@ -259,8 +259,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_horizontal.xnb</Output>
-      <Time>2013-02-24T13:47:59.6876378+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_horizontal.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>fond.png</Source>
@@ -268,8 +268,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb</Output>
-      <Time>2013-02-24T13:47:59.4446239+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>animation_attaque.png</Source>
@@ -277,8 +277,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\animation_attaque.xnb</Output>
-      <Time>2013-02-24T13:47:58.8745913+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\animation_attaque.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>bouton_retouractiv.png</Source>
@@ -286,8 +286,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retouractiv.xnb</Output>
-      <Time>2013-02-24T13:47:58.8765915+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retouractiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>back.png</Source>
@@ -295,8 +295,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\back.xnb</Output>
-      <Time>2013-02-24T13:47:58.8745913+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\back.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>backactiv.png</Source>
@@ -304,8 +304,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\backactiv.xnb</Output>
-      <Time>2013-02-24T13:47:58.8755914+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\backactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>english.png</Source>
@@ -313,8 +313,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\english.xnb</Output>
-      <Time>2013-02-24T13:47:59.3296174+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\english.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>englishactiv.png</Source>
@@ -322,8 +322,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\englishactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.3306174+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\englishactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>exit.png</Source>
@@ -331,8 +331,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exit.xnb</Output>
-      <Time>2013-02-24T13:47:59.3336176+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exit.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>exitactiv.png</Source>
@@ -340,8 +340,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exitactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.3346177+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exitactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>french.png</Source>
@@ -349,8 +349,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\french.xnb</Output>
-      <Time>2013-02-24T13:47:59.4526244+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\french.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>frenchactiv.png</Source>
@@ -358,8 +358,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\frenchactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.4536245+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\frenchactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>FS.png</Source>
@@ -367,8 +367,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FS.xnb</Output>
-      <Time>2013-02-24T13:47:58.5845748+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FS.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>FSactiv.png</Source>
@@ -376,8 +376,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FSactiv.xnb</Output>
-      <Time>2013-02-24T13:47:58.5865749+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FSactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>language.png</Source>
@@ -385,8 +385,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\language.xnb</Output>
-      <Time>2013-02-24T13:47:59.5666309+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\language.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>languageactiv.png</Source>
@@ -394,8 +394,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\languageactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.567631+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\languageactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>play.png</Source>
@@ -403,8 +403,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\play.xnb</Output>
-      <Time>2013-02-24T13:47:59.6776373+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\play.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>playactiv.png</Source>
@@ -412,8 +412,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\playactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.6836376+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\playactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>IMG_15012013_210205.png</Source>
@@ -421,8 +421,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\IMG_15012013_210205.xnb</Output>
-      <Time>2013-02-24T13:47:58.8705911+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\IMG_15012013_210205.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>coffre_ferme.png</Source>
@@ -430,8 +430,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ferme.xnb</Output>
-      <Time>2013-02-24T13:47:58.8785916+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ferme.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>coffre_ouvert.png</Source>
@@ -439,8 +439,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ouvert.xnb</Output>
-      <Time>2013-02-24T13:47:58.8795916+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ouvert.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>cyborgcostar.png</Source>
@@ -448,8 +448,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cyborgcostar.xnb</Output>
-      <Time>2013-02-24T13:47:59.3286173+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cyborgcostar.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>equip.png</Source>
@@ -457,8 +457,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equip.xnb</Output>
-      <Time>2013-02-24T13:47:59.3316175+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equip.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>fond inventaire.png</Source>
@@ -466,8 +466,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond inventaire.xnb</Output>
-      <Time>2013-02-24T13:47:59.3346177+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond inventaire.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>utilitaires.png</Source>
@@ -475,8 +475,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitaires.xnb</Output>
-      <Time>2013-02-24T13:47:59.689638+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitaires.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>equipactiv.png</Source>
@@ -484,8 +484,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equipactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.3326175+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equipactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>utilitairesactiv.png</Source>
@@ -493,8 +493,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitairesactiv.xnb</Output>
-      <Time>2013-02-24T13:47:59.690638+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitairesactiv.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>tile0.png</Source>
@@ -502,8 +502,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile0.xnb</Output>
-      <Time>2013-02-24T13:47:59.6866378+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile0.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>tile1.png</Source>
@@ -511,8 +511,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile1.xnb</Output>
-      <Time>2013-02-24T13:47:59.6876378+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile1.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>HUD.png</Source>
@@ -520,8 +520,80 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\HUD.xnb</Output>
-      <Time>2013-02-24T13:47:58.588575+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\HUD.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
+    </Item>
+    <Item>
+      <Source>heros.png</Source>
+      <Name>heros</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\heros.xnb</Output>
+      <Time>2013-02-24T17:24:36+01:00</Time>
+    </Item>
+    <Item>
+      <Source>inventaire.png</Source>
+      <Name>inventaire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\inventaire.xnb</Output>
+      <Time>2013-02-25T16:10:44+01:00</Time>
+    </Item>
+    <Item>
+      <Source>item1.png</Source>
+      <Name>item1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\item1.xnb</Output>
+      <Time>2013-02-25T16:17:06+01:00</Time>
+    </Item>
+    <Item>
+      <Source>map.PNG</Source>
+      <Name>map</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\map.xnb</Output>
+      <Time>2013-02-25T17:31:10+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tile_water.png</Source>
+      <Name>tile_water</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile_water.xnb</Output>
+      <Time>2013-02-25T17:43:38+01:00</Time>
+    </Item>
+    <Item>
+      <Source>transp.png</Source>
+      <Name>transp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\transp.xnb</Output>
+      <Time>2013-02-25T17:48:22+01:00</Time>
+    </Item>
+    <Item>
+      <Source>magasin.png</Source>
+      <Name>magasin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\magasin.xnb</Output>
+      <Time>2013-02-26T10:22:14+01:00</Time>
+    </Item>
+    <Item>
+      <Source>tuto.png</Source>
+      <Name>tuto</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tuto.xnb</Output>
+      <Time>2013-02-26T10:40:14+01:00</Time>
     </Item>
     <Item>
       <Source>Font_PDV.spritefont</Source>
@@ -529,8 +601,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\Font_PDV.xnb</Output>
-      <Time>2013-02-24T13:47:58.5875749+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\Font_PDV.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>tir_son.mp3</Source>
@@ -538,8 +610,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_son.xnb</Output>
-      <Time>2013-02-24T13:47:59.6886379+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_son.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>musique_menu.mp3</Source>
@@ -547,9 +619,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.xnb</Output>
-      <Extra>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.wma</Extra>
-      <Time>2013-02-24T13:47:59.6476356+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.xnb</Output>
+      <Extra>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.wma</Extra>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>deplacement_robot_son.mp3</Source>
@@ -557,8 +629,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\deplacement_robot_son.xnb</Output>
-      <Time>2013-02-24T13:47:59.3296174+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\deplacement_robot_son.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>game_over_son.mp3</Source>
@@ -566,8 +638,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_son.xnb</Output>
-      <Time>2013-02-24T13:47:59.4906266+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_son.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>game_over_musique.mp3</Source>
@@ -575,9 +647,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.xnb</Output>
-      <Extra>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.wma</Extra>
-      <Time>2013-02-24T13:47:59.4886265+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.xnb</Output>
+      <Extra>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.wma</Extra>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>musique_jeu.mp3</Source>
@@ -585,9 +657,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.xnb</Output>
-      <Extra>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.wma</Extra>
-      <Time>2013-02-24T13:47:59.6016329+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.xnb</Output>
+      <Extra>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.wma</Extra>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>etre_toucher_son.mp3</Source>
@@ -595,8 +667,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\etre_toucher_son.xnb</Output>
-      <Time>2013-02-24T13:47:59.3336176+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\etre_toucher_son.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>corp_a_corp_son.mp3</Source>
@@ -604,8 +676,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\corp_a_corp_son.xnb</Output>
-      <Time>2013-02-24T13:47:58.8795916+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\corp_a_corp_son.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <Item>
       <Source>cri_montre_devient_rouge.mp3</Source>
@@ -613,8 +685,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cri_montre_devient_rouge.xnb</Output>
-      <Time>2013-02-24T13:47:59.3266172+01:00</Time>
+      <Output>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cri_montre_devient_rouge.xnb</Output>
+      <Time>2013-02-24T05:17:00+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -622,10 +694,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenuContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenuContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenuContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenuContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

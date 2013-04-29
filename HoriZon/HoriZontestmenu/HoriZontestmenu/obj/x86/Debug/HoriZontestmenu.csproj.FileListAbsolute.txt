@@ -1,183 +1,85 @@
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZontestmenu.exe
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZontestmenu.pdb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZontestmenu.exe
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZontestmenu.pdb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jouer.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\joueractiv.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\option.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\optionactiv.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\creditactiv.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\credits.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quit.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb
-c:\users\binooz\documents\visual studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bl.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb
-C:\Users\Binooz\Documents\Visual Studio 2010\Projects\HoriZontestmenu\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jouer.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\joueractiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\option.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\optionactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\creditactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\credits.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quit.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\Font_PDV.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\monstre.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond_gameover.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retour.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bt_credit.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZon.exe
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZon.pdb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZon.exe
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZon.pdb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fondville.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jauge_pv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_vertical.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_horizontal.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\animation_attaque.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retouractiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\back.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\backactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\english.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\englishactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exit.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exitactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\french.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\frenchactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FS.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FSactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\language.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\languageactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\play.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\playactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jouer.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\joueractiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\option.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\optionactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\creditactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\credits.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quit.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\monstre.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond_gameover.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retour.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bt_credit.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fondville.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jauge_pv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_vertical.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_horizontal.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\animation_attaque.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retouractiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\back.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\backactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\english.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\englishactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exit.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exitactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\french.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\frenchactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FS.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FSactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\language.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\languageactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\play.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\playactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\Font_PDV.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZon.exe
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZon.pdb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZon.exe
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZon.pdb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.wma
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_son.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\deplacement_robot_son.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_son.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.wma
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.wma
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\etre_toucher_son.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\corp_a_corp_son.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cri_montre_devient_rouge.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_son.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\deplacement_robot_son.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_son.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\etre_toucher_son.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\corp_a_corp_son.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cri_montre_devient_rouge.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.wma
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.wma
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.wma
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\IMG_15012013_210205.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ferme.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ouvert.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cyborgcostar.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equip.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond inventaire.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitaires.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equipactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitairesactiv.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile0.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile1.xnb
-C:\Users\Bastien\Documents\GitHub\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\HUD.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\IMG_15012013_210205.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ferme.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ouvert.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cyborgcostar.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equip.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond inventaire.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitaires.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equipactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitairesactiv.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile0.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile1.xnb
-C:\Users\archer\Documents\HoriZon\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\HUD.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jouer.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\joueractiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\option.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\optionactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\creditactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\credits.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quit.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\quitactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\testanim.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\walk_iso.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\ronflex.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\anglactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fra.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fraactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langue.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\langueactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\offactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\onactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PE.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\PEactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\angl.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\monstre.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond_gameover.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retour.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bt_credit.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fondville.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\jauge_pv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_vertical.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_horizontal.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\animation_attaque.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\bouton_retouractiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\back.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\backactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\english.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\englishactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exit.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\exitactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\french.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\frenchactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FS.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\FSactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\language.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\languageactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\play.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\playactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\IMG_15012013_210205.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ferme.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\coffre_ouvert.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cyborgcostar.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equip.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\fond inventaire.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitaires.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\equipactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\utilitairesactiv.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile0.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile1.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\HUD.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\heros.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\inventaire.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\item1.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\map.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tile_water.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\transp.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\magasin.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tuto.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\Font_PDV.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\tir_son.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\deplacement_robot_son.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_son.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\etre_toucher_son.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\corp_a_corp_son.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\cri_montre_devient_rouge.xnb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_menu.wma
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\game_over_musique.wma
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\Content\musique_jeu.wma
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZon.exe
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\bin\x86\Debug\HoriZon.pdb
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZon.exe
+C:\Users\archer\Desktop\Nouveau dossier\HoriZon\HoriZontestmenu\HoriZontestmenu\obj\x86\Debug\HoriZon.pdb

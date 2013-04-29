@@ -26,18 +26,24 @@ namespace HoriZontestmenu
         Rectangle attaque;
         Animations attaque_cac;
 
-        Stack<Munitions> munitionsLoaded;
+        List<Munitions> munitionsLoaded;
         List<Munitions> munitionsShooted;
         Stack<Munitions> munitionspossédées;
+        Color laser;
+
+        List<Equipements> inventaire;
+        List<Equipements> equip;
+        Equipements item1;
+        Equipements item2;
 
         Recompense coffre;
         List<Recompense> liste_coffre;
-        int argent = 0;
+        int argent = 5000;
         int vague = 1;
 
         List<Personnage> pileronflex;
 
-        Map map;
+     
 
         KeyboardEvent Keyboard; // Variable qui gère le clavier d'apres la classe KeyboardEvent
         KeyboardState kboldstate;
@@ -87,9 +93,9 @@ namespace HoriZontestmenu
         MenuButton Onoff_menu;
         MenuButton Retour;
 
-        MenuButton fond_inventaire;
-        MenuButton utilitaire_menu;
-        MenuButton equip_menu;
+        MenuButton mag1, mag2, mag3, mag4;
+
+        Map map;
 
         MouseEvent mousevent;
 
@@ -103,6 +109,9 @@ namespace HoriZontestmenu
         bool credit_actif = false;
         bool inventaire_actif = false;
         bool menu_gameover = false;
+
+
+        bool magasin_actif = false;
         #endregion
         public Game1()
         {
@@ -119,29 +128,30 @@ namespace HoriZontestmenu
             liste_coffre = new List<Recompense>();
 
             attaque_cac = new Animations(Content.Load<Texture2D>("animation_attaque"), new Rectangle(0, 0, 0, 0));
-
-            munitionsLoaded = new Stack<Munitions>();
+            map = new Map(Content.Load<Texture2D>("tile0"), Content.Load<Texture2D>("tile1"), Content.Load<Texture2D>("tile_water"), "map.txt");
+            munitionsLoaded = new List<Munitions>();
             munitionsShooted = new List<Munitions>();
             munitionspossédées = new Stack<Munitions>();
 
+            map.init();
             pileronflex = new List<Personnage>();
             for (int i = 0; i < 25; i++)
             {
-                munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
-                munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
+                munitionsLoaded.Add(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical"),laser));
+                munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical"), laser));
             }
             for (int i = 0; i <= 3; i++)
             {
-                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10, 1, 0, 0));
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10, 1, 0, 0, null, null, map));
                 pileronflex[i].numero = 2;
             }
             for (int i = 4; i < 7; i++)
             {
-                pileronflex.Add(new Personnage(Content.Load<Texture2D>("cyborgcostar"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10,2,0,0));
+                pileronflex.Add(new Personnage(Content.Load<Texture2D>("cyborgcostar"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10, 2, 0, 0, null, null, map));
                 pileronflex[i].numero = 4;
             }
 
-            map = new Map(Content.Load<Texture2D>("tile0"),Content.Load<Texture2D>("tile1"));
+            
             Keyboard = new KeyboardEvent();
             this.IsMouseVisible = true;
             #region variables menu
@@ -157,28 +167,38 @@ namespace HoriZontestmenu
             Onoff_menu = new MenuButton(new Vector2(150, 425), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"), Content.Load<Texture2D>("offactiv"), Content.Load<Texture2D>("onactiv"));
             Retour = new MenuButton(new Vector2(700, 425), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("bouton_retour"), Content.Load<Texture2D>("back"), Content.Load<Texture2D>("backactiv"));
 
-            fond_inventaire = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("fond inventaire"), Content.Load<Texture2D>("fond inventaire"), Content.Load<Texture2D>("fond inventaire"), Content.Load<Texture2D>("fond inventaire"));
-            equip_menu = new MenuButton(new Vector2(550, 150), Content.Load<Texture2D>("equip"), Content.Load<Texture2D>("equipactiv"), Content.Load<Texture2D>("equip"), Content.Load<Texture2D>("equipactiv"));
-            utilitaire_menu = new MenuButton(new Vector2(550, 220), Content.Load<Texture2D>("utilitaires"), Content.Load<Texture2D>("utilitairesactiv"), Content.Load<Texture2D>("utilitaires"), Content.Load<Texture2D>("utilitairesactiv"));
+            mag1 = new MenuButton(new Vector2(400, 130), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"));
+            mag2 = new MenuButton(new Vector2(400, 230), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"));
+            mag3  =new MenuButton(new Vector2(400, 330 ), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"));
+            mag4 = new MenuButton(new Vector2(400, 430), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"), Content.Load<Texture2D>("tuto"));
+            
+            
+            
             #endregion
 
             // Initialisation des variables monstres et personnages :
 
-            
+            laser = Color.Red;
+            inventaire = new List<Equipements>();
+            equip = new List<Equipements>();
+
+            item1 = new Equipements("Main", Content.Load<Texture2D>("item1"), 50, 50, 50);
+            item2 = new Equipements("Tete", Content.Load<Texture2D>("item1"), 50, 50, 50);
+
+            inventaire.Add(item1);
+            inventaire.Add(item2);
+            inventaire[0].stack(inventaire);
+            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 300, 5, 5, 5, inventaire, equip, map);
+
             Font_PDV = Content.Load<SpriteFont>("Font_PDV");
-            heros = new Personnage(Content.Load<Texture2D>("walk_iso"), new Rectangle(00, 00, 75, 101), 350,5,5,5);
-            camera = new Camera(new Vector2(heros.position.X, heros.position.Y), Content.Load<Texture2D>("fondville"));
+            heros = new Personnage(Content.Load<Texture2D>("heros"), new Rectangle(200, 200, 24, 32), 350,5,5,5, inventaire, equip ,map);
+            camera = new Camera(new Vector2(heros.position.X, heros.position.Y), Content.Load<Texture2D>("map"));
+            heros.Inventaire();
 
             #region musique
 
             musique_jeu_principal_lancer = false;
             musique_menu_lancer = false;
-            bool musique_game_over_lancer=false;
-            
-         
-
-
-
             old_keys_deplacement = Keys.U;
             etre_toucher_ou_pas = false;
             cri_montre_devient_rouge_fait = false;
@@ -318,9 +338,7 @@ namespace HoriZontestmenu
                             PE_menu.anglais_on = false;
                             Onoff_menu.anglais_on = false;
                             Retour.anglais_on = false;
-                            equip_menu.anglais_on = false;
-                            fond_inventaire.anglais_on = false;
-                            utilitaire_menu.anglais_on = false;
+                          
 
                         }
                         else
@@ -338,9 +356,7 @@ namespace HoriZontestmenu
                             PE_menu.anglais_on = true;
                             Onoff_menu.anglais_on = true;
                             Retour.anglais_on = true;
-                            equip_menu.anglais_on = true;
-                            fond_inventaire.anglais_on = true;
-                            utilitaire_menu.anglais_on = true;
+                          
                         }
                     }
 
@@ -410,30 +426,7 @@ namespace HoriZontestmenu
 
 
             }
-            else if (inventaire_actif)
-            {
-                fond = fond_inventaire;
-                if (mousevent.getmousecontainer().Intersects(equip_menu.container))
-                {
-                    equip_menu.activ();
-                    if (mousevent.UpdateMouse())
-                    {
-                        Exit();
-                    }
-                }
-                if (mousevent.getmousecontainer().Intersects(utilitaire_menu.container))
-                {
-                    utilitaire_menu.activ();
-                     if (mousevent.UpdateMouse())
-                    {
-                        
-                    }
-                }
-                if (Keyboard.Is_I_Pressed() && kboldstate.IsKeyUp(Keys.I))
-                {
-                    inventaire_actif = false;
-                }
-            }
+          
             else if (menu_gameover)
             {
 
@@ -445,7 +438,68 @@ namespace HoriZontestmenu
                 }
                 #endregion
             }
+            else if (inventaire_actif)
+            {
+                for (int i = 0; i < inventaire.Count; i++)
+                {
+                    if (mousevent.getmousecontainer().Intersects(inventaire[i].emplacementInventaire))
+                    {
+                        if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
+                        {
+                            equip.Add(inventaire[i]);
+                            // equip[equip.Count - 1].stack(equip);
+                            inventaire.RemoveAt(i);
+                        }
+                    }
+                }
 
+                for (int i = 0; i < equip.Count; i++)
+                {
+                    if (mousevent.getmousecontainer().Intersects(equip[i].emplacementEquip))
+                    {
+                        if (mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released)
+                        {
+                            inventaire.Add(equip[i]);
+                            // inventaire[equip.Count - 1].stack(inventaire, true);
+                            equip.RemoveAt(i);
+                        }
+                    }
+                }
+
+                if (Keyboard.Is_I_Pressed() && kboldstate.IsKeyUp(Keys.I))
+                {
+                    inventaire_actif = false;
+                }
+                heros.Inventaire();
+            }
+            else if (magasin_actif)
+            {
+                fond = new MenuButton(Vector2.Zero, Content.Load<Texture2D>("magasin"), Content.Load<Texture2D>("magasin"), Content.Load<Texture2D>("magasin"), Content.Load<Texture2D>("magasin"));
+                if (mousevent.getmousecontainer().Intersects(mag1.getcontainer()) && mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released && argent >= 50 )
+                {
+                    heros.bonus_attaque++;
+                    argent -= 50;
+                }
+                if (mousevent.getmousecontainer().Intersects(mag2.getcontainer()) && mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released && argent >= 40 )
+                {
+                    heros.bonus_defense++;
+                    argent -= 40;
+                }
+                if (mousevent.getmousecontainer().Intersects(mag3.getcontainer()) && mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released && argent >= 2000)
+                {
+                    argent -= 2000;
+                    // voir pour le changement de musique
+                }
+                if (mousevent.getmousecontainer().Intersects(mag4.getcontainer()) && mousevent.UpdateMouse() && oldstate.LeftButton == ButtonState.Released && argent >= 100)
+                {
+                    laser = Color.GreenYellow;
+                    argent -= 100;
+                }
+                if(Keyboard.Is_M_Pressed() && kboldstate.IsKeyUp(Keys.M))
+                {
+                    magasin_actif = false;
+                }
+            }
             else
             {
                 Musique.lancer_musique(ref musique_jeu_principal_lancer, musique_jeu);
@@ -461,6 +515,12 @@ namespace HoriZontestmenu
                 if (Keyboard.Is_I_Pressed() && kboldstate.IsKeyUp(Keys.I))
                 {
                     inventaire_actif = true;
+                }
+                if(Keyboard.Is_M_Pressed() && kboldstate.IsKeyUp(Keys.M))
+
+                {
+                    magasin_actif = true;
+                   
                 }
                 heros.deplacement();
                 if (Keyboard.Is_Space_Pressed())
@@ -493,37 +553,41 @@ namespace HoriZontestmenu
                     else
                     {
                         #region deplacement enemi (revoir l'IA )
-                        if (mechant.position.Intersects(new Rectangle(heros.position.X - 50, heros.position.Y - 50, heros.position.X + heros.skin.Width + 50, heros.position.Y + heros.skin.Height + 50)))
+                        if (mechant.position.Intersects(new Rectangle(heros.position.X - 200, heros.position.Y - 200, heros.position.X + heros.skin.Width + 200, heros.position.Y + heros.skin.Height + 200)))
                         {
-
+                            
                             if (mechant.position.X < heros.position.X)
                             {
-                                mechant.position.X++;
+
+                                if (map.GetFropPos(mechant.position.X + 32, mechant.position.Y) == 0 && map.GetFropPos(mechant.position.X + 32, mechant.position.Y  + 30) == 0)
+                                    mechant.position.X++;
                                 mechant.direction = Direction.Right;
                                 mechant.animationmonstre(mechant.numero);
-                                mechant.Animate(mechant.numero);
+                                mechant.Animate(mechant.numero); 
                             }
                             else if (mechant.position.X > heros.position.X)
                             {
-                                mechant.position.X--;
+                                if (map.GetFropPos(mechant.position.X, mechant.position.Y) == 0 && map.GetFropPos(mechant.position.X, mechant.position.Y + 30) == 0)
+                                    mechant.position.X --;
                                 mechant.direction = Direction.Left;
                                 mechant.animationmonstre(mechant.numero);
                                 mechant.Animate(mechant.numero);
                             }
                             else
                             {
-
-
                                 if (mechant.position.Y <= heros.position.Y)
                                 {
-                                    mechant.position.Y++;
+                                    if (map.GetFropPos(mechant.position.X, mechant.position.Y + 32) == 0 && map.GetFropPos(mechant.position.X + 32, mechant.position.Y + 32) == 0)
+                                        mechant.position.Y++;
+                                    
                                     mechant.direction = Direction.Down;
                                     mechant.animationmonstre(mechant.numero);
                                     mechant.Animate(mechant.numero);
                                 }
                                 else if (mechant.position.Y > heros.position.Y)
                                 {
-                                    mechant.position.Y--;
+                                    if (map.GetFropPos(mechant.position.X, mechant.position.Y -1) == 0)
+                                        mechant.position.Y --;
                                     mechant.direction = Direction.Up;
                                     mechant.animationmonstre(mechant.numero);
                                     mechant.Animate(mechant.numero);
@@ -531,41 +595,17 @@ namespace HoriZontestmenu
 
                             }
                         }
-                        else
-                        {
-                            if (rnd.Next(0, 1) == 0)
-                            {
-                                if (rnd.Next(0,2) == 0)
-                                {
-                                    mechant.position.X++;
-                                }
-                                else
-                                {
-                                    mechant.position.X--;
-                                }
-                            }
-                            else 
-                            {
-                                if (rnd.Next(0, 2) == 0)
-                                {
-                                    mechant.position.Y--;
-                                }
-                                else 
-                                {
-                                    mechant.position.Y++;
-                                }
-                            }
-                        }
+                       
                     }
 
                         #endregion
-
+                    
                     if (heros.Points_Vie_Perso <= 0)
                     {
                         for (int i = (munitionsLoaded.Count() - 25) / 2; i < 25; i++)
                         {
-                            munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
-                            munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
+                            munitionsLoaded.Add(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical"), laser));
+                            munitionspossédées.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical"), laser));
                         }
                         mechant.position = mechant.positiondepart;
                         game_over_son.Play();
@@ -580,23 +620,17 @@ namespace HoriZontestmenu
                 #region attque CAC
                 if (Keyboard.Is_A_Pressed() && kboldstate.IsKeyUp(Keys.A))
                 {
-                    if (old_keys_deplacement != Keys.A)
-                    {
-                        corp_a_corp_son.Play();
-                    }
-                    old_keys_deplacement = Keys.A;
-
+                    corp_a_corp_son.Play();
                     attaque_cac.Animate(5);
-                   
                     switch (heros.direction)
                     {
-                        case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, 74, 25);
+                        case Direction.Up: attaque = new Rectangle(heros.position.X, heros.position.Y - 25, 24, 25);
                             break;
-                        case Direction.Down: attaque = new Rectangle(heros.position.X, heros.position.Y + 104, 74, 25);
+                        case Direction.Down: attaque = new Rectangle(heros.position.X, heros.position.Y + 56, 24, 25);
                             break;
-                        case Direction.Left: attaque = new Rectangle(heros.position.X - 25, heros.position.Y, 25, 104);
+                        case Direction.Left: attaque = new Rectangle(heros.position.X - 25, heros.position.Y, 25, 32);
                             break;
-                        case Direction.Right: attaque = new Rectangle(heros.position.X + 74, heros.position.Y, 25, 104);
+                        case Direction.Right: attaque = new Rectangle(heros.position.X + 49, heros.position.Y, 25, 32);
                             break;
                     }
                 }
@@ -620,16 +654,16 @@ namespace HoriZontestmenu
                     if (Keyboard.Is_E_Pressed() && kboldstate.IsKeyUp(Keys.E))
                     {
                         tir_son.Play();
-                        munitionsLoaded.Pop();
+                        munitionsLoaded.RemoveAt(munitionsLoaded.Count -1);
                         switch (heros.direction)
                         {
-                            case Direction.Up: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y), Content.Load<Texture2D>("tir_horizontal")));
+                            case Direction.Up: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 12, heros.position.Y), Content.Load<Texture2D>("tir_horizontal"),laser));
                                 break;
-                            case Direction.Down: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 32, heros.position.Y + 100), Content.Load<Texture2D>("tir_horizontal")));
+                            case Direction.Down: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 12, heros.position.Y + 32), Content.Load<Texture2D>("tir_horizontal"), laser));
                                 break;
-                            case Direction.Left: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
+                            case Direction.Left: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X, heros.position.Y + 16), Content.Load<Texture2D>("tir_vertical"), laser));
                                 break;
-                            case Direction.Right: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 72, heros.position.Y + 50), Content.Load<Texture2D>("tir_vertical")));
+                            case Direction.Right: munitionsShooted.Add(new Munitions(new Vector2(heros.position.X + 24, heros.position.Y + 16), Content.Load<Texture2D>("tir_vertical"),laser));
                                 break;
                         }
                         switch (heros.direction)
@@ -652,13 +686,13 @@ namespace HoriZontestmenu
                     bool old_intersect_munition_ennemi ;
                     switch (cs.munitiondirection)
                     {
-                        case Direction.Up: cs.position.Y -= 5;
+                        case Direction.Up: cs.position.Y -= 10;
                             break;
-                        case Direction.Down: cs.position.Y += 5;
+                        case Direction.Down: cs.position.Y += 10;
                             break;
-                        case Direction.Left: cs.position.X -= 5;
+                        case Direction.Left: cs.position.X -= 10;
                             break;
-                        case Direction.Right: cs.position.X += 5;
+                        case Direction.Right: cs.position.X += 10;
                             break;
                     }
                     for (int i = 0; i < pileronflex.Count; i++)
@@ -681,7 +715,7 @@ namespace HoriZontestmenu
                         if (munitionspossédées.Count() > 0)
                         {
                             munitionspossédées.Pop();
-                            munitionsLoaded.Push(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical")));
+                            munitionsLoaded.Add(new Munitions(new Vector2(100, 100), Content.Load<Texture2D>("tir_vertical"), laser));
                         }
                         i++;
                     }
@@ -695,7 +729,16 @@ namespace HoriZontestmenu
               
                     if (pileronflex.Count() == 0 && vague == 1)
                     {
- 
+                        int rnd01, rnd02;
+
+                        rnd01 = rnd.Next(0, 750);
+                        rnd02 = rnd.Next(0, 450);
+                        while (map.GetFropPos(rnd01,rnd02) != 0)
+                        {
+                            rnd01 = rnd.Next(0,750);
+                            rnd02 = rnd.Next(0,450);
+
+                        }
                         liste_coffre.Add(new Recompense(Content.Load<Texture2D>("coffre_ferme"), Content.Load<Texture2D>("coffre_ouvert"), new Rectangle(rnd.Next(0, 750), rnd.Next(0, 450), 25, 25)));
                         vague--;
                     }
@@ -704,20 +747,21 @@ namespace HoriZontestmenu
                 {
                     if (liste_coffre[i].obtention_recompense(heros) && !liste_coffre[i].ouvert)
                     {
+                        inventaire.Add(new Equipements("Main", Content.Load<Texture2D>("item1"), 50, 50, 50));
+                        inventaire[inventaire.Count - 1].stack(inventaire);
                         argent += rnd.Next(0, 100);
                         liste_coffre[i].ouverture();
                         heros.Points_Vie_Perso += 50;
                         vague++;
                         for (int j = 0; j < 6; j++)
                         {
-                            pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10, 1, 0, 0));
-                            pileronflex[j].numero = 2 ;
+                            pileronflex.Add(new Personnage(Content.Load<Texture2D>("ronflex"), new Rectangle(rnd.Next(100, 800), rnd.Next(150, 500), 32, 32), 10, 1, 0, 0, null, null,map));
+                            pileronflex[j].numero = 2;
                         }
                     }
+                    
                 }
             }
-
-
 
             base.Update(gameTime);
         }
@@ -753,29 +797,17 @@ namespace HoriZontestmenu
             {
                 Retour.DrawButton(spriteBatch);
             }
-            else if (inventaire_actif)
-            {
-               
-                utilitaire_menu.DrawButton(spriteBatch);
-                equip_menu.DrawButton(spriteBatch);
-                fond_inventaire.DrawFond(spriteBatch, 0, 0);
-            }
+            
             else if (menu_gameover)
             {
 
             }
             else
             {
-                
 
-                camera.Draw(spriteBatch, 800, 600);
-                if (heros.position.Y > GraphicsDeviceManager.DefaultBackBufferHeight / 2)
-                    heros.affichage.Y = GraphicsDeviceManager.DefaultBackBufferHeight / 2;
-
-                if (heros.position.X > GraphicsDeviceManager.DefaultBackBufferWidth / 2)
-                    heros.affichage.X = GraphicsDeviceManager.DefaultBackBufferWidth / 2;
-
-                heros.Drawperso(spriteBatch, 75, 101);
+                map.draw(spriteBatch, heros, camera);
+                //camera.Draw(spriteBatch, 800, 600);
+                camera.DrawHeros(spriteBatch, heros);
                 
                 if (heros.Points_Vie_Perso > 0)
                 {
@@ -799,19 +831,19 @@ namespace HoriZontestmenu
                 }
                 foreach (Personnage en in pileronflex)
                 {
-                    en.affichage = en.position;
+                    en.affichage = en.position; 
                     if (heros.position.X > camera.CameraWidth / 2)
                         en.affichage.X = camera.CameraWidth / 2 - heros.position.X + en.position.X; ;
                     if (heros.position.Y > camera.CameraHeight / 2)
                         en.affichage.Y = camera.CameraHeight / 2 - heros.position.Y + en.position.Y; 
                     if (en.numero == 2)
-                    {
+                    { 
                         en.Drawperso(spriteBatch, 32, 32);
                     }
                     else if (en.numero == 4)
                     {
                         en.Drawperso(spriteBatch, 64, 80);
-                    }
+                    } 
 
                 }
 
@@ -852,7 +884,32 @@ namespace HoriZontestmenu
                 spriteBatch.Draw(Content.Load<Texture2D>("HUD"), new Rectangle(0, 0, 200, 150), Color.White);
                 spriteBatch.DrawString(Font_PDV, "$" + argent, new Vector2(40, 90), Color.Yellow);
             }
-           
+
+            if (inventaire_actif)
+            {
+                spriteBatch.Draw(Content.Load<Texture2D>("inventaire"), new Rectangle(camera.CameraWidth / 2 - 250, camera.CameraHeight / 2 - 159, 500, 318), Color.White);
+
+                for (int i = 0; i < inventaire.Count; i++)
+                {
+                    spriteBatch.Draw(inventaire[i].item, inventaire[i].emplacementInventaire, Color.White);
+                }
+
+                for (int i = 0; i < equip.Count; i++)
+                {
+                    spriteBatch.Draw(equip[i].item, equip[i].emplacementEquip, Color.White);
+                }
+             
+            }
+            if (magasin_actif)
+            {
+                fond.DrawFond(spriteBatch, 800, 600);
+                mag1.DrawButton(spriteBatch);
+                mag2.DrawButton(spriteBatch);
+                mag3.DrawButton(spriteBatch);
+                mag4.DrawButton(spriteBatch);
+                spriteBatch.DrawString(Font_PDV, "$" + argent, new Vector2(40, 90), Color.Yellow);
+              
+            }
 
             spriteBatch.End();
             heros.affichage = heros.position;

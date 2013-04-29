@@ -51,8 +51,8 @@ namespace HoriZontestmenu
             container = new Rectangle
                 ((int)position.X,
                 (int)position.Y,
-                ((int)texture.Width),
-                ((int)texture.Height));
+                (102),
+                (53));
             return container;
         }
 
@@ -90,7 +90,5 @@ namespace HoriZontestmenu
 
             return texture;
         }
-
-
     }
 }

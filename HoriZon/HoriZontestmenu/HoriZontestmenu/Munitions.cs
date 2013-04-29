@@ -19,12 +19,14 @@ namespace HoriZon
         public Rectangle affichage;
         Texture2D texture;
         public Direction munitiondirection;
+        public Color c;
 
-        public Munitions(Vector2 position, Texture2D texture)       
+        public Munitions(Vector2 position, Texture2D texture, Color c)       
         {
             this.position = position;
             this.texture = texture;
             this.affichage = getContainer();
+            this.c = c;
         }
 
         public Rectangle getContainer()
@@ -33,14 +35,23 @@ namespace HoriZon
             return container;
         }
 
-     
 
 
+        public void changecolor()
+        {
+            if (Keyboard.GetState().IsKeyDown (Keys.M))
+            {
+                
+            }
+
+
+
+        }
 
 
         public void DrawMunitions(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, affichage, Color.Orange);
+            spriteBatch.Draw(texture, affichage, c);
 
 
         }

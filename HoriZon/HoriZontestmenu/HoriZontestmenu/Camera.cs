@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using HoriZontestmenu;
+using HoriZon;
 
 namespace HoriZon
 {
@@ -34,6 +35,8 @@ namespace HoriZon
 
         public void Update(Rectangle position2)
         {
+            position.X = 0;
+            position.Y = 0;
             position.X = position2.X - CameraWidth / 2;
             position.Y = position2.Y - CameraHeight / 2;
             if (position.X < 0)
@@ -46,5 +49,19 @@ namespace HoriZon
             spriteBatch.Draw(texture, Vector2.Zero, new Rectangle((int)position.X, (int)position.Y, x, y), Color.White);
         }
 
+        public void DrawHeros(SpriteBatch spritebatch, Personnage heros)
+        {
+            if (heros.position.Y > GraphicsDeviceManager.DefaultBackBufferHeight / 2)
+                heros.affichage.Y = GraphicsDeviceManager.DefaultBackBufferHeight / 2;
+
+            if (heros.position.X > GraphicsDeviceManager.DefaultBackBufferWidth / 2)
+                heros.affichage.X = GraphicsDeviceManager.DefaultBackBufferWidth / 2;
+
+            heros.Drawperso(spritebatch, 24, 32);
+        }
+
+        public void DrawFixe(SpriteBatch spritebatch, Personnage heros)
+        {
+        }
     }
 }

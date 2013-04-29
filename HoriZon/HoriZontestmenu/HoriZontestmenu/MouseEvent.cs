@@ -39,8 +39,5 @@ namespace HoriZontestmenu
             mousedetection = new Rectangle((int)ButtonPressed.X, (int)ButtonPressed.Y, (int)1, (int)1);
             return mousedetection;
         }
-
-
-       
     }
 }
