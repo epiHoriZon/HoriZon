@@ -1,0 +1,168 @@
+/* Elements principaux de la page*/
+
+body
+{
+	background-color: black; 
+	background: url('img/fond.png');
+	background-attachment: fixed;
+	color: #FFFFFF;
+	margin-left: 30px;
+}
+
+#bloc_page
+{
+	width: auto;
+	font-family: Arial, sans-serif;
+	margin: auto;
+}
+
+#scenario
+{
+	font-size: larger;
+}
+
+#liste h1
+{
+	text-decoration: underline
+}
+
+section h1, footer h1, nav a
+{
+	font-weight: serif;
+	text-transform: uppercase;
+}
+
+/*header*/
+
+header
+{
+	/*background: url('img/separateur.png') repeat-x bottom;*/
+}
+
+#titre_principal
+{
+    display: inline-block;
+}
+
+header h1
+{
+    font-family: 'Lobster Two', cursive, Arial, serif;
+    font-size: 2.5em;
+    font-weight: normal;
+	margin-left: 500px;
+}
+
+#logo, header h1
+{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+header h2
+{
+    font-family: 'Lobster Two', Dayrom, serif;
+    font-size: 1.5em;
+    margin-top: 0px;
+    font-weight: normal;
+	margin-left: 580px;
+}
+
+/* Navigation */
+
+nav
+{
+    display: inline-block;
+    width: auto;
+    text-align: right;
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 15px;
+	margin-left: 20px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #FFFFFF;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+/* Corps */
+
+div
+{
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+div article
+{
+    display: block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+aside
+{
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+article
+{
+    width: 1350px;
+    margin-right: 25px;
+	margin-left: 20px;
+}
+
+article p
+{
+    font-size: 20px;
+}
+
+aside
+{
+    position: relative;
+    width: 235px;
+	background-color: black; 
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+}
+
+#epita
+{
+    text-align: center;
+}
+
+#epita img
+{
+    border: 1px solid #181818;
+}
+
+aside img
+{
+    margin-right: 5px;
+}
+
+
+
