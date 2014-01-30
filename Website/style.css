@@ -54,6 +54,11 @@ h4
 	font-size: 1.3em
 }
 
+article li
+{
+	font-size: 20px
+}
+
 .bloc_page
 {
 	width: auto;
@@ -67,6 +72,11 @@ h4
 }
 
 .news h3
+{
+	text-decoration: underline
+}
+
+.musiques h4
 {
 	text-decoration: underline
 }
