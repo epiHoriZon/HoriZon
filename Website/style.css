@@ -9,6 +9,17 @@ body
 	margin-left: 30px;
 }
 
+/*
+A:link
+{
+   color: blue;
+}
+A:visited
+{
+   color: blue;
+}
+*/
+
 h1
 {
 	font-size: 1.3em
@@ -21,7 +32,7 @@ h1
 	margin: auto;
 }
 
-#scenario
+#scenario article p
 {
 	font-size: larger;
 }
@@ -95,7 +106,7 @@ nav li
 
 nav a
 {
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: #FFFFFF;
     padding-bottom: 3px;
     text-decoration: none;
